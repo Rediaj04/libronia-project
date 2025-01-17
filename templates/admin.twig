@@ -3,6 +3,26 @@
 {% block title %}Panel de Administración{% endblock %}
 
 {% block content %}
-<h1>Bienvenido, {{ user }}</h1>
-<p>Este es tu panel de administración.</p>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h1 class="text-center text-primary">Panel de Administración</h1>
+                    <p class="text-center">Bienvenido, <strong>{{ user }}</strong>. Este es tu panel de control.</p>
+                    <hr>
+                    <div class="d-flex justify-content-around flex-wrap">
+                        <a href="/admin/usuarios" class="btn btn-outline-primary my-2">Gestionar Usuarios</a>
+                        <a href="/admin/libros" class="btn btn-outline-primary my-2">Gestionar Libros</a>
+                        <a href="/admin/categorias" class="btn btn-outline-primary my-2">Gestionar Categorías</a>
+                    </div>
+                    <hr>
+                    <div class="text-center">
+                        <a href="/logout" class="btn btn-danger">Cerrar sesión</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
