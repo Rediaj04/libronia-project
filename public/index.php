@@ -1,5 +1,8 @@
 <?php
-// Habilitar la visualización de errores
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+// Habilitar la visualización de errores para desarrollo
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -24,4 +27,13 @@ $router->addRoute('POST', '/login', [new DefaultController(), 'login']); // Mane
 $router->addRoute('GET', '/logout', [new DefaultController(), 'logout']); // Cerrar sesión
 
 // Manejar la solicitud entrante
-$router->handleRequest($_SERVER['REQUEST_METHOD'], parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+try {
+    $router->handleRequest(
+        $_SERVER['REQUEST_METHOD'], 
+        parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)
+    );
+} catch (Exception $e) {
+    // Manejar errores globales y devolver un mensaje adecuado
+    http_response_code(500);
+    echo "Ha ocurrido un error en el servidor.";
+}

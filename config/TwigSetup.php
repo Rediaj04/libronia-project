@@ -6,7 +6,8 @@ use Twig\Environment;
 
 class TwigSetup {
     public function getTwig() {
-        $loader = new FilesystemLoader('../templates');
+        // Ruta correcta basada en la ubicación del archivo actual
+        $loader = new FilesystemLoader(__DIR__ . '/../templates');
         return new Environment($loader);
     }
 }
