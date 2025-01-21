@@ -1,0 +1,548 @@
+2025-01-17 19:45:27,606 - CRITICAL - Libro scrapeado: Beauty in the Beast: Flora, Fauna, and Endangered Species of Artist Ralph Burke Tyree
+2025-01-17 19:45:31,500 - CRITICAL - Libro scrapeado: Loud and Clear: The Grateful Dead’s Wall of Sound and the Quest for Audio Perfection
+2025-01-17 19:45:33,956 - CRITICAL - Libro scrapeado: Creative Possibilities : Reconnecting with Creativity to Improve Mental Health
+2025-01-17 19:45:38,504 - CRITICAL - Libro scrapeado: Beauty in the Beast: Flora, Fauna, and Endangered Species of Artist Ralph Burke Tyree
+2025-01-17 19:45:41,730 - CRITICAL - Libro scrapeado: Get Me Carlucci: A Daughter Recounts Her Father’s Legacy of Service
+2025-01-17 19:45:45,334 - CRITICAL - Libro scrapeado: Bau: Artist at War
+2025-01-17 19:45:50,260 - CRITICAL - Libro scrapeado: Michigan Ross School of Business: A Century of Stories Celebrating the "Leaders and Best"
+2025-01-17 19:45:52,575 - CRITICAL - Libro scrapeado: The Tree That Bends: How a Flexible Mind Can Help You Thrive
+2025-01-17 19:45:55,444 - CRITICAL - Libro scrapeado: Essential: How Distributed Teams, Generative AI, and Global Shifts Are Creating a New Human-Powered Leadership
+2025-01-17 19:46:02,697 - CRITICAL - Libro scrapeado: Whale Eyes: A Memoir About Seeing and Being Seen
+2025-01-17 19:46:05,844 - CRITICAL - Libro scrapeado: A Cloud in the Forest
+2025-01-17 19:46:10,358 - CRITICAL - Libro scrapeado: Pick Me! (Me, Too!, #3).
+2025-01-17 19:46:22,570 - CRITICAL - Error al procesar la categoría Christian: Message: 
+
+2025-01-17 19:46:29,343 - CRITICAL - Libro scrapeado: Inheritance of Crises and Dysfunction
+2025-01-17 19:46:33,145 - CRITICAL - Libro scrapeado: «Kalila y Dimna» y otras fábulas del «Panchatantra»
+2025-01-17 19:46:36,952 - CRITICAL - Libro scrapeado: Northanger Abbey
+2025-01-17 19:46:43,158 - CRITICAL - Libro scrapeado: The Cartoonists Club: A Graphic Novel
+2025-01-17 19:46:46,854 - CRITICAL - Libro scrapeado: How to Catch the Easter Bunny
+2025-01-17 19:46:49,319 - CRITICAL - Libro scrapeado: Wicked: The Graphic Novel Part I: An Enchanting Graphic Novelization of the Inspiration for the Major Motion Picture
+2025-01-17 19:46:57,373 - CRITICAL - Libro scrapeado: Breaking Up with Dairy: 100 Indulgent Plant-based Recipes for Cheese (and Butter, Cream, and Milk) Lovers Everywhere
+2025-01-17 19:47:00,011 - CRITICAL - Libro scrapeado: Baby Leads the Way: An Evidence-Based Guide to Introducing Solid Foods
+2025-01-17 19:47:04,822 - CRITICAL - Libro scrapeado: The Vegetarian Reset: 75 Low-Carb, Plant-Forward Recipes from Around the World
+2025-01-17 19:47:17,228 - CRITICAL - Error al procesar la categoría Ebooks: Message: 
+
+2025-01-17 19:47:24,967 - CRITICAL - Libro scrapeado: Infinity Alchemist
+2025-01-17 19:47:28,602 - CRITICAL - Libro scrapeado: Shadow and Bone
+2025-01-17 19:47:29,923 - CRITICAL - Libro scrapeado: A Cloud in the Forest
+2025-01-17 19:47:37,258 - CRITICAL - Libro scrapeado: The Evolution of the Gospelettes
+2025-01-17 19:47:42,296 - CRITICAL - Libro scrapeado: Sierra Six
+2025-01-17 19:47:46,409 - CRITICAL - Libro scrapeado: Pay the Piper
+2025-01-17 19:47:51,370 - CRITICAL - Libro scrapeado: The Cartoonists Club: A Graphic Novel
+2025-01-17 19:47:54,995 - CRITICAL - Libro scrapeado: Blades of Furry, Vol. 1
+2025-01-17 19:47:59,832 - CRITICAL - Libro scrapeado: Crumble: A Graphic Novel
+2025-01-17 19:48:07,690 - CRITICAL - Libro scrapeado: The Gilded Cage of Woman
+2025-01-17 19:48:10,571 - CRITICAL - Libro scrapeado: Finding Opal
+2025-01-17 19:48:14,223 - CRITICAL - Libro scrapeado: Mnara 610: Lycia's Timeless Resistance in Battle
+2025-01-17 19:48:21,330 - CRITICAL - Libro scrapeado: Backyard Politics: A Psychological Understanding of Today's Political and Social Divide
+2025-01-17 19:48:25,676 - CRITICAL - Libro scrapeado: The Ultimate Hidden Truth of the World...: Essays
+2025-01-17 19:48:27,213 - CRITICAL - Libro scrapeado: Mnara 610: Lycia's Timeless Resistance in Battle
+2025-01-17 19:48:34,755 - CRITICAL - Libro scrapeado: Del tiempo y sus demonios
+2025-01-17 19:48:37,150 - CRITICAL - Libro scrapeado: Pay the Piper
+2025-01-17 19:48:40,280 - CRITICAL - Libro scrapeado: Equilibrium
+2025-01-17 19:48:44,260 - CRITICAL - Libro scrapeado: Whale Eyes: A Memoir About Seeing and Being Seen
+2025-01-17 19:48:47,298 - CRITICAL - Libro scrapeado: A Very Narrow Bridge: Reflections of a Psychologist
+2025-01-17 19:48:50,088 - CRITICAL - Libro scrapeado: The Science of Last Things: Essays on Deep Time and the Boundaries of the Self
+2025-01-17 19:49:02,383 - CRITICAL - Error al procesar la categoría Music: Message: 
+
+2025-01-17 19:49:08,367 - CRITICAL - Libro scrapeado: The Queen of Fives
+2025-01-17 19:49:10,865 - CRITICAL - Libro scrapeado: Death at the Bodega
+2025-01-17 19:49:14,328 - CRITICAL - Libro scrapeado: The Plagiarism Plot
+2025-01-17 19:49:19,720 - CRITICAL - Error al procesar la categoría Nonfiction: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=132.0.6834.83)
+Stacktrace:
+#0 0x56505b93da5a <unknown>
+#1 0x56505b44b2f0 <unknown>
+#2 0x56505b42157f <unknown>
+#3 0x56505b4c6d6d <unknown>
+#4 0x56505b4dcb0c <unknown>
+#5 0x56505b4be963 <unknown>
+#6 0x56505b48beec <unknown>
+#7 0x56505b48d13e <unknown>
+#8 0x56505b90a1cf <unknown>
+#9 0x56505b90e2dd <unknown>
+#10 0x56505b8f86d7 <unknown>
+#11 0x56505b90ea51 <unknown>
+#12 0x56505b8dfd1e <unknown>
+#13 0x56505b92c538 <unknown>
+#14 0x56505b92c73a <unknown>
+#15 0x56505b93c6cc <unknown>
+#16 0x7f0c126f3ac3 <unknown>
+
+2025-01-17 19:49:19,723 - CRITICAL - Error al procesar la categoría Poetry: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=132.0.6834.83)
+Stacktrace:
+#0 0x56505b93da5a <unknown>
+#1 0x56505b44b2f0 <unknown>
+#2 0x56505b42157f <unknown>
+#3 0x56505b4c6d6d <unknown>
+#4 0x56505b4dcb0c <unknown>
+#5 0x56505b4be963 <unknown>
+#6 0x56505b48beec <unknown>
+#7 0x56505b48d13e <unknown>
+#8 0x56505b90a1cf <unknown>
+#9 0x56505b90e2dd <unknown>
+#10 0x56505b8f86d7 <unknown>
+#11 0x56505b90ea51 <unknown>
+#12 0x56505b8dfd1e <unknown>
+#13 0x56505b92c538 <unknown>
+#14 0x56505b92c73a <unknown>
+#15 0x56505b93c6cc <unknown>
+#16 0x7f0c126f3ac3 <unknown>
+
+2025-01-17 19:49:19,727 - CRITICAL - Error al procesar la categoría Psychology: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=132.0.6834.83)
+Stacktrace:
+#0 0x56505b93da5a <unknown>
+#1 0x56505b44b2f0 <unknown>
+#2 0x56505b42157f <unknown>
+#3 0x56505b4c6d6d <unknown>
+#4 0x56505b4dcb0c <unknown>
+#5 0x56505b4be963 <unknown>
+#6 0x56505b48beec <unknown>
+#7 0x56505b48d13e <unknown>
+#8 0x56505b90a1cf <unknown>
+#9 0x56505b90e2dd <unknown>
+#10 0x56505b8f86d7 <unknown>
+#11 0x56505b90ea51 <unknown>
+#12 0x56505b8dfd1e <unknown>
+#13 0x56505b92c538 <unknown>
+#14 0x56505b92c73a <unknown>
+#15 0x56505b93c6cc <unknown>
+#16 0x7f0c126f3ac3 <unknown>
+
+2025-01-17 19:49:19,730 - CRITICAL - Error al procesar la categoría Romance: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=132.0.6834.83)
+Stacktrace:
+#0 0x56505b93da5a <unknown>
+#1 0x56505b44b2f0 <unknown>
+#2 0x56505b42157f <unknown>
+#3 0x56505b4c6d6d <unknown>
+#4 0x56505b4dcb0c <unknown>
+#5 0x56505b4be963 <unknown>
+#6 0x56505b48beec <unknown>
+#7 0x56505b48d13e <unknown>
+#8 0x56505b90a1cf <unknown>
+#9 0x56505b90e2dd <unknown>
+#10 0x56505b8f86d7 <unknown>
+#11 0x56505b90ea51 <unknown>
+#12 0x56505b8dfd1e <unknown>
+#13 0x56505b92c538 <unknown>
+#14 0x56505b92c73a <unknown>
+#15 0x56505b93c6cc <unknown>
+#16 0x7f0c126f3ac3 <unknown>
+
+2025-01-17 19:49:19,739 - CRITICAL - Error al procesar la categoría Science: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=132.0.6834.83)
+Stacktrace:
+#0 0x56505b93da5a <unknown>
+#1 0x56505b44b2f0 <unknown>
+#2 0x56505b42157f <unknown>
+#3 0x56505b4c6d6d <unknown>
+#4 0x56505b4dcb0c <unknown>
+#5 0x56505b4be963 <unknown>
+#6 0x56505b48beec <unknown>
+#7 0x56505b48d13e <unknown>
+#8 0x56505b90a1cf <unknown>
+#9 0x56505b90e2dd <unknown>
+#10 0x56505b8f86d7 <unknown>
+#11 0x56505b90ea51 <unknown>
+#12 0x56505b8dfd1e <unknown>
+#13 0x56505b92c538 <unknown>
+#14 0x56505b92c73a <unknown>
+#15 0x56505b93c6cc <unknown>
+#16 0x7f0c126f3ac3 <unknown>
+
+2025-01-17 19:49:19,752 - CRITICAL - Error al procesar la categoría Science Fiction: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=132.0.6834.83)
+Stacktrace:
+#0 0x56505b93da5a <unknown>
+#1 0x56505b44b2f0 <unknown>
+#2 0x56505b42157f <unknown>
+#3 0x56505b4c6d6d <unknown>
+#4 0x56505b4dcb0c <unknown>
+#5 0x56505b4be963 <unknown>
+#6 0x56505b48beec <unknown>
+#7 0x56505b48d13e <unknown>
+#8 0x56505b90a1cf <unknown>
+#9 0x56505b90e2dd <unknown>
+#10 0x56505b8f86d7 <unknown>
+#11 0x56505b90ea51 <unknown>
+#12 0x56505b8dfd1e <unknown>
+#13 0x56505b92c538 <unknown>
+#14 0x56505b92c73a <unknown>
+#15 0x56505b93c6cc <unknown>
+#16 0x7f0c126f3ac3 <unknown>
+
+2025-01-17 19:49:19,758 - CRITICAL - Error al procesar la categoría Self Help: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=132.0.6834.83)
+Stacktrace:
+#0 0x56505b93da5a <unknown>
+#1 0x56505b44b2f0 <unknown>
+#2 0x56505b42157f <unknown>
+#3 0x56505b4c6d6d <unknown>
+#4 0x56505b4dcb0c <unknown>
+#5 0x56505b4be963 <unknown>
+#6 0x56505b48beec <unknown>
+#7 0x56505b48d13e <unknown>
+#8 0x56505b90a1cf <unknown>
+#9 0x56505b90e2dd <unknown>
+#10 0x56505b8f86d7 <unknown>
+#11 0x56505b90ea51 <unknown>
+#12 0x56505b8dfd1e <unknown>
+#13 0x56505b92c538 <unknown>
+#14 0x56505b92c73a <unknown>
+#15 0x56505b93c6cc <unknown>
+#16 0x7f0c126f3ac3 <unknown>
+
+2025-01-17 19:49:19,765 - CRITICAL - Error al procesar la categoría Sports: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=132.0.6834.83)
+Stacktrace:
+#0 0x56505b93da5a <unknown>
+#1 0x56505b44b2f0 <unknown>
+#2 0x56505b42157f <unknown>
+#3 0x56505b4c6d6d <unknown>
+#4 0x56505b4dcb0c <unknown>
+#5 0x56505b4be963 <unknown>
+#6 0x56505b48beec <unknown>
+#7 0x56505b48d13e <unknown>
+#8 0x56505b90a1cf <unknown>
+#9 0x56505b90e2dd <unknown>
+#10 0x56505b8f86d7 <unknown>
+#11 0x56505b90ea51 <unknown>
+#12 0x56505b8dfd1e <unknown>
+#13 0x56505b92c538 <unknown>
+#14 0x56505b92c73a <unknown>
+#15 0x56505b93c6cc <unknown>
+#16 0x7f0c126f3ac3 <unknown>
+
+2025-01-17 19:49:19,775 - CRITICAL - Error al procesar la categoría Thriller: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=132.0.6834.83)
+Stacktrace:
+#0 0x56505b93da5a <unknown>
+#1 0x56505b44b2f0 <unknown>
+#2 0x56505b42157f <unknown>
+#3 0x56505b4c6d6d <unknown>
+#4 0x56505b4dcb0c <unknown>
+#5 0x56505b4be963 <unknown>
+#6 0x56505b48beec <unknown>
+#7 0x56505b48d13e <unknown>
+#8 0x56505b90a1cf <unknown>
+#9 0x56505b90e2dd <unknown>
+#10 0x56505b8f86d7 <unknown>
+#11 0x56505b90ea51 <unknown>
+#12 0x56505b8dfd1e <unknown>
+#13 0x56505b92c538 <unknown>
+#14 0x56505b92c73a <unknown>
+#15 0x56505b93c6cc <unknown>
+#16 0x7f0c126f3ac3 <unknown>
+
+2025-01-17 19:49:19,783 - CRITICAL - Error al procesar la categoría Travel: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=132.0.6834.83)
+Stacktrace:
+#0 0x56505b93da5a <unknown>
+#1 0x56505b44b2f0 <unknown>
+#2 0x56505b42157f <unknown>
+#3 0x56505b4c6d6d <unknown>
+#4 0x56505b4dcb0c <unknown>
+#5 0x56505b4be963 <unknown>
+#6 0x56505b48beec <unknown>
+#7 0x56505b48d13e <unknown>
+#8 0x56505b90a1cf <unknown>
+#9 0x56505b90e2dd <unknown>
+#10 0x56505b8f86d7 <unknown>
+#11 0x56505b90ea51 <unknown>
+#12 0x56505b8dfd1e <unknown>
+#13 0x56505b92c538 <unknown>
+#14 0x56505b92c73a <unknown>
+#15 0x56505b93c6cc <unknown>
+#16 0x7f0c126f3ac3 <unknown>
+
+2025-01-17 19:49:19,791 - CRITICAL - Error al procesar la categoría Young Adult: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=132.0.6834.83)
+Stacktrace:
+#0 0x56505b93da5a <unknown>
+#1 0x56505b44b2f0 <unknown>
+#2 0x56505b42157f <unknown>
+#3 0x56505b4c6d6d <unknown>
+#4 0x56505b4dcb0c <unknown>
+#5 0x56505b4be963 <unknown>
+#6 0x56505b48beec <unknown>
+#7 0x56505b48d13e <unknown>
+#8 0x56505b90a1cf <unknown>
+#9 0x56505b90e2dd <unknown>
+#10 0x56505b8f86d7 <unknown>
+#11 0x56505b90ea51 <unknown>
+#12 0x56505b8dfd1e <unknown>
+#13 0x56505b92c538 <unknown>
+#14 0x56505b92c73a <unknown>
+#15 0x56505b93c6cc <unknown>
+#16 0x7f0c126f3ac3 <unknown>
+
+2025-01-17 19:49:19,792 - CRITICAL - Se encontró la sección 'More genres'. Parando el scraping de categorías.
+2025-01-17 19:49:19,959 - CRITICAL - Navegador cerrado.
+2025-01-21 15:55:41,734 - CRITICAL - Libro scrapeado: Loud and Clear: The Grateful Dead’s Wall of Sound and the Quest for Audio Perfection
+2025-01-21 15:55:43,856 - CRITICAL - Libro scrapeado: Creative Possibilities : Reconnecting with Creativity to Improve Mental Health
+2025-01-21 15:55:48,035 - CRITICAL - Libro scrapeado: Albertus: The Biography of a Typeface
+2025-01-21 15:55:53,265 - CRITICAL - Libro scrapeado: Let Us March On
+2025-01-21 15:55:54,934 - CRITICAL - Libro scrapeado: Loud and Clear: The Grateful Dead’s Wall of Sound and the Quest for Audio Perfection
+2025-01-21 15:55:59,063 - CRITICAL - Libro scrapeado: From These Roots: My Fight with Harvard to Reclaim My Legacy
+2025-01-21 15:56:05,945 - CRITICAL - Libro scrapeado: Be a Warrior in Business: How to Develop Resilient Organizations and Teams
+2025-01-21 15:56:07,988 - CRITICAL - Libro scrapeado: Fishing the Unexpected: Navigating the Unpredictable Waters of Entrepreneurship
+2025-01-21 15:56:10,647 - CRITICAL - Libro scrapeado: Reset: How to Change What's Not Working
+2025-01-21 15:56:15,882 - CRITICAL - Libro scrapeado: Be My Yummy ABC
+2025-01-21 15:56:23,345 - CRITICAL - Libro scrapeado: The Memory Thieves
+2025-01-21 15:56:26,519 - CRITICAL - Libro scrapeado: When You Know What You Don't Want
+2025-01-21 15:56:38,488 - CRITICAL - Error al procesar la categoría Christian: Message: 
+
+2025-01-21 15:56:42,557 - CRITICAL - Libro scrapeado: «Kalila y Dimna» y otras fábulas del «Panchatantra»
+2025-01-21 15:56:44,581 - CRITICAL - Libro scrapeado: Story Skeleton: The Classics
+2025-01-21 15:56:47,455 - CRITICAL - Libro scrapeado: Northanger Abbey
+2025-01-21 15:56:51,396 - CRITICAL - Libro scrapeado: Wicked: The Graphic Novel Part I: An Enchanting Graphic Novelization of the Inspiration for the Major Motion Picture
+2025-01-21 15:56:53,312 - CRITICAL - Libro scrapeado: Crumb: A Cartoonist's Life
+2025-01-21 15:56:56,067 - CRITICAL - Libro scrapeado: I'll Have What She's Having
+2025-01-21 15:57:00,320 - CRITICAL - Libro scrapeado: Breaking Up with Dairy: 100 Indulgent Plant-based Recipes for Cheese (and Butter, Cream, and Milk) Lovers Everywhere
+2025-01-21 15:57:04,463 - CRITICAL - Libro scrapeado: Baby Leads the Way: An Evidence-Based Guide to Introducing Solid Foods
+2025-01-21 15:57:09,006 - CRITICAL - Libro scrapeado: The Vegetarian Reset: 75 Low-Carb, Plant-Forward Recipes from Around the World
+2025-01-21 15:57:20,865 - CRITICAL - Error al procesar la categoría Ebooks: Message: 
+
+2025-01-21 15:57:27,190 - CRITICAL - Libro scrapeado: Gate to Kagoshima
+2025-01-21 15:57:29,872 - CRITICAL - Libro scrapeado: Taken to the Stars
+2025-01-21 15:57:32,532 - CRITICAL - Libro scrapeado: The Bridge to Magic
+2025-01-21 15:57:36,624 - CRITICAL - Libro scrapeado: The Bridge to Magic
+2025-01-21 15:57:38,641 - CRITICAL - Libro scrapeado: Feudal
+2025-01-21 15:57:41,005 - CRITICAL - Libro scrapeado: Bon Vivant
+2025-01-21 15:57:44,628 - CRITICAL - Libro scrapeado: Vagabond, Vol. 1
+2025-01-21 15:57:47,259 - CRITICAL - Libro scrapeado: Pantomime
+2025-01-21 15:57:49,262 - CRITICAL - Libro scrapeado: Spent: A Comic Novel
+2025-01-21 15:57:52,826 - CRITICAL - Libro scrapeado: Let Us March On
+2025-01-21 15:57:54,723 - CRITICAL - Libro scrapeado: The Better Part of Worse: A Novel of Hope
+2025-01-21 15:57:57,456 - CRITICAL - Libro scrapeado: The Eights
+2025-01-21 15:58:00,837 - CRITICAL - Libro scrapeado: Death by Astonishment: Confronting the Mystery of the World's Strangest Drug
+2025-01-21 15:58:04,546 - CRITICAL - Libro scrapeado: A Tropical Frontier: The Last Caloosa
+2025-01-21 15:58:06,821 - CRITICAL - Libro scrapeado: Rain of Ruin: Tokyo, Hiroshima, and the Surrender of Japan
+2025-01-21 15:58:12,377 - CRITICAL - Libro scrapeado: The Electric God and Other Shorts
+2025-01-21 15:58:16,376 - CRITICAL - Libro scrapeado: Our Winter Monster
+2025-01-21 15:58:19,933 - CRITICAL - Libro scrapeado: At Dark, I Become Loathsome
+2025-01-21 15:58:24,718 - CRITICAL - Libro scrapeado: Cleavage: Men, Women, and the Space Between Us
+2025-01-21 15:58:27,516 - CRITICAL - Libro scrapeado: The Last American Road Trip: A Memoir
+2025-01-21 15:58:31,402 - CRITICAL - Libro scrapeado: Uprooted: Family Trauma, Unknown Origins, and the Secretive History of Artificial Insemination
+2025-01-21 15:58:43,466 - CRITICAL - Error al procesar la categoría Music: Message: 
+
+2025-01-21 15:58:47,445 - CRITICAL - Libro scrapeado: Shaw Connolly Lives to Tell
+2025-01-21 15:58:51,738 - CRITICAL - Libro scrapeado: Star-Crossed Egg Tarts
+2025-01-21 15:58:53,448 - CRITICAL - Libro scrapeado: Operation Bayou Justice
+2025-01-21 15:58:57,791 - CRITICAL - Libro scrapeado: Embrace the Code: Cultivating Emotional Resilience in a Tough IT Culture
+2025-01-21 15:59:02,139 - CRITICAL - Libro scrapeado: Seeking Shelter: A Working Mother, Her Children, and a Story of Homelessness in America
+2025-01-21 15:59:05,491 - CRITICAL - Libro scrapeado: You're Probably Gayish: The Truth (and Lies) Behind 17 Gay Stereotypes
+2025-01-21 15:59:10,246 - CRITICAL - Libro scrapeado: Far From Home Close to Love: In New York City
+2025-01-21 15:59:11,750 - CRITICAL - Libro scrapeado: When You Know What You Don't Want
+2025-01-21 15:59:14,978 - CRITICAL - Libro scrapeado: The Costume Box: Poems by Peter Hynes
+2025-01-21 15:59:27,930 - CRITICAL - Error al procesar la categoría Psychology: Message: 
+
+2025-01-21 15:59:46,545 - CRITICAL - Libro scrapeado: Forget Me Not
+2025-01-21 15:59:49,094 - CRITICAL - Libro scrapeado: Lights Out
+2025-01-21 15:59:51,628 - CRITICAL - Libro scrapeado: The King's Maiden
+2025-01-21 16:00:04,488 - CRITICAL - Error al procesar el libro en https://www.goodreads.com/book/show/213656343-the-social-paradox: Message: 
+Stacktrace:
+#0 0x562412d66a5a <unknown>
+#1 0x5624128742f0 <unknown>
+#2 0x5624128c3235 <unknown>
+#3 0x5624128c3451 <unknown>
+#4 0x562412908dc4 <unknown>
+#5 0x5624128e7bed <unknown>
+#6 0x56241290611e <unknown>
+#7 0x5624128e7963 <unknown>
+#8 0x5624128b4eec <unknown>
+#9 0x5624128b613e <unknown>
+#10 0x562412d331cf <unknown>
+#11 0x562412d372dd <unknown>
+#12 0x562412d216d7 <unknown>
+#13 0x562412d37a51 <unknown>
+#14 0x562412d08d1e <unknown>
+#15 0x562412d55538 <unknown>
+#16 0x562412d5573a <unknown>
+#17 0x562412d656cc <unknown>
+#18 0x7f31bca32ac3 <unknown>
+
+2025-01-21 16:00:06,434 - CRITICAL - Error al procesar el libro en https://www.goodreads.com/book/show/222410647-untethered: Message: no such element: Unable to locate element: {"method":"css selector","selector":"p[data-testid='pagesFormat']"}
+  (Session info: chrome=132.0.6834.83); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x562412d66a5a <unknown>
+#1 0x5624128742f0 <unknown>
+#2 0x5624128c3235 <unknown>
+#3 0x5624128c3451 <unknown>
+#4 0x562412908dc4 <unknown>
+#5 0x5624128e7bed <unknown>
+#6 0x56241290611e <unknown>
+#7 0x5624128e7963 <unknown>
+#8 0x5624128b4eec <unknown>
+#9 0x5624128b613e <unknown>
+#10 0x562412d331cf <unknown>
+#11 0x562412d372dd <unknown>
+#12 0x562412d216d7 <unknown>
+#13 0x562412d37a51 <unknown>
+#14 0x562412d08d1e <unknown>
+#15 0x562412d55538 <unknown>
+#16 0x562412d5573a <unknown>
+#17 0x562412d656cc <unknown>
+#18 0x7f31bca32ac3 <unknown>
+
+2025-01-21 16:00:07,538 - CRITICAL - Libro scrapeado: Uprooted: Family Trauma, Unknown Origins, and the Secretive History of Artificial Insemination
+2025-01-21 16:00:12,278 - CRITICAL - Libro scrapeado: Taken to the Stars
+2025-01-21 16:00:13,211 - CRITICAL - Libro scrapeado: Feudal
+2025-01-21 16:00:13,821 - CRITICAL - Libro scrapeado: Bon Vivant
+2025-01-21 16:00:16,864 - CRITICAL - Libro scrapeado: Embrace the Code: Cultivating Emotional Resilience in a Tough IT Culture
+2025-01-21 16:00:27,825 - CRITICAL - Error al procesar el libro en https://www.goodreads.com/book/show/219365446-the-mindful-path: Message: 
+Stacktrace:
+#0 0x562412d66a5a <unknown>
+#1 0x5624128742f0 <unknown>
+#2 0x5624128c3235 <unknown>
+#3 0x5624128c3451 <unknown>
+#4 0x562412908dc4 <unknown>
+#5 0x5624128e7bed <unknown>
+#6 0x56241290611e <unknown>
+#7 0x5624128e7963 <unknown>
+#8 0x5624128b4eec <unknown>
+#9 0x5624128b613e <unknown>
+#10 0x562412d331cf <unknown>
+#11 0x562412d372dd <unknown>
+#12 0x562412d216d7 <unknown>
+#13 0x562412d37a51 <unknown>
+#14 0x562412d08d1e <unknown>
+#15 0x562412d55538 <unknown>
+#16 0x562412d5573a <unknown>
+#17 0x562412d656cc <unknown>
+#18 0x7f31bca32ac3 <unknown>
+
+2025-01-21 16:00:38,904 - CRITICAL - Error al procesar el libro en https://www.goodreads.com/book/show/221974157-even-if: Message: 
+Stacktrace:
+#0 0x562412d66a5a <unknown>
+#1 0x5624128742f0 <unknown>
+#2 0x5624128c3235 <unknown>
+#3 0x5624128c3451 <unknown>
+#4 0x562412908dc4 <unknown>
+#5 0x5624128e7bed <unknown>
+#6 0x56241290611e <unknown>
+#7 0x5624128e7963 <unknown>
+#8 0x5624128b4eec <unknown>
+#9 0x5624128b613e <unknown>
+#10 0x562412d331cf <unknown>
+#11 0x562412d372dd <unknown>
+#12 0x562412d216d7 <unknown>
+#13 0x562412d37a51 <unknown>
+#14 0x562412d08d1e <unknown>
+#15 0x562412d55538 <unknown>
+#16 0x562412d5573a <unknown>
+#17 0x562412d656cc <unknown>
+#18 0x7f31bca32ac3 <unknown>
+
+2025-01-21 16:00:50,841 - CRITICAL - Error al procesar la categoría Sports: Message: 
+
+2025-01-21 16:00:54,909 - CRITICAL - Libro scrapeado: The Weekend Guests
+2025-01-21 16:00:57,760 - CRITICAL - Libro scrapeado: Nemesis
+2025-01-21 16:01:00,026 - CRITICAL - Libro scrapeado: Artificial Agent
+2025-01-21 16:01:03,232 - CRITICAL - Libro scrapeado: The Last American Road Trip: A Memoir
+2025-01-21 16:01:06,501 - CRITICAL - Libro scrapeado: Worlds to Discover: Kayak Adventures One Inch Above the Water
+2025-01-21 16:01:08,656 - CRITICAL - Libro scrapeado: Breakfast Wine
+2025-01-21 16:01:13,997 - CRITICAL - Libro scrapeado: Mistress of Bones
+2025-01-21 16:01:17,332 - CRITICAL - Libro scrapeado: The Last Bookstore on Earth
+2025-01-21 16:01:19,999 - CRITICAL - Libro scrapeado: All Better Now
+2025-01-21 16:01:19,999 - CRITICAL - Se encontró la sección 'More genres'. Parando el scraping de categorías.
+2025-01-21 16:01:20,286 - CRITICAL - Navegador cerrado.
+2025-01-21 16:14:35,528 - CRITICAL - Libro scrapeado: Loud and Clear: The Grateful Dead’s Wall of Sound and the Quest for Audio Perfection
+2025-01-21 16:14:37,662 - CRITICAL - Libro scrapeado: Creative Possibilities : Reconnecting with Creativity to Improve Mental Health
+2025-01-21 16:14:39,644 - CRITICAL - Libro scrapeado: Albertus: The Biography of a Typeface
+2025-01-21 16:14:45,064 - CRITICAL - Libro scrapeado: Let Us March On
+2025-01-21 16:14:46,354 - CRITICAL - Libro scrapeado: Loud and Clear: The Grateful Dead’s Wall of Sound and the Quest for Audio Perfection
+2025-01-21 16:14:48,622 - CRITICAL - Libro scrapeado: From These Roots: My Fight with Harvard to Reclaim My Legacy
+2025-01-21 16:14:52,449 - CRITICAL - Libro scrapeado: Be a Warrior in Business: How to Develop Resilient Organizations and Teams
+2025-01-21 16:14:55,298 - CRITICAL - Libro scrapeado: Fishing the Unexpected: Navigating the Unpredictable Waters of Entrepreneurship
+2025-01-21 16:14:57,001 - CRITICAL - Libro scrapeado: Reset: How to Change What's Not Working
+2025-01-21 16:15:01,423 - CRITICAL - Libro scrapeado: Be My Yummy ABC
+2025-01-21 16:15:07,794 - CRITICAL - Libro scrapeado: The Memory Thieves
+2025-01-21 16:15:10,544 - CRITICAL - Libro scrapeado: When You Know What You Don't Want
+2025-01-21 16:15:22,527 - CRITICAL - Error al procesar la categoría Christian: Message: 
+
+2025-01-21 16:15:26,382 - CRITICAL - Libro scrapeado: «Kalila y Dimna» y otras fábulas del «Panchatantra»
+2025-01-21 16:15:28,484 - CRITICAL - Libro scrapeado: Story Skeleton: The Classics
+2025-01-21 16:15:31,385 - CRITICAL - Libro scrapeado: Northanger Abbey
+2025-01-21 16:15:36,091 - CRITICAL - Libro scrapeado: Wicked: The Graphic Novel Part I: An Enchanting Graphic Novelization of the Inspiration for the Major Motion Picture
+2025-01-21 16:15:38,082 - CRITICAL - Libro scrapeado: Crumb: A Cartoonist's Life
+2025-01-21 16:15:40,871 - CRITICAL - Libro scrapeado: I'll Have What She's Having
+2025-01-21 16:15:47,033 - CRITICAL - Libro scrapeado: Breaking Up with Dairy: 100 Indulgent Plant-based Recipes for Cheese (and Butter, Cream, and Milk) Lovers Everywhere
+2025-01-21 16:15:49,643 - CRITICAL - Libro scrapeado: Baby Leads the Way: An Evidence-Based Guide to Introducing Solid Foods
+2025-01-21 16:15:52,680 - CRITICAL - Libro scrapeado: The Vegetarian Reset: 75 Low-Carb, Plant-Forward Recipes from Around the World
+2025-01-21 16:16:04,656 - CRITICAL - Error al procesar la categoría Ebooks: Message: 
+
+2025-01-21 16:16:09,806 - CRITICAL - Libro scrapeado: Gate to Kagoshima
+2025-01-21 16:16:13,762 - CRITICAL - Libro scrapeado: Taken to the Stars
+2025-01-21 16:16:17,706 - CRITICAL - Libro scrapeado: The Bridge to Magic
+2025-01-21 16:16:23,040 - CRITICAL - Libro scrapeado: The Bridge to Magic
+2025-01-21 16:16:25,351 - CRITICAL - Libro scrapeado: Feudal
+2025-01-21 16:16:29,032 - CRITICAL - Libro scrapeado: Bon Vivant
+2025-01-21 16:16:33,740 - CRITICAL - Libro scrapeado: Vagabond, Vol. 1
+2025-01-21 16:16:37,931 - CRITICAL - Libro scrapeado: Pantomime
+2025-01-21 16:16:41,636 - CRITICAL - Libro scrapeado: Spent: A Comic Novel
+2025-01-21 16:16:46,340 - CRITICAL - Libro scrapeado: Let Us March On
+2025-01-21 16:16:48,758 - CRITICAL - Libro scrapeado: The Better Part of Worse: A Novel of Hope
+2025-01-21 16:16:52,473 - CRITICAL - Libro scrapeado: The Eights
+2025-01-21 16:16:56,478 - CRITICAL - Libro scrapeado: Death by Astonishment: Confronting the Mystery of the World's Strangest Drug
+2025-01-21 16:16:59,763 - CRITICAL - Libro scrapeado: A Tropical Frontier: The Last Caloosa
+2025-01-21 16:17:02,023 - CRITICAL - Libro scrapeado: Rain of Ruin: Tokyo, Hiroshima, and the Surrender of Japan
+2025-01-21 16:17:07,047 - CRITICAL - Libro scrapeado: The Electric God and Other Shorts
+2025-01-21 16:17:10,148 - CRITICAL - Libro scrapeado: Our Winter Monster
+2025-01-21 16:17:12,774 - CRITICAL - Libro scrapeado: At Dark, I Become Loathsome
+2025-01-21 16:17:17,986 - CRITICAL - Libro scrapeado: Cleavage: Men, Women, and the Space Between Us
+2025-01-21 16:17:20,716 - CRITICAL - Libro scrapeado: The Last American Road Trip: A Memoir
+2025-01-21 16:17:23,805 - CRITICAL - Libro scrapeado: Uprooted: Family Trauma, Unknown Origins, and the Secretive History of Artificial Insemination
+2025-01-21 16:17:35,811 - CRITICAL - Error al procesar la categoría Music: Message: 
+
+2025-01-21 16:17:40,966 - CRITICAL - Libro scrapeado: Shaw Connolly Lives to Tell
+2025-01-21 16:17:43,228 - CRITICAL - Libro scrapeado: Star-Crossed Egg Tarts
+2025-01-21 16:17:45,747 - CRITICAL - Libro scrapeado: Operation Bayou Justice
+2025-01-21 16:17:50,104 - CRITICAL - Libro scrapeado: Embrace the Code: Cultivating Emotional Resilience in a Tough IT Culture
+2025-01-21 16:17:52,891 - CRITICAL - Libro scrapeado: Seeking Shelter: A Working Mother, Her Children, and a Story of Homelessness in America
+2025-01-21 16:17:54,830 - CRITICAL - Libro scrapeado: You're Probably Gayish: The Truth (and Lies) Behind 17 Gay Stereotypes
+2025-01-21 16:17:58,584 - CRITICAL - Libro scrapeado: Far From Home Close to Love: In New York City
+2025-01-21 16:18:00,086 - CRITICAL - Libro scrapeado: When You Know What You Don't Want
+2025-01-21 16:18:02,220 - CRITICAL - Libro scrapeado: The Costume Box: Poems by Peter Hynes
+2025-01-21 16:18:14,097 - CRITICAL - Error al procesar la categoría Psychology: Message: 
+
+2025-01-21 16:18:19,197 - CRITICAL - Libro scrapeado: Forget Me Not
+2025-01-21 16:18:22,790 - CRITICAL - Libro scrapeado: Lights Out
+2025-01-21 16:18:25,826 - CRITICAL - Libro scrapeado: The King's Maiden
+2025-01-21 16:18:29,737 - CRITICAL - Libro scrapeado: The Social Paradox: Autonomy, Connection, and Why We Need Both to Find Happiness
+2025-01-21 16:18:32,145 - CRITICAL - Libro scrapeado: Untethered: How Visionaries Think about the Mobile-First Future
+2025-01-21 16:18:34,091 - CRITICAL - Libro scrapeado: Uprooted: Family Trauma, Unknown Origins, and the Secretive History of Artificial Insemination
+2025-01-21 16:18:37,817 - CRITICAL - Libro scrapeado: Taken to the Stars
+2025-01-21 16:18:39,306 - CRITICAL - Libro scrapeado: Feudal
+2025-01-21 16:18:40,767 - CRITICAL - Libro scrapeado: Bon Vivant
+2025-01-21 16:18:43,360 - CRITICAL - Libro scrapeado: Embrace the Code: Cultivating Emotional Resilience in a Tough IT Culture
+2025-01-21 16:18:46,453 - CRITICAL - Libro scrapeado: The Mindful Path: 9 Weeks to Emotional Clarity and Inner Calm
+2025-01-21 16:18:48,353 - CRITICAL - Libro scrapeado: Even If: Keeping Faith in the Face of Adversity
+2025-01-21 16:19:00,252 - CRITICAL - Error al procesar la categoría Sports: Message: 
+
+2025-01-21 16:19:05,349 - CRITICAL - Libro scrapeado: The Weekend Guests
+2025-01-21 16:19:07,567 - CRITICAL - Libro scrapeado: Nemesis
+2025-01-21 16:19:10,105 - CRITICAL - Libro scrapeado: Artificial Agent
+2025-01-21 16:19:13,422 - CRITICAL - Libro scrapeado: The Last American Road Trip: A Memoir
+2025-01-21 16:19:16,143 - CRITICAL - Libro scrapeado: Worlds to Discover: Kayak Adventures One Inch Above the Water
+2025-01-21 16:19:18,253 - CRITICAL - Libro scrapeado: Breakfast Wine
+2025-01-21 16:19:22,280 - CRITICAL - Libro scrapeado: Mistress of Bones
+2025-01-21 16:19:24,391 - CRITICAL - Libro scrapeado: The Last Bookstore on Earth
+2025-01-21 16:19:26,257 - CRITICAL - Libro scrapeado: All Better Now
+2025-01-21 16:19:26,257 - CRITICAL - Se encontró la sección 'More genres'. Parando el scraping de categorías.
+2025-01-21 16:19:26,546 - CRITICAL - Navegador cerrado.
