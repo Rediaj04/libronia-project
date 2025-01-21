@@ -18,9 +18,9 @@ CREATE TABLE IF NOT EXISTS usuarios (
 -- Crear la tabla categorias
 CREATE TABLE IF NOT EXISTS categorias (
     id INT AUTO_INCREMENT PRIMARY KEY,               -- Identificador único de la categoría
-    nombre_categoria VARCHAR(255) UNIQUE NOT NULL,   -- Nombre único de la categoría
-    descripcion TEXT                                 -- Descripción de la categoría (opcional)
+    nombre_categoria VARCHAR(255) UNIQUE NOT NULL     -- Nombre único de la categoría (sin coma al final)
 );
+
 
 -- Crear la tabla datos_scrapeados
 CREATE TABLE IF NOT EXISTS datos_scrapeados (
