@@ -15,7 +15,7 @@ try {
         while (($data = fgetcsv($handle)) !== false) {
             // Asignar los valores del CSV a variables
             $titulo = $data[0];
-            $autor = $data[1];
+            $autor_nombre = $data[1]; // Cambiado a autor_nombre
             $descripcion = $data[2];
             $formato = $data[3];
 
@@ -39,6 +39,23 @@ try {
             $libro_url = $data[10];
             $categoria = trim($data[11]); // Limpiar espacios
 
+            // Buscar el ID del autor
+            $queryAutor = "SELECT id FROM autores WHERE nombre_autor = :autor_nombre LIMIT 1";
+            $stmtAutor = $pdo->prepare($queryAutor);
+            $stmtAutor->bindValue(':autor_nombre', $autor_nombre, PDO::PARAM_STR);
+            $stmtAutor->execute();
+
+            $autor_id = $stmtAutor->fetchColumn();
+
+            // Si el autor no existe, insertarlo
+            if (!$autor_id) {
+                $sqlAutor = "INSERT INTO autores (nombre_autor) VALUES (:autor_nombre)";
+                $stmtInsertAutor = $pdo->prepare($sqlAutor);
+                $stmtInsertAutor->execute([':autor_nombre' => $autor_nombre]);
+                $autor_id = $pdo->lastInsertId();
+                echo "Autor '$autor_nombre' creado con éxito.\n";
+            }
+
             // Buscar el ID de la categoría
             $queryCategoria = "SELECT id FROM categorias WHERE nombre_categoria = :categoria LIMIT 1";
             $stmtCategoria = $pdo->prepare($queryCategoria);
@@ -57,26 +74,39 @@ try {
                 echo "Categoría '$categoria' creada con éxito.\n";
             }
 
-            // Preparar y ejecutar la inserción de los datos del libro
-            $sql = "INSERT INTO datos_scrapeados (titulo, autor, descripcion, formato, num_paginas, fecha_publicacion, num_calificaciones, num_resenas, imagen_url, libro_url, categoria_id) 
-                    VALUES (:titulo, :autor, :descripcion, :formato, :num_paginas, :fecha_publicacion, :num_calificaciones, :num_resenas, :imagen_url, :libro_url, :categoria_id)";
+            // Verificar si el libro ya existe
+            $queryLibro = "SELECT id FROM libros WHERE titulo = :titulo AND autor_id = :autor_id LIMIT 1"; // Cambiado a 'libros'
+            $stmtLibro = $pdo->prepare($queryLibro);
+            $stmtLibro->bindValue(':titulo', $titulo, PDO::PARAM_STR);
+            $stmtLibro->bindValue(':autor_id', $autor_id, PDO::PARAM_INT);
+            $stmtLibro->execute();
 
-            $stmt = $pdo->prepare($sql);
-            $stmt->execute([
-                ':titulo' => $titulo,
-                ':autor' => $autor,
-                ':descripcion' => $descripcion,
-                ':formato' => $formato,
-                ':num_paginas' => $num_paginas,
-                ':fecha_publicacion' => $fecha_publicacion,
-                ':num_calificaciones' => $num_calificaciones,
-                ':num_resenas' => $num_resenas,
-                ':imagen_url' => $imagen_url,
-                ':libro_url' => $libro_url,
-                ':categoria_id' => $categoria_id
-            ]);
+            $libro_id = $stmtLibro->fetchColumn();
 
-            echo "Libro '$titulo' insertado correctamente.\n";
+            if ($libro_id) {
+                echo "El libro '$titulo' ya existe en la base de datos.\n";
+            } else {
+                // Preparar y ejecutar la inserción de los datos del libro
+                $sql = "INSERT INTO libros (titulo, descripcion, formato, num_paginas, fecha_publicacion, num_calificaciones, num_resenas, imagen_url, libro_url, categoria_id, autor_id) 
+                        VALUES (:titulo, :descripcion, :formato, :num_paginas, :fecha_publicacion, :num_calificaciones, :num_resenas, :imagen_url, :libro_url, :categoria_id, :autor_id)";
+
+                $stmt = $pdo->prepare($sql);
+                $stmt->execute([
+                    ':titulo' => $titulo,
+                    ':descripcion' => $descripcion,
+                    ':formato' => $formato,
+                    ':num_paginas' => $num_paginas,
+                    ':fecha_publicacion' => $fecha_publicacion,
+                    ':num_calificaciones' => $num_calificaciones,
+                    ':num_resenas' => $num_resenas,
+                    ':imagen_url' => $imagen_url,
+                    ':libro_url' => $libro_url,
+                    ':categoria_id' => $categoria_id,
+                    ':autor_id' => $autor_id
+                ]);
+
+                echo "Libro '$titulo' insertado correctamente.\n";
+            }
         }
 
         fclose($handle);
