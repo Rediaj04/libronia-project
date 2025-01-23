@@ -18,15 +18,19 @@ CREATE TABLE IF NOT EXISTS usuarios (
 -- Crear la tabla categorias
 CREATE TABLE IF NOT EXISTS categorias (
     id INT AUTO_INCREMENT PRIMARY KEY,               -- Identificador único de la categoría
-    nombre_categoria VARCHAR(255) UNIQUE NOT NULL     -- Nombre único de la categoría (sin coma al final)
+    nombre_categoria VARCHAR(255) UNIQUE NOT NULL     -- Nombre único de la categoría
 );
 
+-- Crear la tabla autores
+CREATE TABLE IF NOT EXISTS autores (
+    id INT AUTO_INCREMENT PRIMARY KEY,                -- Identificador único del autor
+    nombre_autor VARCHAR(255) UNIQUE NOT NULL         -- Nombre único del autor
+);
 
--- Crear la tabla datos_scrapeados
-CREATE TABLE IF NOT EXISTS datos_scrapeados (
-    id INT AUTO_INCREMENT PRIMARY KEY,               -- Identificador único del dato scrapeado
-    titulo VARCHAR(255) NOT NULL,                    -- Título del libro u objeto scrapeado
-    autor VARCHAR(255) NOT NULL,                     -- Autor del libro
+-- Crear la tabla libros
+CREATE TABLE IF NOT EXISTS libros (
+    id INT AUTO_INCREMENT PRIMARY KEY,               -- Identificador único del libro
+    titulo VARCHAR(255) NOT NULL,                    -- Título del libro
     descripcion TEXT,                                -- Descripción o sinopsis del libro
     formato VARCHAR(50),                             -- Formato del libro (PDF, físico, etc.)
     num_paginas INT,                                 -- Número de páginas
@@ -36,7 +40,8 @@ CREATE TABLE IF NOT EXISTS datos_scrapeados (
     imagen_url VARCHAR(255),                         -- URL de la imagen del libro
     libro_url VARCHAR(255),                          -- URL del libro o referencia
     categoria_id INT,                                -- Relación con la tabla categorías
-    usuario_id INT,                                  -- Relación con el usuario asociado (si aplica)
+    autor_id INT,                                    -- Relación con la tabla autores
     FOREIGN KEY (categoria_id) REFERENCES categorias(id) ON DELETE SET NULL ON UPDATE CASCADE,
-    FOREIGN KEY (usuario_id) REFERENCES usuarios(id) ON DELETE SET NULL ON UPDATE CASCADE
+    FOREIGN KEY (autor_id) REFERENCES autores(id) ON DELETE SET NULL ON UPDATE CASCADE,
+    UNIQUE (titulo, autor_id)                        -- Restricción de unicidad para título y autor_id
 );

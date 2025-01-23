@@ -1,5 +1,5 @@
 <?php
-require_once '/../config/db.php'; // Incluye la configuración para conectar a la base de datos
+require_once __DIR__ . '/../config/Database.php'; // Incluye la configuración para conectar a la base de datos
 
 /**
  * Este script se utiliza para insertar un usuario administrador predeterminado en la tabla `usuarios`.
@@ -11,7 +11,7 @@ require_once '/../config/db.php'; // Incluye la configuración para conectar a l
 
 try {
     // Conectar a la base de datos
-    $db = (new Database())->connect();
+    $db = (new Config\Database())->connect(); // Asegúrate de usar el namespace correcto
 
     // Datos del usuario administrador
     $username = 'admin'; // Ahora 'nombre'
