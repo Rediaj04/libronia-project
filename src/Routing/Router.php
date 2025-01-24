@@ -1,6 +1,12 @@
 <?php
 namespace Routing;
 
+use Controller\DefaultController;
+
+$router = new Router();
+
+$router->addRoute('GET', 'charts', [DefaultController::class, 'charts']);
+
 class Router {
     private $routes = [];
 

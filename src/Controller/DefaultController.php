@@ -1,4 +1,5 @@
 <?php
+
 namespace Controller;
 
 use Config\Database;
@@ -23,10 +24,36 @@ class DefaultController {
     }
 
     /**
-     * Página principal
+     * Página principal: muestra las categorías y las portadas de los libros.
      */
     public function home() {
-        echo $this->twig->render('index.twig', ['name' => 'Libronia']);
+        try {
+            // Conectar a la base de datos
+            $db = (new Database())->connect();
+
+            // Consulta para obtener categorías y sus libros (agrupados)
+            $query = "
+                SELECT c.nombre_categoria, l.imagen_url
+                FROM categorias c
+                LEFT JOIN libros l ON c.id = l.categoria_id
+                ORDER BY c.nombre_categoria;
+            ";
+
+            // Ejecutar consulta
+            $stmt = $db->query($query);
+
+            // Agrupar resultados por categorías
+            $categorias = $stmt->fetchAll(PDO::FETCH_GROUP | PDO::FETCH_ASSOC);
+
+            // Renderizar la vista con las categorías y libros
+            echo $this->twig->render('index.twig', [
+                'categorias' => $categorias
+            ]);
+        } catch (PDOException $e) {
+            // Manejar errores de conexión o consulta
+            echo "Error al cargar los datos: " . $e->getMessage();
+            error_log("Error al cargar categorías y libros: " . $e->getMessage());
+        }
     }
 
     /**
@@ -51,13 +78,13 @@ class DefaultController {
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-            $password = $_POST['password']; // Sanitización adicional no es necesaria para contraseñas
+            $password = $_POST['password'];
 
             try {
                 // Conectar a la base de datos
                 $db = (new Database())->connect();
 
-                // Consultar el usuario usando la columna correcta 'correo' para el campo de username
+                // Consultar el usuario usando la columna correcta
                 $stmt = $db->prepare("SELECT id, contrasena FROM usuarios WHERE correo = :username");
                 $stmt->bindParam(':username', $username, PDO::PARAM_STR);
                 $stmt->execute();
@@ -88,9 +115,16 @@ class DefaultController {
      */
     public function logout() {
         $this->initSession();
-
         session_destroy();
         header('Location: /login');
         exit;
+    }
+
+    /**
+     * Página de gráficos (Charts)
+     */
+    public function charts() {
+        echo "Grafico aquí";
+        echo $this->twig->render('charts.twig');
     }
 }

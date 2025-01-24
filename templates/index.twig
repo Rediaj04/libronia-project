@@ -3,41 +3,22 @@
 {% block title %}Inicio{% endblock %}
 
 {% block content %}
-<div class="text-center">
-    <h1 class="display-4 text-primary">Bienvenido a Libronia</h1>
-    <p class="lead">Explora un mundo de libros desde la comodidad de tu hogar.</p>
-</div>
+<div class="container">
+    <h1 class="text-center text-primary mb-5">Categorías y Libros</h1>
 
-<div class="row mt-5">
-    <div class="col-md-4">
-        <div class="card shadow-sm">
-            <img src="/img/novelas.jpg" class="card-img-top" alt="Novelas">
-            <div class="card-body">
-                <h5 class="card-title">Novelas</h5>
-                <p class="card-text">Historias que te atraparán desde la primera página.</p>
-                <a href="/categorias/novelas" class="btn btn-primary">Explorar</a>
+    {% for categoria, libros in categorias %}
+    <div class="categoria-section my-4">
+        <h2 class="text-secondary">{{ categoria }}</h2>
+        <div class="row justify-content-start">
+            {% for libro in libros %}
+            <div class="col-md-2 col-sm-3 col-4 mb-3">
+                <div class="card shadow-sm">
+                    <img src="{{ libro.imagen_url }}" class="card-img-top portada" alt="Portada de {{ categoria }}">
+                </div>
             </div>
+            {% endfor %}
         </div>
     </div>
-    <div class="col-md-4">
-        <div class="card shadow-sm">
-            <img src="/img/educativos.jpg" class="card-img-top" alt="Educativos">
-            <div class="card-body">
-                <h5 class="card-title">Educativos</h5>
-                <p class="card-text">Aprende y crece con nuestros libros educativos.</p>
-                <a href="/categorias/educativos" class="btn btn-primary">Explorar</a>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="card shadow-sm">
-            <img src="/img/fantasia.jpg" class="card-img-top" alt="Fantasía">
-            <div class="card-body">
-                <h5 class="card-title">Fantasía</h5>
-                <p class="card-text">Déjate llevar por mundos mágicos y aventuras increíbles.</p>
-                <a href="/categorias/fantasia" class="btn btn-primary">Explorar</a>
-            </div>
-        </div>
-    </div>
+    {% endfor %}
 </div>
 {% endblock %}
