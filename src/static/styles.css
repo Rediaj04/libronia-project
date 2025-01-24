@@ -1,0 +1,15 @@
+.portada {
+    width: 100%; /* Ocupar todo el ancho del contenedor */
+    height: 150px; /* Altura fija para uniformidad */
+    object-fit: cover; /* Ajustar la imagen sin distorsionarla */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.categoria-section {
+    margin-bottom: 2rem; /* Espaciado entre categorías */
+}
+
+.card {
+    border: none; /* Opcional: sin bordes */
+}
