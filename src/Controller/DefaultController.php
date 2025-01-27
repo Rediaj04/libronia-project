@@ -24,35 +24,40 @@ class DefaultController {
     }
 
     /**
-     * Página principal: muestra las categorías y las portadas de los libros.
+     * Página principal: muestra las categorías y los autores.
      */
     public function home() {
         try {
             // Conectar a la base de datos
             $db = (new Database())->connect();
 
-            // Consulta para obtener categorías y sus libros (agrupados)
+            // Consulta para obtener categorías y sus autores
             $query = "
-                SELECT c.nombre_categoria, l.imagen_url
+                SELECT c.nombre_categoria, a.nombre_autor
                 FROM categorias c
                 LEFT JOIN libros l ON c.id = l.categoria_id
-                ORDER BY c.nombre_categoria;
+                LEFT JOIN autores a ON l.autor_id = a.id
+                ORDER BY c.nombre_categoria, a.nombre_autor;
             ";
 
             // Ejecutar consulta
             $stmt = $db->query($query);
 
             // Agrupar resultados por categorías
-            $categorias = $stmt->fetchAll(PDO::FETCH_GROUP | PDO::FETCH_ASSOC);
+            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $categorias = [];
+            foreach ($result as $row) {
+                $categorias[$row['nombre_categoria']][] = ['autor_nombre' => $row['nombre_autor']];
+            }
 
-            // Renderizar la vista con las categorías y libros
+            // Renderizar la vista con las categorías y autores
             echo $this->twig->render('index.twig', [
                 'categorias' => $categorias
             ]);
         } catch (PDOException $e) {
             // Manejar errores de conexión o consulta
             echo "Error al cargar los datos: " . $e->getMessage();
-            error_log("Error al cargar categorías y libros: " . $e->getMessage());
+            error_log("Error al cargar categorías y autores: " . $e->getMessage());
         }
     }
 
