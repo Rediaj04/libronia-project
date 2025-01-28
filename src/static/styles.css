@@ -1,15 +1,17 @@
-.portada {
-    width: 100%; /* Ocupar todo el ancho del contenedor */
-    height: 150px; /* Altura fija para uniformidad */
-    object-fit: cover; /* Ajustar la imagen sin distorsionarla */
-    border-radius: 5px; /* Bordes redondeados */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
-}
+/* .portada {
+    width: 100%; 
+    height: 150px; 
+    object-fit: cover; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+} */
 
-.categoria-section {
-    margin-bottom: 2rem; /* Espaciado entre categorías */
-}
+/* .categoria-section {
+    margin-bottom: 2rem; 
+} */
 
+
+/* 
 .card {
-    border: none; /* Opcional: sin bordes */
-}
+    border: none; 
+} */

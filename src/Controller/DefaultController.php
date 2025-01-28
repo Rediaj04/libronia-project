@@ -9,6 +9,7 @@ use PDOException;
 
 class DefaultController {
     private $twig;
+    private $itemsPerPage = 10;
 
     public function __construct() {
         $this->twig = (new TwigSetup())->getTwig();
@@ -24,40 +25,34 @@ class DefaultController {
     }
 
     /**
-     * Página principal: muestra las categorías y los autores.
+     * Página principal: muestra las categorías.
      */
     public function home() {
         try {
             // Conectar a la base de datos
             $db = (new Database())->connect();
 
-            // Consulta para obtener categorías y sus autores
+            // Consulta para obtener categorías
             $query = "
-                SELECT c.nombre_categoria, a.nombre_autor
+                SELECT DISTINCT c.nombre_categoria
                 FROM categorias c
-                LEFT JOIN libros l ON c.id = l.categoria_id
-                LEFT JOIN autores a ON l.autor_id = a.id
-                ORDER BY c.nombre_categoria, a.nombre_autor;
+                ORDER BY c.nombre_categoria;
             ";
 
             // Ejecutar consulta
             $stmt = $db->query($query);
 
-            // Agrupar resultados por categorías
-            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-            $categorias = [];
-            foreach ($result as $row) {
-                $categorias[$row['nombre_categoria']][] = ['autor_nombre' => $row['nombre_autor']];
-            }
+            // Obtener categorías
+            $categorias = $stmt->fetchAll(PDO::FETCH_COLUMN);
 
-            // Renderizar la vista con las categorías y autores
+            // Renderizar la vista con las categorías
             echo $this->twig->render('index.twig', [
                 'categorias' => $categorias
             ]);
         } catch (PDOException $e) {
             // Manejar errores de conexión o consulta
             echo "Error al cargar los datos: " . $e->getMessage();
-            error_log("Error al cargar categorías y autores: " . $e->getMessage());
+            error_log("Error al cargar categorías: " . $e->getMessage());
         }
     }
 
@@ -129,7 +124,77 @@ class DefaultController {
      * Página de gráficos (Charts)
      */
     public function charts() {
-        echo "Grafico aquí";
         echo $this->twig->render('charts.twig');
+    }
+
+    /**
+     * Página de categoría: muestra los libros de una categoría específica
+     */
+    public function categoria($params) {
+        try {
+            $db = (new Database())->connect();
+    
+            $nombre_categoria = urldecode($params['nombre_categoria']);
+            
+            // Verificar si la categoría existe
+            $checkCategoryQuery = "SELECT id FROM categorias WHERE nombre_categoria = :nombre_categoria";
+            $checkStmt = $db->prepare($checkCategoryQuery);
+            $checkStmt->bindParam(':nombre_categoria', $nombre_categoria, PDO::PARAM_STR);
+            $checkStmt->execute();
+    
+            if ($checkStmt->rowCount() === 0) {
+                // Categoría no encontrada
+                http_response_code(404);
+                echo $this->twig->render('404.twig', ['mensaje' => 'Categoría no encontrada']);
+                return;
+            }
+    
+            // Paginación
+            $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+            $offset = ($page - 1) * $this->itemsPerPage;
+    
+            // Consulta para obtener los libros de la categoría con paginación
+            $query = "
+                SELECT l.titulo, l.imagen_url
+                FROM libros l
+                INNER JOIN categorias c ON l.categoria_id = c.id
+                WHERE c.nombre_categoria = :nombre_categoria
+                LIMIT :offset, :items_per_page
+            ";
+    
+            $stmt = $db->prepare($query);
+            $stmt->bindParam(':nombre_categoria', $nombre_categoria, PDO::PARAM_STR);
+            $stmt->bindParam(':offset', $offset, PDO::PARAM_INT);
+            $stmt->bindParam(':items_per_page', $this->itemsPerPage, PDO::PARAM_INT);
+            $stmt->execute();
+    
+            $libros = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+            // Obtener el total de libros para la paginación
+            $countQuery = "
+                SELECT COUNT(*) as total
+                FROM libros l
+                INNER JOIN categorias c ON l.categoria_id = c.id
+                WHERE c.nombre_categoria = :nombre_categoria
+            ";
+            $countStmt = $db->prepare($countQuery);
+            $countStmt->bindParam(':nombre_categoria', $nombre_categoria, PDO::PARAM_STR);
+            $countStmt->execute();
+            $totalLibros = $countStmt->fetchColumn();
+    
+            $totalPages = ceil($totalLibros / $this->itemsPerPage);
+    
+            // Renderizar la vista de categoría
+            echo $this->twig->render('categoria.twig', [
+                'categoria' => $nombre_categoria,
+                'libros' => $libros,
+                'currentPage' => $page,
+                'totalPages' => $totalPages,
+                'totalLibros' => $totalLibros
+            ]);
+        } catch (PDOException $e) {
+            echo "Error al cargar los libros de la categoría: " . $e->getMessage();
+            error_log("Error en categoría: " . $e->getMessage());
+        }
     }
 }

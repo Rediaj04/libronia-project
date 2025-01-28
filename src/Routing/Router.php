@@ -6,6 +6,7 @@ use Controller\DefaultController;
 $router = new Router();
 
 $router->addRoute('GET', 'charts', [DefaultController::class, 'charts']);
+$router->addRoute('GET', 'categoria/{nombre_categoria}', [DefaultController::class, 'categoria']);
 
 class Router {
     private $routes = [];
@@ -64,7 +65,7 @@ class Router {
      * @return bool Verdadero si coinciden, falso de lo contrario
      */
     private function matchRoute($route, $uri) {
-        $routePattern = preg_replace('/\{[a-zA-Z0-9_]+\}/', '([a-zA-Z0-9_-]+)', $route);
+        $routePattern = preg_replace('/\{[a-zA-Z0-9_]+\}/', '([a-zA-Z0-9_%20-]+)', $route);
         return preg_match("#^$routePattern$#", $uri);
     }
 
@@ -77,7 +78,7 @@ class Router {
      */
     private function extractParams($route, $uri) {
         $params = [];
-        $routePattern = preg_replace('/\{([a-zA-Z0-9_]+)\}/', '(?P<\1>[a-zA-Z0-9_-]+)', $route);
+        $routePattern = preg_replace('/\{([a-zA-Z0-9_]+)\}/', '(?P<\1>[a-zA-Z0-9_%20-]+)', $route);
         if (preg_match("#^$routePattern$#", $uri, $matches)) {
             foreach ($matches as $key => $value) {
                 if (!is_int($key)) {
