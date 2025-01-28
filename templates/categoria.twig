@@ -1,0 +1,26 @@
+{% extends 'base.twig' %}
+
+{% block title %}Categoría: {{ categoria }}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="text-primary text-center mb-5">Categoría: {{ categoria }}</h1>
+    <p class="text-secondary text-center mb-4">
+        En esta categoría encontrarás todos los libros relacionados.
+    </p>
+
+    <div class="row">
+        {% for libro in libros %}
+        <div class="col-md-3 col-sm-6 col-12 mb-4">
+            <div class="card shadow-sm">
+                <img src="{{ libro.imagen_url }}" class="card-img-top" alt="{{ libro.titulo }}">
+            </div>
+        </div>
+        {% else %}
+        <div class="col-12">
+            <p class="text-center text-muted">No hay libros en esta categoría.</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

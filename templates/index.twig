@@ -6,7 +6,7 @@
 <div class="container">
     <h1 class="text-center text-primary mb-5">Bienvenido a Libronia</h1>
     <div class="alert alert-success text-center" role="alert">
-        ¡Explora nuestras categorías y descubre nuevos autores!
+        ¡Explora nuestras categorías y descubre nuevas lecturas!
     </div>
 
     <div class="row mb-4">
@@ -15,38 +15,13 @@
                 <div class="card-body">
                     <h5 class="card-title text-secondary">Categorías</h5>
                     <div class="row">
-                        {% for categoria, libros in categorias %}
+                        {% for categoria in categorias %}
                         <div class="col-md-4 col-sm-6 col-12 mb-2">
-                            <div class="list-group-item">{{ categoria }}</div>
+                            <!-- Enlace a la página de categoría -->
+                            <a href="/categoria/{{ categoria|url_encode }}" class="list-group-item list-group-item-action">
+                                {{ categoria }}
+                            </a>
                         </div>
-                        {% endfor %}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row mb-4">
-        <div class="col-12">
-            <div class="card shadow-sm">
-                <div class="card-body">
-                    <h5 class="card-title text-secondary">Autores</h5>
-                    <div class="row">
-                        {% set current_initial = '' %}
-                        {% for categoria, libros in categorias %}
-                        {% for libro in libros %}
-                        {% set initial = libro.autor_nombre[0] %}
-                        {% if initial != current_initial %}
-                        {% set current_initial = initial %}
-                        <div class="col-12">
-                            <h6 class="text-secondary mt-3">{{ current_initial }}</h6>
-                            <hr>
-                        </div>
-                        {% endif %}
-                        <div class="col-md-4 col-sm-6 col-12 mb-2">
-                            <div class="list-group-item">{{ libro.autor_nombre }}</div>
-                        </div>
-                        {% endfor %}
                         {% endfor %}
                     </div>
                 </div>

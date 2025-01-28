@@ -20,11 +20,13 @@ use Controller\DefaultController;
 $router = new Router();
 
 // Registrar rutas
-$router->addRoute('GET', '/', [new DefaultController(), 'home']);      // Página principal
-$router->addRoute('GET', '/admin', [new DefaultController(), 'admin']); // Panel de administración
-$router->addRoute('GET', '/login', [new DefaultController(), 'login']); // Página de login
-$router->addRoute('POST', '/login', [new DefaultController(), 'login']); // Manejo de formulario de login
-$router->addRoute('GET', '/logout', [new DefaultController(), 'logout']); // Cerrar sesión
+$router->addRoute('GET', '/', [new DefaultController(), 'home']);
+$router->addRoute('GET', '/admin', [new DefaultController(), 'admin']);
+$router->addRoute('GET', '/login', [new DefaultController(), 'login']);
+$router->addRoute('POST', '/login', [new DefaultController(), 'login']);
+$router->addRoute('GET', '/logout', [new DefaultController(), 'logout']);
+$router->addRoute('GET', '/charts', [new DefaultController(), 'charts']);
+$router->addRoute('GET', '/categoria/{nombre_categoria}', [new DefaultController(), 'categoria']);
 
 // Manejar la solicitud entrante
 try {
