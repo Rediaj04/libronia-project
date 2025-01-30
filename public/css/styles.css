@@ -35,21 +35,25 @@ footer {
     font-size: 0.9rem;
 }
 
-.card-img-top {
-    width: 160px;
-    height: 230px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
 @media (max-width: 768px) {
     .card-img-top {
         height: 150px;
     }
 }
 
-.card {
-    margin-bottom: 10px; /* Reduce la distancia vertical */
+.cardl {
+    width: 100%; /* Asegura que la tarjeta use todo el espacio de la columna */
+    max-width: 260px; /* Opcional, para limitar el tamaño máximo */
+    margin: auto; /* Centra la tarjeta dentro de la columna */
+}
+
+
+.card-img-topl {
+    width: 240px; /* Ajusta la imagen al ancho de la tarjeta */
+    height: 320px; /* Mantiene una altura uniforme */
+    object-fit: cover; /* Recorta la imagen para llenar el espacio sin deformarla */
+    background-color: transparent; 
+    padding: 20px;
 }
 
 .row > .col-md-3, 
@@ -57,3 +61,4 @@ footer {
 .row > .col-12 {
     padding: 5px; /* Reduce el espacio horizontal y vertical entre columnas */
 }
+
