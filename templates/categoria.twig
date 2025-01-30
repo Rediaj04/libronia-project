@@ -12,10 +12,12 @@
     <div class="row">
         {% for libro in libros %}
             <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4">
-            <div class="card shadow-sm">
-                <img src="{{ libro.imagen_url }}" class="card-img-topl" alt="{{ libro.titulo }}">
+                <div class="card shadow-sm">
+<a href="/libro/{{ libro.id }}">
+    <img src="{{ libro.imagen_url }}" class="card-img-topl" alt="{{ libro.titulo }}">
+</a>
+                </div>
             </div>
-        </div>
         {% else %}
         <div class="col-12">
             <p class="text-center text-muted">No hay libros en esta categoría.</p>
