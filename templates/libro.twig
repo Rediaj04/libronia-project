@@ -1,26 +1,26 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ libro.titulo }}</title>
-    <link href="/styles.css" rel="stylesheet">
-</head>
-<body>
-    <div class="container">
-        <h1>{{ libro.titulo }}</h1>
-        <img src="{{ libro.imagen_url }}" alt="Portada de {{ libro.titulo }}" class="portada">
-        <p><strong>Autor:</strong> {{ libro.nombre_autor }}</p>
-        <p><strong>Descripción:</strong> {{ libro.descripcion }}</p>
-        <p><strong>Formato:</strong> {{ libro.formato }}</p>
-        <p><strong>Número de páginas:</strong> {{ libro.num_paginas }}</p>
-        <p><strong>Fecha de publicación:</strong> {{ libro.fecha_publicacion }}</p>
-        <p><strong>Número de calificaciones:</strong> {{ libro.num_calificaciones }}</p>
-        <p><strong>Número de reseñas:</strong> {{ libro.num_resenas }}</p>
-        <p><strong>Categoría:</strong> {{ libro.nombre_categoria }}</p>
-        <a href="{{ libro.libro_url }}" target="_blank">Ver libro</a>
-        <br><br>
-        <a href="/categorias">Volver a Categorías</a>
+{% extends 'base.twig' %}
+
+{% block title %}{{ libro.titulo }}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="text-primary text-center mb-3">{{ libro.titulo }}</h1>
+
+    <div class="row">
+        <div class="col-md-4">
+            <img src="{{ libro.imagen_url }}" class="img-fluid rounded shadow" alt="{{ libro.titulo }}">
+        </div>
+        <div class="col-md-8">
+            <p><strong>Autor:</strong> {{ libro.nombre_autor }}</p>
+            <p><strong>Categoría:</strong> {{ libro.nombre_categoria }}</p>
+            <p><strong>Formato:</strong> {{ libro.formato }}</p>
+            <p><strong>Número de páginas:</strong> {{ libro.num_paginas }}</p>
+            <p><strong>Fecha de publicación:</strong> {{ libro.fecha_publicacion }}</p>
+            <p><strong>Calificaciones:</strong> {{ libro.num_calificaciones }}</p>
+            <p><strong>Reseñas:</strong> {{ libro.num_resenas }}</p>
+            <p><strong>Descripción:</strong> {{ libro.descripcion }}</p>
+            <a href="{{ libro.libro_url }}" class="btn btn-primary" target="_blank">Ver libro</a>
+        </div>
     </div>
-</body>
-</html>
+</div>
+{% endblock %}

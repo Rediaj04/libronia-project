@@ -27,6 +27,7 @@ $router->addRoute('POST', '/login', [new DefaultController(), 'login']);
 $router->addRoute('GET', '/logout', [new DefaultController(), 'logout']);
 $router->addRoute('GET', '/charts', [new DefaultController(), 'charts']);
 $router->addRoute('GET', '/categoria/{nombre_categoria}', [new DefaultController(), 'categoria']);
+$router->addRoute('GET', '/libro/{id}', [new DefaultController(), 'detalleLibro']);
 
 // Manejar la solicitud entrante
 try {

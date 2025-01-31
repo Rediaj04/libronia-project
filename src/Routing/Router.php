@@ -7,7 +7,7 @@ $router = new Router();
 
 $router->addRoute('GET', 'charts', [DefaultController::class, 'charts']);
 $router->addRoute('GET', 'categoria/{nombre_categoria}', [DefaultController::class, 'categoria']);
-$router->addRoute('GET', 'libro/{id}', [DefaultController::class, 'detalleLibro']);
+$router->addRoute('GET', '/libro/{id}', [new DefaultController(), 'detalleLibro']);
 
 class Router {
     private $routes = [];
@@ -33,17 +33,21 @@ class Router {
      * @param string $method El método HTTP usado en la solicitud
      * @param string $uri La URI solicitada
      */
+
     public function handleRequest($method, $uri) {
         $uri = $this->normalizeRoute($uri);
+        error_log("Manejando petición: " . $method . " " . $uri);
+        error_log("Método: $method - URI: $uri");
 
         foreach ($this->routes as $route) {
             if ($route['method'] === $method && $this->matchRoute($route['route'], $uri)) {
+                error_log("Ruta encontrada: " . $route['route']);
                 call_user_func($route['handler'], $this->extractParams($route['route'], $uri));
                 return;
             }
         }
-
-        // Respuesta 404 si no se encuentra la ruta
+    
+        // Si no se encuentra la ruta
         http_response_code(404);
         echo "Página no encontrada.";
     }
@@ -67,9 +71,10 @@ class Router {
      */
     private function matchRoute($route, $uri) {
         $routePattern = preg_replace('/\{[a-zA-Z0-9_]+\}/', '([a-zA-Z0-9_%20-]+)', $route);
+        error_log("Comparando URI: " . $uri . " con patrón: " . $routePattern);
         return preg_match("#^$routePattern$#", $uri);
     }
-
+    
     /**
      * Extraer parámetros dinámicos de la URI
      * 
@@ -87,6 +92,7 @@ class Router {
                 }
             }
         }
+        error_log("Extracting params from route: " . $route . " with URI: " . $uri);
         return $params;
     }
 }
