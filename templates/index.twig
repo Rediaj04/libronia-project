@@ -32,5 +32,56 @@
     <div class="alert alert-info text-center mt-4" role="alert">
         ¡Sigue explorando y encuentra tu próxima lectura favorita!
     </div>
+
+    <!-- Mapa -->
+    <div class="alert alert-info text-center mt-4" role="alert">
+        <h5>Bibliotecas cercanas a tu ubicación:</h5>
+    </div>
+
+    <div id="map" style="height: 400px;"></div> <!-- El contenedor para el mapa -->
+    
 </div>
+
+{% block scripts %}
+<script src="/assets/leaflet/leaflet.js"></script>
+<script>
+    // Usamos la geolocalización del navegador para obtener la ubicación del usuario
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            var userLat = position.coords.latitude;
+            var userLon = position.coords.longitude;
+
+            // Inicializamos el mapa centrado en la ubicación del usuario
+            var map = L.map('map').setView([userLat, userLon], 13);
+
+            // Cargamos el mapa con OpenStreetMap
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            // Marcador para la ubicación del usuario
+            L.marker([userLat, userLon]).addTo(map)
+                .bindPopup('Tu ubicación')
+                .openPopup();
+
+            // Ejemplo de bibliotecas cercanas (estos puntos serían dinámicos de alguna base de datos)
+            var bibliotecas = [
+                { lat: userLat + 0.01, lon: userLon + 0.01, name: 'Biblioteca Central' },
+                { lat: userLat + 0.02, lon: userLon - 0.02, name: 'Biblioteca del Parque' },
+            ];
+
+            // Añadimos marcadores para las bibliotecas cercanas
+            bibliotecas.forEach(function(biblioteca) {
+                L.marker([biblioteca.lat, biblioteca.lon]).addTo(map)
+                    .bindPopup(biblioteca.name);
+            });
+        }, function(error) {
+            alert('No se pudo obtener tu ubicación.');
+        });
+    } else {
+        alert('La geolocalización no está disponible en este navegador.');
+    }
+</script>
+{% endblock %}
+
 {% endblock %}

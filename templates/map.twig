@@ -1,0 +1,37 @@
+{% extends 'base.twig' %}
+
+{% block title %}Mapa de bibliotecas{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="text-center text-primary mb-5">Bibliotecas cercanas</h1>
+    <div id="map" style="height: 400px;"></div> <!-- Aquí va el mapa -->
+</div>
+
+{% block scripts %}
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script>
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            var userLat = position.coords.latitude;
+            var userLon = position.coords.longitude;
+
+            // Inicializamos el mapa
+            var map = L.map('map').setView([userLat, userLon], 13);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            // Marcador para la ubicación del usuario
+            L.marker([userLat, userLon]).addTo(map)
+                .bindPopup('Tu ubicación')
+                .openPopup();
+        }, function(error) {
+            alert('No se pudo obtener tu ubicación.');
+        });
+    } else {
+        alert('La geolocalización no está disponible en este navegador.');
+    }
+</script>
+{% endblock %}
+{% endblock %}
