@@ -9,7 +9,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 from utils import clean_text, split_format_and_pages
-from config import BASE_URL, WAIT_TIME
+from config import BASE_URL, WAIT_TIME 
 
 # Crear carpetas si no existen
 os.makedirs("logs", exist_ok=True)  # Crea la carpeta de logs si no existe

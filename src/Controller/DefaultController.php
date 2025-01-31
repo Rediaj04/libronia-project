@@ -135,7 +135,7 @@ class DefaultController {
 
             // Consulta para obtener libros de la categoría con paginación
             $query = "
-                SELECT l.titulo, l.imagen_url
+                SELECT l.id, l.titulo, l.imagen_url
                 FROM libros l
                 INNER JOIN categorias c ON l.categoria_id = c.id
                 WHERE c.nombre_categoria = :nombre_categoria
@@ -189,11 +189,24 @@ class DefaultController {
 
 
             $query = "
-            SELECT l.titulo, l.descripcion, l.imagen_url, l.fecha_publicacion, a.nombre_autor, e.nombre_editorial
-            FROM libros l
-            LEFT JOIN autores a ON l.autor_id = a.id
-            LEFT JOIN editoriales e ON l.editorial_id = e.id
-            WHERE l.id = :libroId
+        SELECT 
+        l.id, 
+        l.titulo, 
+        l.descripcion, 
+        l.imagen_url, 
+        l.fecha_publicacion, 
+        l.formato, 
+        l.num_paginas, 
+        l.num_calificaciones, 
+        l.num_resenas, 
+        l.libro_url,
+        a.nombre_autor, 
+        c.nombre_categoria
+        FROM libros l
+        LEFT JOIN autores a ON l.autor_id = a.id
+        LEFT JOIN categorias c ON l.categoria_id = c.id
+        WHERE l.id = :libroId
+
         ";        
 
             $stmt = $db->prepare($query);
@@ -209,7 +222,7 @@ class DefaultController {
             }
 
             // Renderizar la vista de detalles del libro
-            echo $this->twig->render('detalle_libro.twig', ['libro' => $libro]);
+            echo $this->twig->render('libro.twig', ['libro' => $libro]);
         } catch (PDOException $e) {
             echo "Error al cargar el detalle del libro: " . $e->getMessage();
             error_log("Error en detalleLibro(): " . $e->getMessage());
