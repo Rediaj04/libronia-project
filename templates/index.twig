@@ -8,7 +8,6 @@
     <div class="alert alert-success text-center" role="alert">
         ¡Explora nuestras categorías y descubre nuevas lecturas!
     </div>
-
     <div class="row mb-4">
         <div class="col-12">
             <div class="card shadow-sm">
@@ -17,7 +16,6 @@
                     <div class="row">
                         {% for categoria in categorias %}
                         <div class="col-md-4 col-sm-6 col-12 mb-2">
-                            <!-- Enlace a la página de categoría -->
                             <a href="/categoria/{{ categoria|url_encode }}" class="list-group-item list-group-item-action">
                                 {{ categoria }}
                             </a>
@@ -34,53 +32,52 @@
     </div>
 
     <!-- Mapa -->
-    <div class="alert alert-info text-center mt-4" role="alert">
-        <h5>Bibliotecas cercanas a tu ubicación:</h5>
+    <div class="card mt-4">
+        <div class="card-body">
+            <h5 class="card-title text-secondary">Bibliotecas cercanas a tu ubicación:</h5>
+            <div class="map-container">
+                <div id="map"></div>
+            </div>
+        </div>
     </div>
-
-    <div id="map" style="height: 400px;"></div> <!-- El contenedor para el mapa -->
-    
 </div>
 
-{% block scripts %}
+{% block scripts %}    
 <script src="/assets/leaflet/leaflet.js"></script>
 <script>
-    // Usamos la geolocalización del navegador para obtener la ubicación del usuario
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function(position) {
-            var userLat = position.coords.latitude;
-            var userLon = position.coords.longitude;
+    var redIcon = new L.Icon({
+        iconUrl: '/assets/leaflet/images/marker-icon-red.png',
+        shadowUrl: '/assets/leaflet/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+    });
 
-            // Inicializamos el mapa centrado en la ubicación del usuario
-            var map = L.map('map').setView([userLat, userLon], 13);
+    // Ubicación central
+    var ILocation = [41.45551, 2.20150];
+    var map = L.map('map').setView(ILocation, 16);
 
-            // Cargamos el mapa con OpenStreetMap
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            }).addTo(map);
+    // Cargamos la capa de OpenStreetMap
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {}).addTo(map);
 
-            // Marcador para la ubicación del usuario
-            L.marker([userLat, userLon]).addTo(map)
-                .bindPopup('Tu ubicación')
-                .openPopup();
+    // Marcador para la ubicación actual
+    L.marker(ILocation, { icon: redIcon }).addTo(map)
+        .bindPopup('Estás Aquí')
+        .openPopup();
 
-            // Ejemplo de bibliotecas cercanas (estos puntos serían dinámicos de alguna base de datos)
-            var bibliotecas = [
-                { lat: userLat + 0.01, lon: userLon + 0.01, name: 'Biblioteca Central' },
-                { lat: userLat + 0.02, lon: userLon - 0.02, name: 'Biblioteca del Parque' },
-            ];
+    // Agregamos marcadores de "bibliotecas" (ubicaciones inventadas)
+    L.marker([41.45700, 2.20300]).addTo(map)
+        .bindPopup('Biblioteca del Saber');
 
-            // Añadimos marcadores para las bibliotecas cercanas
-            bibliotecas.forEach(function(biblioteca) {
-                L.marker([biblioteca.lat, biblioteca.lon]).addTo(map)
-                    .bindPopup(biblioteca.name);
-            });
-        }, function(error) {
-            alert('No se pudo obtener tu ubicación.');
-        });
-    } else {
-        alert('La geolocalización no está disponible en este navegador.');
-    }
+    L.marker([41.45400, 2.20000]).addTo(map)
+        .bindPopup('Centro de Lectura Aurora');
+
+    L.marker([41.45600, 2.20600]).addTo(map)
+        .bindPopup('Archivo de Letras');
+
+    L.marker([41.45350, 2.20350]).addTo(map)
+        .bindPopup('Sala del Conocimiento');
 </script>
 {% endblock %}
 

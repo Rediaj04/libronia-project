@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <!-- Estilos personalizados -->
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/assets/leaflet/leaflet.css" />
 </head>
 <body class="bg-light">
     <!-- Navbar -->
@@ -48,5 +49,11 @@
 
     <!-- Bootstrap JS -->
     <script src="/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script Chart.js -->
+    <script src="/assets/chart.js/chart.umd.js"></script>
+
+    <!-- Scripts adicionales -->
+    {% block scripts %}{% endblock %}
 </body>
 </html>
