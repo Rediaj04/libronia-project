@@ -28,6 +28,7 @@ $router->addRoute('GET', '/logout', [new DefaultController(), 'logout']);
 $router->addRoute('GET', '/charts', [new DefaultController(), 'charts']);
 $router->addRoute('GET', '/categoria/{nombre_categoria}', [new DefaultController(), 'categoria']);
 $router->addRoute('GET', '/libro/{id}', [new DefaultController(), 'detalleLibro']);
+$router->addRoute('GET', '/buscar', [new DefaultController(), 'buscarLibros']);
 
 // Manejar la solicitud entrante
 try {
@@ -36,7 +37,20 @@ try {
         parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)
     );
 } catch (Exception $e) {
-    // Manejar errores globales y devolver un mensaje adecuado
     http_response_code(500);
-    echo "Ha ocurrido un error en el servidor.";
+    echo "Error: " . $e->getMessage();
+    error_log($e->getMessage());
 }
+
+//Este codigo es el que deberia ir, ya que el actual es para modo desarrolador (nos muestra directamente el problema actual)
+// try {
+//     $router->handleRequest(
+//         $_SERVER['REQUEST_METHOD'], 
+//         parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)
+//     );
+// } catch (Exception $e) {
+//     // Manejar errores globales y devolver un mensaje adecuado
+//     http_response_code(500);
+//     echo "Ha ocurrido un error en el servidor.";
+// }
+// Tarea: Diseñar paginas para errores.
