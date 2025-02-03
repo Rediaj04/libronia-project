@@ -1,0 +1,71 @@
+{% extends 'base.twig' %}
+
+{% block title %}Buscar tu libro{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="text-center text-primary mb-4">Buscar tu libro</h1>
+    <form action="/buscar" method="GET" class="mb-4">
+        <div class="input-group">
+            <!-- Se prellena el campo con el término buscado -->
+            <input type="text" name="q" class="form-control" placeholder="Escribe el nombre del libro o autor..." required value="{{ query }}">
+            <button class="btn btn-primary" type="submit">Buscar</button>
+        </div>
+    </form>
+
+    {% if libros is not empty %}
+        <h3 class="text-secondary">Resultados encontrados:</h3>
+        <div class="list-group mt-3">
+            {% for libro in libros %}
+                <div class="list-group-item d-flex align-items-center">
+                    <a href="/libro/{{ libro.id }}">
+                        <img src="{{ libro.imagen_url }}" alt="Portada de {{ libro.titulo }}" class="me-3" style="width: 80px; height: auto;">
+                    </a>
+                    <div>
+                        <a href="/libro/{{ libro.id }}">
+                            <h5 class="mb-1">{{ libro.titulo }}</h5>
+                        </a>
+                        <p class="mb-1"><strong>Autor:</strong> {{ libro.autor }}</p>
+                        <small><strong>Publicado en:</strong> {{ libro.fecha_publicacion }}</small>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        {# Paginación #}
+        {% if totalPages > 1 %}
+        <nav aria-label="Paginación">
+          <ul class="pagination justify-content-center mt-4">
+            {# Enlace a la página anterior #}
+            {% if currentPage > 1 %}
+            <li class="page-item">
+              <a class="page-link" href="/buscar?q={{ query }}&page={{ currentPage - 1 }}" aria-label="Anterior">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            {% endif %}
+
+            {# Enlaces numerados para cada página #}
+            {% for i in 1..totalPages %}
+            <li class="page-item {% if i == currentPage %}active{% endif %}">
+              <a class="page-link" href="/buscar?q={{ query }}&page={{ i }}">{{ i }}</a>
+            </li>
+            {% endfor %}
+
+            {# Enlace a la página siguiente #}
+            {% if currentPage < totalPages %}
+            <li class="page-item">
+              <a class="page-link" href="/buscar?q={{ query }}&page={{ currentPage + 1 }}" aria-label="Siguiente">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+            {% endif %}
+          </ul>
+        </nav>
+        {% endif %}
+
+    {% else %}
+        <div class="alert alert-warning text-center mt-4">No se encontraron resultados para "{{ query }}"</div>
+    {% endif %}
+</div>
+{% endblock %}

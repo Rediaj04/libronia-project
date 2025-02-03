@@ -8,6 +8,25 @@
     <div class="alert alert-success text-center" role="alert">
         ¡Explora nuestras categorías y descubre nuevas lecturas!
     </div>
+
+    <!-- Formulario de búsqueda -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title text-secondary">Buscar y explorar libros</h5>
+                    <form action="/buscar" method="GET">
+                        <div class="input-group">
+                            <input type="text" name="q" class="form-control" placeholder="Escribe el nombre del libro o autor..." required>
+                            <button class="btn btn-primary" type="submit">Buscar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección de categorías -->
     <div class="row mb-4">
         <div class="col-12">
             <div class="card shadow-sm">

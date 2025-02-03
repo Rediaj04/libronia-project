@@ -8,6 +8,7 @@ $router = new Router();
 $router->addRoute('GET', 'charts', [DefaultController::class, 'charts']);
 $router->addRoute('GET', 'categoria/{nombre_categoria}', [DefaultController::class, 'categoria']);
 $router->addRoute('GET', '/libro/{id}', [new DefaultController(), 'detalleLibro']);
+$router->addRoute('GET', '/buscar', [new DefaultController(), 'buscarLibros']);
 
 class Router {
     private $routes = [];

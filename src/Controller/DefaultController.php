@@ -228,4 +228,53 @@ class DefaultController {
             error_log("Error en detalleLibro(): " . $e->getMessage());
         }
     }
+
+    /** 
+     * Realizar busqueda de libros.
+     */
+    public function buscarLibros($params) {
+        // Obtener el término de búsqueda
+        $query = $_GET['q'] ?? '';
+        
+        // Paginación: establecer la página actual y calcular el offset
+        $page = isset($_GET['page']) ? max((int)$_GET['page'], 1) : 1;
+        $itemsPerPage = 10;
+        $offset = ($page - 1) * $itemsPerPage;
+        
+        // Conectar a la base de datos
+        $db = Database::getConnection();
+        
+        // Consulta para obtener los libros con paginación
+        $sql = "SELECT l.id, l.titulo, a.nombre_autor AS autor, l.fecha_publicacion, l.imagen_url 
+                FROM libros l 
+                LEFT JOIN autores a ON l.autor_id = a.id 
+                WHERE l.titulo LIKE :query OR a.nombre_autor LIKE :query
+                LIMIT :offset, :itemsPerPage";
+        
+        $stmt = $db->prepare($sql);
+        $stmt->bindValue(':query', "%$query%", PDO::PARAM_STR);
+        $stmt->bindValue(':offset', $offset, PDO::PARAM_INT);
+        $stmt->bindValue(':itemsPerPage', $itemsPerPage, PDO::PARAM_INT);
+        $stmt->execute();
+        $libros = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        
+        // Consulta para contar el total de libros encontrados
+        $sqlCount = "SELECT COUNT(*) FROM libros l 
+                     LEFT JOIN autores a ON l.autor_id = a.id 
+                     WHERE l.titulo LIKE :query OR a.nombre_autor LIKE :query";
+        $stmtCount = $db->prepare($sqlCount);
+        $stmtCount->bindValue(':query', "%$query%", PDO::PARAM_STR);
+        $stmtCount->execute();
+        $totalLibros = $stmtCount->fetchColumn();
+        $totalPages = ceil($totalLibros / $itemsPerPage);
+        
+        // Renderizar la plantilla con los resultados y datos de paginación
+        echo $this->twig->render('buscar.twig', [
+            'query'       => $query,
+            'libros'      => $libros,
+            'currentPage' => $page,
+            'totalPages'  => $totalPages,
+            'totalLibros' => $totalLibros
+        ]);
+    }    
 }

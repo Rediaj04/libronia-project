@@ -23,8 +23,15 @@ try {
             $num_paginas = preg_replace('/[^0-9]/', '', $data[4]); // Eliminar caracteres no numéricos
             $num_paginas = is_numeric($num_paginas) ? (int)$num_paginas : null; // Convertir a entero o asignar null
 
-            // Verificar si la fecha de publicación es válida
-            $fecha_publicacion = date('Y-m-d', strtotime($data[5]));
+            // Verificar y procesar la fecha de publicación
+            // Posibles entradas: 
+            // "Published October 22, 2024", "Expected publication February 4, 2025" o "First published December 20, 1817"
+            $fechaStr = trim($data[5]);
+            // Eliminar prefijos conocidos
+            $fechaStr = str_replace(['Published', 'Expected publication', 'First published'], '', $fechaStr);
+            $fechaStr = trim($fechaStr);
+            $timestamp = strtotime($fechaStr);
+            $fecha_publicacion = $timestamp ? date('Y-m-d', $timestamp) : null;
 
             // Verificar y extraer el número de calificaciones
             $num_calificaciones = preg_replace('/[^0-9]/', '', $data[7]); // Eliminar caracteres no numéricos
@@ -66,16 +73,15 @@ try {
 
             // Si la categoría no existe, insertarla
             if (!$categoria_id) {
-                // Insertar la categoría si no existe
                 $sqlCategoria = "INSERT INTO categorias (nombre_categoria) VALUES (:categoria)";
                 $stmtInsertCategoria = $pdo->prepare($sqlCategoria);
                 $stmtInsertCategoria->execute([':categoria' => $categoria]);
-                $categoria_id = $pdo->lastInsertId(); // Obtener el último id insertado
+                $categoria_id = $pdo->lastInsertId();
                 echo "Categoría '$categoria' creada con éxito.\n";
             }
 
             // Verificar si el libro ya existe
-            $queryLibro = "SELECT id FROM libros WHERE titulo = :titulo AND autor_id = :autor_id LIMIT 1"; // Cambiado a 'libros'
+            $queryLibro = "SELECT id FROM libros WHERE titulo = :titulo AND autor_id = :autor_id LIMIT 1";
             $stmtLibro = $pdo->prepare($queryLibro);
             $stmtLibro->bindValue(':titulo', $titulo, PDO::PARAM_STR);
             $stmtLibro->bindValue(':autor_id', $autor_id, PDO::PARAM_INT);
