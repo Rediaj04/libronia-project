@@ -22,5 +22,42 @@
             <a href="{{ libro.libro_url }}" class="btn btn-primary" target="_blank">Ver libro</a>
         </div>
     </div>
+
+    <!-- Gráfico de Calificaciones y Reseñas -->
+    <div class="mt-4">
+        <h3>Comparación de Calificaciones y Reseñas</h3>
+        <!-- Agregar una clase al canvas -->
+        <canvas id="reviewsChart" class="small-chart"></canvas>
+    </div>
+
+
 </div>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    var ctx = document.getElementById('reviewsChart').getContext('2d');
+    var reviewsChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Calificaciones', 'Reseñas'],
+            datasets: [{
+                label: 'Cantidad',
+                data: [{{ libro.num_calificaciones }}, {{ libro.num_resenas }}],
+                backgroundColor: ['#3498db', '#e74c3c'],
+                borderColor: ['#2980b9', '#c0392b'],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>
 {% endblock %}

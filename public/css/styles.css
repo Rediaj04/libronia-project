@@ -4,6 +4,16 @@ body {
     background-color: #f8f9fa;
 }
 
+#map {
+    height: 400px; /* O la altura que necesites */
+    width: 100%;
+  }
+
+.small-chart {
+    width: 750px !important;
+    height: 450px !important;
+}
+
 /* Navbar */
 .navbar {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
