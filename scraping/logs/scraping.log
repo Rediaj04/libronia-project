@@ -1612,3 +1612,137 @@ Stacktrace:
 2025-02-04 17:22:23,743 - CRITICAL - Libro scrapeado: The Payback Girls
 2025-02-04 17:22:23,743 - CRITICAL - Se encontró la sección 'More genres'. Parando el scraping de categorías.
 2025-02-04 17:22:24,090 - CRITICAL - Navegador cerrado.
+2025-02-05 17:42:01,612 - CRITICAL - Error al procesar la categoría Art: Message: 
+
+2025-02-05 17:42:11,177 - CRITICAL - Libro scrapeado: Propaganda Girls: The Secret War of the Women in the OSS
+2025-02-05 17:42:13,078 - CRITICAL - Libro scrapeado: My Honor to Serve: 9-11-01 World Trade Center Disaster
+2025-02-05 17:42:15,019 - CRITICAL - Libro scrapeado: When the Going Was Good: An Editor's Adventures During the Last Golden Age of Magazines
+2025-02-05 17:42:19,397 - CRITICAL - Libro scrapeado: Be a Warrior in Business: How to Develop Resilient Organizations and Teams
+2025-02-05 17:42:21,470 - CRITICAL - Libro scrapeado: Little Bosses Everywhere: How the Pyramid Scheme Shaped America
+2025-02-05 17:42:25,608 - CRITICAL - Libro scrapeado: Qualified: How Competency Checking and Race Collide at Work
+2025-02-05 17:42:29,859 - CRITICAL - Libro scrapeado: Stories of the Spirit of Justice
+2025-02-05 17:42:32,952 - CRITICAL - Libro scrapeado: I Am the Spirit of Justice
+2025-02-05 17:42:34,994 - CRITICAL - Libro scrapeado: The Girl with Stars in Her Eyes
+2025-02-05 17:42:46,477 - CRITICAL - Error al procesar la categoría Christian: Message: 
+
+2025-02-05 17:42:51,353 - CRITICAL - Libro scrapeado: Northanger Abbey
+2025-02-05 17:42:54,428 - CRITICAL - Libro scrapeado: Dante's Divine Comedy: A Biography
+2025-02-05 17:42:58,974 - CRITICAL - Libro scrapeado: I'll Have What She's Having
+2025-02-05 17:43:01,244 - CRITICAL - Libro scrapeado: Crumb: A Cartoonist's Life
+2025-02-05 17:43:04,693 - CRITICAL - Libro scrapeado: Kin: Caribbean Recipes for the Modern Kitchen
+2025-02-05 17:43:08,934 - CRITICAL - Libro scrapeado: Bowls: 100+ Recipes for Healthy, Vibrant Bowls
+2025-02-05 17:43:10,960 - CRITICAL - Libro scrapeado: Solid Starts for Babies: How to Introduce Solid Food and Raise a Happy Eater
+2025-02-05 17:43:22,481 - CRITICAL - Error al procesar la categoría Ebooks: Message: 
+
+2025-02-05 17:43:28,679 - CRITICAL - Libro scrapeado: Prophecy
+2025-02-05 17:43:31,561 - CRITICAL - Libro scrapeado: Combat Monsters: Untold Tales of World War II
+2025-02-05 17:43:33,524 - CRITICAL - Libro scrapeado: The Gate of the Feral Gods
+2025-02-05 17:43:38,842 - CRITICAL - Libro scrapeado: The Nimbus
+2025-02-05 17:43:41,714 - CRITICAL - Libro scrapeado: Food Person
+2025-02-05 17:43:42,673 - CRITICAL - Libro scrapeado: Combat Monsters: Untold Tales of World War II
+2025-02-05 17:43:49,325 - CRITICAL - Libro scrapeado: Surrounded: America’s First School for Black Girls, 1832
+2025-02-05 17:43:52,659 - CRITICAL - Libro scrapeado: Remember Us to Life: A Graphic Memoir
+2025-02-05 17:43:54,835 - CRITICAL - Libro scrapeado: We Could Be Magic
+2025-02-05 17:44:00,618 - CRITICAL - Libro scrapeado: The Hounding
+2025-02-05 17:44:03,569 - CRITICAL - Libro scrapeado: The Nazi Housewife of Queens, New York
+2025-02-05 17:44:05,536 - CRITICAL - Libro scrapeado: No Greater Loss: A Faith Clarke Mystery
+2025-02-05 17:44:10,952 - CRITICAL - Libro scrapeado: Pushback: The 2,500-Year Fight to Thwart Women by Restricting Abortion
+2025-02-05 17:44:13,187 - CRITICAL - Libro scrapeado: The Woke Mind: The Twisted Psychology of the Social Justice Movement
+2025-02-05 17:44:15,178 - CRITICAL - Libro scrapeado: Trespassers at the Golden Gate: A True Account of Love, Murder, and Madness in Gilded-Age San Francisco
+2025-02-05 17:44:19,998 - CRITICAL - Libro scrapeado: Tales from the Whispering Woods: Stories of Fear and Folklore from the Dark Forest
+2025-02-05 17:44:23,393 - CRITICAL - Libro scrapeado: My Final Breath
+2025-02-05 17:44:25,695 - CRITICAL - Libro scrapeado: The Shakes: A Horror Short Story
+2025-02-05 17:44:30,380 - CRITICAL - Libro scrapeado: Destined: A Story of Resilience and Beating the Odds
+2025-02-05 17:44:34,144 - CRITICAL - Libro scrapeado: Little Madhouse on the Prairie: A True-Life Story of Overcoming Abuse and Healing the Spirit
+2025-02-05 17:44:36,085 - CRITICAL - Libro scrapeado: Diary of a Woman's Misadventures in Iraq
+2025-02-05 17:44:48,242 - CRITICAL - Error al procesar la categoría Music: Message: 
+
+2025-02-05 17:44:52,528 - CRITICAL - Libro scrapeado: The Nazi Housewife of Queens, New York
+2025-02-05 17:44:53,416 - CRITICAL - Libro scrapeado: No Greater Loss: A Faith Clarke Mystery
+2025-02-05 17:44:56,001 - CRITICAL - Libro scrapeado: Hounds of the Hollywood Baskervilles
+2025-02-05 17:45:00,770 - CRITICAL - Libro scrapeado: The Next Chapter: Writing in Retirement
+2025-02-05 17:45:05,433 - CRITICAL - Libro scrapeado: The No-Regrets Bucket List: Simple Ideas for Living the Life You Were Meant to Live
+2025-02-05 17:45:08,072 - CRITICAL - Libro scrapeado: True and False Magic: A Tools Workbook
+2025-02-05 17:45:11,183 - CRITICAL - Libro scrapeado: Autopsy of an Ex-Teen Heartthrob
+2025-02-05 17:45:12,746 - CRITICAL - Libro scrapeado: Poems for the Dark
+2025-02-05 17:45:14,970 - CRITICAL - Libro scrapeado: In the Deluge
+2025-02-05 17:47:59,265 - CRITICAL - Libro scrapeado: How to Draw Squishy Cats and Kittens: A Step-by-Step Guide to Drawing Totally Floofy Felines and Their Worlds
+2025-02-05 17:48:01,405 - CRITICAL - Libro scrapeado: Beautiful Butterflies and Flowers: 20 Step-by-Step No-Sketch Projects on Watercolor Paper
+2025-02-05 17:48:05,458 - CRITICAL - Libro scrapeado: Viewfinder: A Memoir of Seeing and Being Seen
+2025-02-05 17:48:11,478 - CRITICAL - Libro scrapeado: Propaganda Girls: The Secret War of the Women in the OSS
+2025-02-05 17:48:13,125 - CRITICAL - Libro scrapeado: My Honor to Serve: 9-11-01 World Trade Center Disaster
+2025-02-05 17:48:15,702 - CRITICAL - Libro scrapeado: When the Going Was Good: An Editor's Adventures During the Last Golden Age of Magazines
+2025-02-05 17:48:19,857 - CRITICAL - Libro scrapeado: Be a Warrior in Business: How to Develop Resilient Organizations and Teams
+2025-02-05 17:48:21,420 - CRITICAL - Libro scrapeado: Little Bosses Everywhere: How the Pyramid Scheme Shaped America
+2025-02-05 17:48:23,443 - CRITICAL - Libro scrapeado: Qualified: How Competency Checking and Race Collide at Work
+2025-02-05 17:48:28,138 - CRITICAL - Libro scrapeado: Stories of the Spirit of Justice
+2025-02-05 17:48:30,742 - CRITICAL - Libro scrapeado: I Am the Spirit of Justice
+2025-02-05 17:48:32,591 - CRITICAL - Libro scrapeado: The Girl with Stars in Her Eyes
+2025-02-05 17:48:44,583 - CRITICAL - Error al procesar la categoría Christian: Message: 
+
+2025-02-05 17:48:49,396 - CRITICAL - Libro scrapeado: Northanger Abbey
+2025-02-05 17:48:51,375 - CRITICAL - Libro scrapeado: Dante's Divine Comedy: A Biography
+2025-02-05 17:48:55,960 - CRITICAL - Libro scrapeado: I'll Have What She's Having
+2025-02-05 17:48:58,550 - CRITICAL - Libro scrapeado: Crumb: A Cartoonist's Life
+2025-02-05 17:49:02,068 - CRITICAL - Libro scrapeado: Kin: Caribbean Recipes for the Modern Kitchen
+2025-02-05 17:49:03,725 - CRITICAL - Libro scrapeado: Bowls: 100+ Recipes for Healthy, Vibrant Bowls
+2025-02-05 17:49:05,696 - CRITICAL - Libro scrapeado: Solid Starts for Babies: How to Introduce Solid Food and Raise a Happy Eater
+2025-02-05 17:49:16,300 - CRITICAL - Error al procesar la categoría Ebooks: Message: 
+
+2025-02-05 17:49:21,674 - CRITICAL - Libro scrapeado: Prophecy
+2025-02-05 17:49:23,663 - CRITICAL - Libro scrapeado: Combat Monsters: Untold Tales of World War II
+2025-02-05 17:49:26,699 - CRITICAL - Libro scrapeado: The Gate of the Feral Gods
+2025-02-05 17:49:33,259 - CRITICAL - Libro scrapeado: The Nimbus
+2025-02-05 17:49:36,199 - CRITICAL - Libro scrapeado: Food Person
+2025-02-05 17:49:37,534 - CRITICAL - Libro scrapeado: Combat Monsters: Untold Tales of World War II
+2025-02-05 17:49:42,744 - CRITICAL - Libro scrapeado: Surrounded: America’s First School for Black Girls, 1832
+2025-02-05 17:49:46,259 - CRITICAL - Libro scrapeado: Remember Us to Life: A Graphic Memoir
+2025-02-05 17:49:49,082 - CRITICAL - Libro scrapeado: We Could Be Magic
+2025-02-05 17:49:59,416 - CRITICAL - Libro scrapeado: The Hounding
+2025-02-05 17:50:02,321 - CRITICAL - Libro scrapeado: The Nazi Housewife of Queens, New York
+2025-02-05 17:50:04,769 - CRITICAL - Libro scrapeado: No Greater Loss: A Faith Clarke Mystery
+2025-02-05 17:50:09,252 - CRITICAL - Libro scrapeado: Pushback: The 2,500-Year Fight to Thwart Women by Restricting Abortion
+2025-02-05 17:50:11,862 - CRITICAL - Libro scrapeado: The Woke Mind: The Twisted Psychology of the Social Justice Movement
+2025-02-05 17:50:14,792 - CRITICAL - Libro scrapeado: Trespassers at the Golden Gate: A True Account of Love, Murder, and Madness in Gilded-Age San Francisco
+2025-02-05 17:50:19,528 - CRITICAL - Libro scrapeado: Tales from the Whispering Woods: Stories of Fear and Folklore from the Dark Forest
+2025-02-05 17:50:25,793 - CRITICAL - Libro scrapeado: My Final Breath
+2025-02-05 17:50:27,953 - CRITICAL - Libro scrapeado: The Shakes: A Horror Short Story
+2025-02-05 17:50:32,214 - CRITICAL - Libro scrapeado: Destined: A Story of Resilience and Beating the Odds
+2025-02-05 17:50:34,785 - CRITICAL - Libro scrapeado: Little Madhouse on the Prairie: A True-Life Story of Overcoming Abuse and Healing the Spirit
+2025-02-05 17:50:37,112 - CRITICAL - Libro scrapeado: Diary of a Woman's Misadventures in Iraq
+2025-02-05 17:50:48,067 - CRITICAL - Error al procesar la categoría Music: Message: 
+
+2025-02-05 17:50:51,996 - CRITICAL - Libro scrapeado: The Nazi Housewife of Queens, New York
+2025-02-05 17:50:53,314 - CRITICAL - Libro scrapeado: No Greater Loss: A Faith Clarke Mystery
+2025-02-05 17:50:57,160 - CRITICAL - Libro scrapeado: Hounds of the Hollywood Baskervilles
+2025-02-05 17:51:01,621 - CRITICAL - Libro scrapeado: The Next Chapter: Writing in Retirement
+2025-02-05 17:51:04,210 - CRITICAL - Libro scrapeado: The No-Regrets Bucket List: Simple Ideas for Living the Life You Were Meant to Live
+2025-02-05 17:51:06,797 - CRITICAL - Libro scrapeado: True and False Magic: A Tools Workbook
+2025-02-05 17:51:10,657 - CRITICAL - Libro scrapeado: Autopsy of an Ex-Teen Heartthrob
+2025-02-05 17:51:15,195 - CRITICAL - Libro scrapeado: Poems for the Dark
+2025-02-05 17:51:17,403 - CRITICAL - Libro scrapeado: In the Deluge
+2025-02-05 17:51:29,290 - CRITICAL - Error al procesar la categoría Psychology: Message: 
+
+2025-02-05 17:51:33,232 - CRITICAL - Libro scrapeado: Food Person
+2025-02-05 17:51:35,446 - CRITICAL - Libro scrapeado: To Capture a Mountain Man
+2025-02-05 17:51:38,098 - CRITICAL - Libro scrapeado: The Roommate Mistake
+2025-02-05 17:51:41,930 - CRITICAL - Libro scrapeado: Waste Wars: The Wild Afterlife of Your Trash
+2025-02-05 17:51:43,752 - CRITICAL - Libro scrapeado: Thinking Like a Human: The Power of Your Mind in the Age of AI
+2025-02-05 17:51:46,941 - CRITICAL - Libro scrapeado: Aqua's Adventure from the Deep Blue Sea to the Rolling River: Water Droplets Journey Through the Water Cycle
+2025-02-05 17:51:52,187 - CRITICAL - Libro scrapeado: Grand Theft AI
+2025-02-05 17:51:53,254 - CRITICAL - Libro scrapeado: The Gate of the Feral Gods
+2025-02-05 17:51:55,391 - CRITICAL - Libro scrapeado: 8: Tales of The Big Men from The Nod/Wells Timelines
+2025-02-05 17:51:58,268 - CRITICAL - Libro scrapeado: The No-Regrets Bucket List: Simple Ideas for Living the Life You Were Meant to Live
+2025-02-05 17:51:59,358 - CRITICAL - Libro scrapeado: Little Madhouse on the Prairie: A True-Life Story of Overcoming Abuse and Healing the Spirit
+2025-02-05 17:52:01,310 - CRITICAL - Libro scrapeado: Glimmers Journal: Reflect on the Small Moments That Bring You Joy, Safety, and Connection
+2025-02-05 17:52:13,567 - CRITICAL - Libro scrapeado: Comeback
+2025-02-05 17:52:15,940 - CRITICAL - Libro scrapeado: Comeback
+2025-02-05 17:52:21,379 - CRITICAL - Libro scrapeado: 10-33 Go!
+2025-02-05 17:52:24,588 - CRITICAL - Libro scrapeado: Obey All Laws
+2025-02-05 17:52:27,380 - CRITICAL - Libro scrapeado: We Don't Talk About Emma
+2025-02-05 17:52:32,062 - CRITICAL - Libro scrapeado: Journey Through Greece: The Stress-Free Guide to Culture, Cuisine, and Hidden Treasures
+2025-02-05 17:52:37,261 - CRITICAL - Libro scrapeado: The Afterdark
+2025-02-05 17:52:38,461 - CRITICAL - Libro scrapeado: Prophecy
+2025-02-05 17:52:41,336 - CRITICAL - Libro scrapeado: Sunlight Playing over a Mountain
+2025-02-05 17:52:41,336 - CRITICAL - Se encontró la sección 'More genres'. Parando el scraping de categorías.
+2025-02-05 17:52:41,624 - CRITICAL - Navegador cerrado.
