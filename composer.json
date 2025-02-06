@@ -4,14 +4,16 @@
     "require": {
         "php": "^8.0",
         "twig/twig": "^3.0",
-        "firebase/php-jwt": "^5.0",
+        "firebase/php-jwt": "^6.11",
         "symfony/var-dumper": "^5.0"
     },
     "autoload": {
         "psr-4": {
+            "src\\": "src/",
             "Routing\\": "src/Routing/",
             "Controller\\": "src/Controller/",
-            "Config\\": "config/"
+            "Config\\": "config/",
+            "Middleware\\": "src/Middleware/"
         }
     }
 }

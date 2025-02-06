@@ -20,6 +20,10 @@ class ComposerStaticInit8d728344c61a21184d0c7e0467fe6d15
     );
 
     public static $prefixLengthsPsr4 = array (
+        's' => 
+        array (
+            'src\\' => 4,
+        ),
         'T' => 
         array (
             'Twig\\' => 5,
@@ -36,6 +40,10 @@ class ComposerStaticInit8d728344c61a21184d0c7e0467fe6d15
         array (
             'Routing\\' => 8,
         ),
+        'M' => 
+        array (
+            'Middleware\\' => 11,
+        ),
         'F' => 
         array (
             'Firebase\\JWT\\' => 13,
@@ -48,6 +56,10 @@ class ComposerStaticInit8d728344c61a21184d0c7e0467fe6d15
     );
 
     public static $prefixDirsPsr4 = array (
+        'src\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
+        ),
         'Twig\\' => 
         array (
             0 => __DIR__ . '/..' . '/twig/twig/src',
@@ -75,6 +87,10 @@ class ComposerStaticInit8d728344c61a21184d0c7e0467fe6d15
         'Routing\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src/Routing',
+        ),
+        'Middleware\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Middleware',
         ),
         'Firebase\\JWT\\' => 
         array (

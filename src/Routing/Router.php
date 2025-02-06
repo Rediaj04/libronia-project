@@ -2,6 +2,7 @@
 namespace Routing;
 
 use Controller\DefaultController;
+use src\Middleware\AuthMiddleware;
 
 $router = new Router();
 
@@ -9,6 +10,8 @@ $router->addRoute('GET', 'charts', [DefaultController::class, 'charts']);
 $router->addRoute('GET', 'categoria/{nombre_categoria}', [DefaultController::class, 'categoria']);
 $router->addRoute('GET', '/libro/{id}', [new DefaultController(), 'detalleLibro']);
 $router->addRoute('GET', '/buscar', [new DefaultController(), 'buscarLibros']);
+$router->addRoute('POST', '/api/login', [AuthController::class, 'login']);
+$router->addRoute('GET', '/admin', [new DefaultController(), 'admin'], [new AuthMiddleware(), 'verificarToken']);
 
 class Router {
     private $routes = [];
@@ -20,9 +23,10 @@ class Router {
      * @param string $route La ruta de la solicitud (ej: "/login")
      * @param callable $handler La función o método a ejecutar
      */
-    public function addRoute($method, $route, $handler) {
+    public function addRoute($method, $route, $handler, $middleware = null) {
         $this->routes[] = [
             'method' => $method,
+            'middleware' => $middleware, // Aquí usamos el middleware proporcionado
             'route' => $this->normalizeRoute($route),
             'handler' => $handler
         ];
