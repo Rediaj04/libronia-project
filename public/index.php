@@ -8,14 +8,15 @@ error_reporting(E_ALL);
 
 session_start();
 
-use Routing\Router;
-use Controller\DefaultController;
-use Controller\AuthController;
-use Controller\AdminController;
-use Middleware\AuthMiddleware;
+use src\Routing\Router;
+use src\Controller\DefaultController;
+use src\Controller\AuthController;
+use src\Controller\AdminController;
+use src\Middleware\AuthMiddleware;
 
 $router = new Router();
 
+// Usar addRoute en lugar de map
 $router->addRoute('GET', '/', [new DefaultController(), 'home']);
 $router->addRoute('GET', '/login', [new DefaultController(), 'login']);
 $router->addRoute('POST', '/login', [new DefaultController(), 'login']);
@@ -27,6 +28,12 @@ $router->addRoute('GET', '/buscar', [new DefaultController(), 'buscarLibros']);
 $router->addRoute('POST', '/api/login', [AuthController::class, 'login']);
 $router->addRoute('GET', '/admin', [new DefaultController(), 'admin'], 'Middleware\AuthMiddleware::verificarSesion');
 
+// Aquí también debes usar addRoute en lugar de map
+$router->addRoute('GET', '/admin', [DefaultController::class, 'admin']);
+$router->addRoute('GET', '/editar/{id}', [new DefaultController(), 'editarLibro']);
+$router->addRoute('POST', '/editar/{id}', [new DefaultController(), 'editarLibro']);
+$router->addRoute('GET', '/eliminar/{id}', [new DefaultController(), 'eliminarLibro']);
+
 try {
     $router->handleRequest(
         $_SERVER['REQUEST_METHOD'], 
@@ -37,4 +44,3 @@ try {
     echo "Error: " . $e->getMessage();
     error_log($e->getMessage());
 }
-

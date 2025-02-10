@@ -13,9 +13,6 @@ return array(
     'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
     'Symfony\\Polyfill\\Ctype\\' => array($vendorDir . '/symfony/polyfill-ctype'),
     'Symfony\\Component\\VarDumper\\' => array($vendorDir . '/symfony/var-dumper'),
-    'Routing\\' => array($baseDir . '/src/Routing'),
-    'Middleware\\' => array($baseDir . '/src/Middleware'),
     'Firebase\\JWT\\' => array($vendorDir . '/firebase/php-jwt/src'),
-    'Controller\\' => array($baseDir . '/src/Controller'),
     'Config\\' => array($baseDir . '/config'),
 );

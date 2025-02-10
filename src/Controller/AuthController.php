@@ -1,6 +1,6 @@
 <?php
 
-namespace Controller;
+namespace src\Controller;
 
 use Models\Usuario;
 use Config\JWTAuth;
