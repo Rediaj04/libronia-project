@@ -1,0 +1,102 @@
+{% extends "base.twig" %}
+
+{% block content %}
+    <div class="editar-libro-container">
+        <h1>Te encuentras editando un libro: <span class="libro-titulo">{{ libro.titulo }}</span></h1>
+
+        <form action="/editar/{{ libro.id }}" method="POST" enctype="multipart/form-data" class="formulario-edicion">
+            <!-- Imagen actual del libro -->
+            <div class="form-group">
+                <label for="imagen_actual">Imagen actual:</label>
+                <img src="{{ libro.imagen_url }}" alt="{{ libro.titulo }}" class="imagen-libro">
+            </div>
+
+            <!-- Campo para cargar una nueva imagen -->
+            <div class="form-group">
+                <label for="nueva_imagen">Cambiar imagen:</label>
+                <input type="file" id="nueva_imagen" name="nueva_imagen" accept="image/*">
+            </div>
+
+            <!-- Campos del formulario -->
+            <div class="form-group">
+                <label for="titulo">Título:</label>
+                <input type="text" id="titulo" name="titulo" value="{{ libro.titulo }}" required>
+            </div>
+
+            <div class="form-group">
+                <label for="autor">Autor:</label>
+                <input type="text" id="autor" name="autor" value="{{ libro.autor }}" required>
+            </div>
+
+            <div class="form-group">
+                <label for="categoria">Categoría:</label>
+                <select id="categoria" name="categoria" required>
+                    {% for categoria in categorias %}
+                        <option value="{{ categoria.id }}" {% if categoria.id == libro.categoria_id %}selected{% endif %}>
+                            {{ categoria.nombre_categoria }}
+                        </option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" name="descripcion" rows="4">{{ libro.descripcion }}</textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="fecha_publicacion">Fecha de publicación:</label>
+                <input type="date" id="fecha_publicacion" name="fecha_publicacion" value="{{ libro.fecha_publicacion }}">
+            </div>
+
+            <div class="form-group">
+                <label for="formato">Formato:</label>
+                <input type="text" id="formato" name="formato" value="{{ libro.formato }}">
+            </div>
+
+            <div class="form-group">
+                <label for="num_paginas">Número de páginas:</label>
+                <input type="number" id="num_paginas" name="num_paginas" value="{{ libro.num_paginas }}">
+            </div>
+
+            <div class="form-group">
+                <label for="num_calificaciones">Número de calificaciones:</label>
+                <input type="number" id="num_calificaciones" name="num_calificaciones" value="{{ libro.num_calificaciones }}">
+            </div>
+
+            <div class="form-group">
+                <label for="num_resenas">Número de reseñas:</label>
+                <input type="number" id="num_resenas" name="num_resenas" value="{{ libro.num_resenas }}">
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn-actualizar">Actualizar</button>
+                <a href="/admin" class="btn-volver">Cancelar</a>
+            </div>
+        </form>
+    </div>
+
+    {# Mostrar mensaje con SweetAlert2 #}
+    {% if mensaje %}
+        <script>
+            Swal.fire({
+                icon: "{{ tipoMensaje }}",
+                title: "{{ tipoMensaje is same as('success') ? '✅' : '❌' }}",
+                text: "{{ mensaje }}",
+            }).then(() => {
+                {% if tipoMensaje is same as('success') %}
+                    window.location.href = "/admin";
+                {% endif %}
+            });
+        </script>
+    {% endif %}
+
+    {# Prueba adicional de SweetAlert2 para depuración #}
+    <script>
+        Swal.fire({
+            icon: "success",
+            title: "¡Prueba exitosa!",
+            text: "Este es un mensaje de prueba para asegurar que SweetAlert2 funciona.",
+        });
+    </script>
+{% endblock %}

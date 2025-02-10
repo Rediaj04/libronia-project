@@ -3,7 +3,7 @@
 namespace src\Middleware;
 
 use Config\JWTAuth;
-use Exception; // Asegúrate de importar Exception si lo usas
+use Exception;
 
 class AuthMiddleware {
     public static function verificarSesion() {
@@ -36,4 +36,3 @@ class AuthMiddleware {
         return $datos;
     }
 }
-

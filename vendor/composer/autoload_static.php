@@ -36,21 +36,12 @@ class ComposerStaticInit8d728344c61a21184d0c7e0467fe6d15
             'Symfony\\Polyfill\\Ctype\\' => 23,
             'Symfony\\Component\\VarDumper\\' => 28,
         ),
-        'R' => 
-        array (
-            'Routing\\' => 8,
-        ),
-        'M' => 
-        array (
-            'Middleware\\' => 11,
-        ),
         'F' => 
         array (
             'Firebase\\JWT\\' => 13,
         ),
         'C' => 
         array (
-            'Controller\\' => 11,
             'Config\\' => 7,
         ),
     );
@@ -84,21 +75,9 @@ class ComposerStaticInit8d728344c61a21184d0c7e0467fe6d15
         array (
             0 => __DIR__ . '/..' . '/symfony/var-dumper',
         ),
-        'Routing\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src/Routing',
-        ),
-        'Middleware\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src/Middleware',
-        ),
         'Firebase\\JWT\\' => 
         array (
             0 => __DIR__ . '/..' . '/firebase/php-jwt/src',
-        ),
-        'Controller\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src/Controller',
         ),
         'Config\\' => 
         array (

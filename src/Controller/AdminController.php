@@ -1,4 +1,6 @@
-namespace Controller;
+<?php
+
+namespace src\Controller;
 
 use Middleware\AuthMiddleware;
 

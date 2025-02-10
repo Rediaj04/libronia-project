@@ -1,7 +1,7 @@
 <?php
-namespace Routing;
+namespace src\Routing;
 
-use Controller\DefaultController;
+use src\Controller\DefaultController;
 use src\Middleware\AuthMiddleware;
 
 $router = new Router();
