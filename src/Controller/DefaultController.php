@@ -40,14 +40,64 @@ class DefaultController {
         AuthMiddleware::verificarSesion();
         $db = (new Database())->connect();
     
-        // Cambiar la consulta para incluir autor y categoría
-        $stmt = $db->query("SELECT l.id, l.titulo, a.nombre_autor AS autor, c.nombre_categoria AS categoria
-                            FROM libros l
-                            LEFT JOIN autores a ON l.autor_id = a.id
-                            LEFT JOIN categorias c ON l.categoria_id = c.id");
+        // Parámetros de paginación
+        $itemsPerPage = 30; // Mostrar 30 libros por página
+        $page = isset($_GET['page']) ? max((int)$_GET['page'], 1) : 1;
+        $offset = ($page - 1) * $itemsPerPage;
+    
+        // Parámetros de búsqueda
+        $searchQuery = $_GET['q'] ?? '';
+        $searchCondition = '';
+        if (!empty($searchQuery)) {
+            $searchCondition = "WHERE l.titulo LIKE :searchQuery OR a.nombre_autor LIKE :searchQuery OR c.nombre_categoria LIKE :searchQuery";
+        }
+    
+        // Consulta para obtener los libros con paginación y búsqueda
+        $query = "
+            SELECT l.id, l.titulo, a.nombre_autor AS autor, c.nombre_categoria AS categoria
+            FROM libros l
+            LEFT JOIN autores a ON l.autor_id = a.id
+            LEFT JOIN categorias c ON l.categoria_id = c.id
+            $searchCondition
+            LIMIT :offset, :itemsPerPage
+        ";
+    
+        $stmt = $db->prepare($query);
+        if (!empty($searchQuery)) {
+            $searchParam = "%$searchQuery%";
+            $stmt->bindParam(':searchQuery', $searchParam, PDO::PARAM_STR);
+        }
+        $stmt->bindValue(':offset', $offset, PDO::PARAM_INT);
+        $stmt->bindValue(':itemsPerPage', $itemsPerPage, PDO::PARAM_INT);
+        $stmt->execute();
         $libros = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
-        echo $this->twig->render('admin.twig', ['libros' => $libros, 'user' => $_SESSION['user_id']]);
+        // Consulta para contar el total de libros (para la paginación)
+        $countQuery = "
+            SELECT COUNT(*) as total
+            FROM libros l
+            LEFT JOIN autores a ON l.autor_id = a.id
+            LEFT JOIN categorias c ON l.categoria_id = c.id
+            $searchCondition
+        ";
+        $countStmt = $db->prepare($countQuery);
+        if (!empty($searchQuery)) {
+            $countStmt->bindParam(':searchQuery', $searchParam, PDO::PARAM_STR);
+        }
+        $countStmt->execute();
+        $totalLibros = $countStmt->fetchColumn();
+    
+        // Calcular el total de páginas
+        $totalPages = ceil($totalLibros / $itemsPerPage);
+    
+        // Renderizar la vista con los datos
+        echo $this->twig->render('admin.twig', [
+            'libros' => $libros,
+            'user' => $_SESSION['user_id'],
+            'currentPage' => $page,
+            'totalPages' => $totalPages,
+            'searchQuery' => $searchQuery,
+        ]);
     }
     
 
@@ -251,7 +301,7 @@ class DefaultController {
             // Recuperar datos del formulario
             $titulo = $_POST['titulo'];
             $autorNombre = $_POST['autor'];
-            $categoriaId = $_POST['categoria']; // Ahora recibimos el ID de la categoría
+            $categoriaId = $_POST['categoria'];
             $descripcion = $_POST['descripcion'];
             $fecha_publicacion = $_POST['fecha_publicacion'];
             $formato = $_POST['formato'];
@@ -263,12 +313,11 @@ class DefaultController {
             $imagen_url = null;
             if (isset($_FILES['nueva_imagen']) && $_FILES['nueva_imagen']['error'] === UPLOAD_ERR_OK) {
                 $imagen = $_FILES['nueva_imagen'];
-                $nombre_imagen = uniqid() . '_' . basename($imagen['name']); // Nombre único para evitar colisiones
+                $nombre_imagen = uniqid() . '_' . basename($imagen['name']);
                 $ruta_imagen = "public/uploads/" . $nombre_imagen;
     
-                // Mover la imagen a la carpeta de uploads
                 if (move_uploaded_file($imagen['tmp_name'], $ruta_imagen)) {
-                    $imagen_url = "/uploads/" . $nombre_imagen; // Ruta relativa para la base de datos
+                    $imagen_url = "/uploads/" . $nombre_imagen;
                 } else {
                     $mensaje = "Error al subir la imagen.";
                     $tipoMensaje = "error";
@@ -303,7 +352,6 @@ class DefaultController {
                         num_calificaciones = :num_calificaciones, 
                         num_resenas = :num_resenas";
     
-                // Si se cargó una nueva imagen, actualizar la URL
                 if ($imagen_url) {
                     $sql .= ", imagen_url = :imagen_url";
                 }
@@ -313,7 +361,7 @@ class DefaultController {
                 $stmt = $db->prepare($sql);
                 $stmt->bindParam(':titulo', $titulo);
                 $stmt->bindParam(':autor_id', $autor_id);
-                $stmt->bindParam(':categoria_id', $categoriaId); // Usar el ID de la categoría seleccionada
+                $stmt->bindParam(':categoria_id', $categoriaId);
                 $stmt->bindParam(':descripcion', $descripcion);
                 $stmt->bindParam(':fecha_publicacion', $fecha_publicacion);
                 $stmt->bindParam(':formato', $formato);
@@ -326,20 +374,13 @@ class DefaultController {
                 $stmt->bindParam(':id', $id);
     
                 if ($stmt->execute()) {
-                    // Mensaje de éxito
                     $mensaje = "El libro se ha actualizado correctamente.";
                     $tipoMensaje = "success";
-    
-                    // Redirigir al admin tras la actualización
-                    header("Location: /admin");
-                    exit;
                 } else {
-                    // Mensaje de error
                     $mensaje = "Error al actualizar el libro.";
                     $tipoMensaje = "error";
                 }
             } catch (PDOException $e) {
-                // Mensaje de error
                 $mensaje = "Error al actualizar el libro: " . $e->getMessage();
                 $tipoMensaje = "error";
             }
@@ -363,9 +404,9 @@ class DefaultController {
             // Renderizar la página de edición con el libro y las categorías
             echo $this->twig->render('editar_libro.twig', [
                 'libro' => $libro,
-                'categorias' => $categorias, // Pasar las categorías a la vista
-                'mensaje' => $mensaje ?? null, // Pasar el mensaje a la vista
-                'tipoMensaje' => $tipoMensaje ?? null // Pasar el tipo de mensaje a la vista
+                'categorias' => $categorias,
+                'mensaje' => $mensaje ?? null,
+                'tipoMensaje' => $tipoMensaje ?? null
             ]);
         } catch (PDOException $e) {
             echo "Error al obtener libro: " . $e->getMessage();
