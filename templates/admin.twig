@@ -4,6 +4,17 @@
 <div class="container mt-4">
     <h2>Panel de Administración</h2>
 
+    <!-- Buscador -->
+    <div class="mb-4">
+        <form action="/admin" method="GET" class="form-inline">
+            <div class="form-group mx-sm-3 mb-2">
+                <input type="text" name="q" class="form-control" placeholder="Buscar por título, autor o categoría" value="{{ searchQuery }}">
+            </div>
+            <button type="submit" class="btn btn-primary mb-2">Buscar</button>
+        </form>
+    </div>
+
+    <!-- Lista de libros -->
     <div class="mt-3">
         <h4>Lista de Libros</h4>
         <table class="table table-striped">
@@ -36,5 +47,32 @@
             </tbody>
         </table>
     </div>
+
+    <!-- Paginación -->
+    <nav aria-label="Paginación">
+        <ul class="pagination">
+            {% if currentPage > 1 %}
+                <li class="page-item">
+                    <a class="page-link" href="/admin?page={{ currentPage - 1 }}{% if searchQuery %}&q={{ searchQuery }}{% endif %}" aria-label="Anterior">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+            {% endif %}
+
+            {% for i in 1..totalPages %}
+                <li class="page-item {% if i == currentPage %}active{% endif %}">
+                    <a class="page-link" href="/admin?page={{ i }}{% if searchQuery %}&q={{ searchQuery }}{% endif %}">{{ i }}</a>
+                </li>
+            {% endfor %}
+
+            {% if currentPage < totalPages %}
+                <li class="page-item">
+                    <a class="page-link" href="/admin?page={{ currentPage + 1 }}{% if searchQuery %}&q={{ searchQuery }}{% endif %}" aria-label="Siguiente">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            {% endif %}
+        </ul>
+    </nav>
 </div>
 {% endblock %}

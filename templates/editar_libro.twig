@@ -2,7 +2,14 @@
 
 {% block content %}
     <div class="editar-libro-container">
-        <h1>Te encuentras editando un libro: <span class="libro-titulo">{{ libro.titulo }}</span></h1>
+        <h1>Te encuentras editando un libro</h1>
+
+        <!-- Mensaje de confirmación -->
+        {% if mensaje %}
+            <div id="mensaje-confirmacion" class="mensaje-confirmacion {{ tipoMensaje }}">
+                {{ mensaje }}
+            </div>
+        {% endif %}
 
         <form action="/editar/{{ libro.id }}" method="POST" enctype="multipart/form-data" class="formulario-edicion">
             <!-- Imagen actual del libro -->
@@ -71,32 +78,20 @@
 
             <div class="form-group">
                 <button type="submit" class="btn-actualizar">Actualizar</button>
-                <a href="/admin" class="btn-volver">Cancelar</a>
+                <a href="/admin" class="btn-volver">Volver Atras</a>
             </div>
         </form>
     </div>
 
-    {# Mostrar mensaje con SweetAlert2 #}
-    {% if mensaje %}
-        <script>
-            Swal.fire({
-                icon: "{{ tipoMensaje }}",
-                title: "{{ tipoMensaje is same as('success') ? '✅' : '❌' }}",
-                text: "{{ mensaje }}",
-            }).then(() => {
-                {% if tipoMensaje is same as('success') %}
-                    window.location.href = "/admin";
-                {% endif %}
-            });
-        </script>
-    {% endif %}
-
-    {# Prueba adicional de SweetAlert2 para depuración #}
+    <!-- Script para ocultar el mensaje después de unos segundos -->
     <script>
-        Swal.fire({
-            icon: "success",
-            title: "¡Prueba exitosa!",
-            text: "Este es un mensaje de prueba para asegurar que SweetAlert2 funciona.",
+        document.addEventListener('DOMContentLoaded', function() {
+            const mensaje = document.getElementById('mensaje-confirmacion');
+            if (mensaje) {
+                setTimeout(() => {
+                    mensaje.classList.add('fade-out');
+                }, 20000); // Ocultar después de 20 segundos
+            }
         });
     </script>
 {% endblock %}
