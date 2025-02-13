@@ -14,7 +14,7 @@ try {
     $db = (new Config\Database())->connect(); // Asegúrate de usar el namespace correcto
 
     // Datos del usuario administrador
-    $username = 'admin'; // Ahora 'nombre'
+    $username = 'Moha'; // Ahora 'nombre'
     $email = 'admin@libronia.local'; // Ahora 'correo'
     $password = 'admin123';
 

@@ -7,7 +7,7 @@ use Firebase\JWT\Key;
 use Exception;
 
 class JWTAuth {
-    private static $secret_key = "clave_super_secreta"; // 🔒 Cambia esto por una clave segura
+    private static $secret_key = "holaxd123"; 
     private static $algoritmo = "HS256";
 
     /**

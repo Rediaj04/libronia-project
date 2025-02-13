@@ -14,6 +14,22 @@ class DefaultController {
 
     public function __construct() {
         $this->twig = (new TwigSetup())->getTwig();
+        $this->initSession(); // Iniciar sesión si no está activa
+    
+        // Obtener el usuario si está logueado
+        if (isset($_SESSION['user_id'])) {
+            $db = (new Database())->connect();
+            $userId = $_SESSION['user_id'];
+            $stmt = $db->prepare("SELECT nombre FROM usuarios WHERE id = :user_id");
+            $stmt->bindParam(':user_id', $userId, PDO::PARAM_INT);
+            $stmt->execute();
+            $this->user = $stmt->fetch(PDO::FETCH_ASSOC);
+        } else {
+            $this->user = null; // No hay usuario logueado
+        }
+    
+        // Pasar el usuario a todas las vistas
+        $this->twig->addGlobal('user', $this->user);
     }
 
     private function initSession() {
@@ -38,7 +54,16 @@ class DefaultController {
 
     public function admin() {
         AuthMiddleware::verificarSesion();
+        $this->initSession(); // Asegúrate de que la sesión esté iniciada
+    
         $db = (new Database())->connect();
+    
+        // Obtener el nombre del usuario desde la base de datos
+        $userId = $_SESSION['user_id'];
+        $stmt = $db->prepare("SELECT nombre FROM usuarios WHERE id = :user_id");
+        $stmt->bindParam(':user_id', $userId, PDO::PARAM_INT);
+        $stmt->execute();
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
     
         // Parámetros de paginación
         $itemsPerPage = 30; // Mostrar 30 libros por página
@@ -93,14 +118,13 @@ class DefaultController {
         // Renderizar la vista con los datos
         echo $this->twig->render('admin.twig', [
             'libros' => $libros,
-            'user' => $_SESSION['user_id'],
+            'user' => $user, // Pasar el nombre del usuario a la vista
             'currentPage' => $page,
             'totalPages' => $totalPages,
             'searchQuery' => $searchQuery,
         ]);
     }
     
-
     public function login() {
         $this->initSession();
 
