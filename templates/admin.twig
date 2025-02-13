@@ -3,6 +3,13 @@
 {% block content %}
 <div class="container mt-4">
     <h2>Panel de Administración</h2>
+    
+    <!-- Mensaje de bienvenida -->
+    {% if user %}
+        <div class="alert alert-info" role="alert">
+            Hola! {{ user.nombre }}
+        </div>
+    {% endif %}
 
     <!-- Buscador -->
     <div class="mb-4">

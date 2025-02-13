@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/assets/leaflet/leaflet.css" />
     <link rel="stylesheet" href="/assets/sweetalert2/sweetalert2.css" />
-
 </head>
 <body class="bg-light">
     <!-- Navbar -->
@@ -22,7 +21,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    {% if session.user %}
+                    {% if user %}
                         <li class="nav-item">
                             <a class="nav-link" href="/admin">Administración</a>
                         </li>
@@ -57,7 +56,7 @@
 
     <!-- Script sweetalert2 -->
     <script src="/assets/sweetalert2/sweetalert2.all.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>S
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- Scripts adicionales -->
     {% block scripts %}{% endblock %}
