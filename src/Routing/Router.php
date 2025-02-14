@@ -4,15 +4,6 @@ namespace src\Routing;
 use src\Controller\DefaultController;
 use src\Middleware\AuthMiddleware;
 
-$router = new Router();
-
-$router->addRoute('GET', 'charts', [DefaultController::class, 'charts']);
-$router->addRoute('GET', 'categoria/{nombre_categoria}', [DefaultController::class, 'categoria']);
-$router->addRoute('GET', '/libro/{id}', [new DefaultController(), 'detalleLibro']);
-$router->addRoute('GET', '/buscar', [new DefaultController(), 'buscarLibros']);
-$router->addRoute('POST', '/api/login', [AuthController::class, 'login']);
-$router->addRoute('GET', '/admin', [new DefaultController(), 'admin'], [new AuthMiddleware(), 'verificarToken']);
-
 class Router {
     private $routes = [];
 
@@ -22,11 +13,12 @@ class Router {
      * @param string $method El método HTTP (GET, POST, etc.)
      * @param string $route La ruta de la solicitud (ej: "/login")
      * @param callable $handler La función o método a ejecutar
+     * @param callable|null $middleware Middleware a ejecutar antes del handler
      */
     public function addRoute($method, $route, $handler, $middleware = null) {
         $this->routes[] = [
             'method' => $method,
-            'middleware' => $middleware, // Aquí usamos el middleware proporcionado
+            'middleware' => $middleware, // Middleware asociado a la ruta
             'route' => $this->normalizeRoute($route),
             'handler' => $handler
         ];
@@ -38,20 +30,28 @@ class Router {
      * @param string $method El método HTTP usado en la solicitud
      * @param string $uri La URI solicitada
      */
-
     public function handleRequest($method, $uri) {
         $uri = $this->normalizeRoute($uri);
         error_log("Manejando petición: " . $method . " " . $uri);
-        error_log("Método: $method - URI: $uri");
 
         foreach ($this->routes as $route) {
             if ($route['method'] === $method && $this->matchRoute($route['route'], $uri)) {
                 error_log("Ruta encontrada: " . $route['route']);
-                call_user_func($route['handler'], $this->extractParams($route['route'], $uri));
+
+                // Ejecutar middleware si está definido
+                if ($route['middleware']) {
+                    call_user_func($route['middleware']);
+                }
+
+                // Extraer parámetros de la ruta
+                $params = $this->extractParams($route['route'], $uri);
+
+                // Ejecutar el handler de la ruta
+                call_user_func($route['handler'], $params);
                 return;
             }
         }
-    
+
         // Si no se encuentra la ruta
         http_response_code(404);
         echo "Página no encontrada.";
@@ -79,7 +79,7 @@ class Router {
         error_log("Comparando URI: " . $uri . " con patrón: " . $routePattern);
         return preg_match("#^$routePattern$#", $uri);
     }
-    
+
     /**
      * Extraer parámetros dinámicos de la URI
      * 
@@ -97,7 +97,38 @@ class Router {
                 }
             }
         }
-        error_log("Extracting params from route: " . $route . " with URI: " . $uri);
+        error_log("Extrayendo parámetros de la ruta: " . $route . " con URI: " . $uri);
         return $params;
     }
+}
+
+// Crear una instancia del enrutador
+$router = new Router();
+
+// Rutas públicas
+$router->addRoute('GET', '/', [new DefaultController(), 'home']);
+$router->addRoute('GET', '/login', [new DefaultController(), 'login']);
+$router->addRoute('POST', '/login', [new DefaultController(), 'login']);
+$router->addRoute('GET', '/logout', [new DefaultController(), 'logout']);
+$router->addRoute('GET', '/charts', [new DefaultController(), 'charts']);
+$router->addRoute('GET', '/categoria/{nombre_categoria}', [new DefaultController(), 'categoria']);
+$router->addRoute('GET', '/libro/{id}', [new DefaultController(), 'detalleLibro']);
+$router->addRoute('GET', '/buscar', [new DefaultController(), 'buscarLibros']);
+
+// Rutas protegidas con JWT
+$router->addRoute('GET', '/admin', [new DefaultController(), 'admin'], [new AuthMiddleware(), 'verificarToken']);
+$router->addRoute('GET', '/editar/{id}', [new DefaultController(), 'editarLibro'], [new AuthMiddleware(), 'verificarToken']);
+$router->addRoute('POST', '/editar/{id}', [new DefaultController(), 'editarLibro'], [new AuthMiddleware(), 'verificarToken']);
+$router->addRoute('GET', '/eliminar/{id}', [new DefaultController(), 'eliminarLibro'], [new AuthMiddleware(), 'verificarToken']);
+
+// Manejo de la solicitud
+try {
+    $router->handleRequest(
+        $_SERVER['REQUEST_METHOD'], 
+        parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)
+    );
+} catch (Exception $e) {
+    http_response_code(500);
+    echo "Error: " . $e->getMessage();
+    error_log($e->getMessage());
 }

@@ -2338,3 +2338,106 @@ Stacktrace:
 2025-02-13 17:54:38,834 - CRITICAL - Libro scrapeado: Summer Girls
 2025-02-13 17:54:38,834 - CRITICAL - Se encontró la sección 'More genres'. Parando el scraping de categorías.
 2025-02-13 17:54:39,030 - CRITICAL - Navegador cerrado.
+2025-02-14 17:50:26,723 - CRITICAL - Libro scrapeado: The Story of ABBA: Melancholy Undercover
+2025-02-14 17:50:29,313 - CRITICAL - Libro scrapeado: We Need Your Art: Stop Messing Around and Make Something
+2025-02-14 17:50:31,746 - CRITICAL - Libro scrapeado: Syme's Letter Writer: A Guide to Modern Correspondence About (Almost) Every Imaginable Subject of Daily Life
+2025-02-14 17:50:36,394 - CRITICAL - Libro scrapeado: The Rebel Romanov: Julie of Saxe-Coburg, the Empress Russia Never Had
+2025-02-14 17:50:39,082 - CRITICAL - Libro scrapeado: Within You Without You: Listening to George Harrison
+2025-02-14 17:50:40,799 - CRITICAL - Libro scrapeado: Faith of the Fathers: The Comprehensive History of Catholic Chaplains in the Civil War
+2025-02-14 17:50:45,116 - CRITICAL - Libro scrapeado: Changemakers Wanted: Your Blueprint for Lasting Impact and Ethical Change
+2025-02-14 17:50:47,964 - CRITICAL - Libro scrapeado: Chokepoints: American Power in the Age of Economic Warfare
+2025-02-14 17:50:52,381 - CRITICAL - Libro scrapeado: Expecting It All: More Time, Money, Energy, and Space for Mothers
+2025-02-14 17:50:58,532 - CRITICAL - Libro scrapeado: Afia in the Land of Wonders
+2025-02-14 17:51:01,911 - CRITICAL - Libro scrapeado: Sunday
+2025-02-14 17:51:05,076 - CRITICAL - Libro scrapeado: Perfectly Sunny: A Big-Hearted Hedgehog Finds Her Forever Home
+2025-02-14 17:51:17,403 - CRITICAL - Error al procesar la categoría Christian: Message: 
+
+2025-02-14 17:51:23,332 - CRITICAL - Libro scrapeado: The Greatest Adventure
+2025-02-14 17:51:27,378 - CRITICAL - Libro scrapeado: The Hampdenshire Wonder
+2025-02-14 17:51:31,022 - CRITICAL - Libro scrapeado: Dante's Divine Comedy: A Biography
+2025-02-14 17:51:36,782 - CRITICAL - Libro scrapeado: Tongues, Vol. 1
+2025-02-14 17:51:39,365 - CRITICAL - Libro scrapeado: Crumb: A Cartoonist's Life
+2025-02-14 17:51:44,370 - CRITICAL - Libro scrapeado: Pacific Harvest: A Northwest Coast Foraging Guide
+2025-02-14 17:51:49,517 - CRITICAL - Libro scrapeado: Praisesong for the Kitchen Ghosts: Stories and Recipes from Five Generations of Black Country Cooks
+2025-02-14 17:51:53,809 - CRITICAL - Libro scrapeado: Buddha Jumps Over the Wall, and Other Curiously Named Classic Chinese Dishes: A Graphic Cookbook―26 Recipes & Stories
+2025-02-14 17:52:05,783 - CRITICAL - Error al procesar la categoría Ebooks: Message: 
+
+2025-02-14 17:52:12,605 - CRITICAL - Libro scrapeado: Six Wild Crowns
+2025-02-14 17:52:17,429 - CRITICAL - Libro scrapeado: The Lost Queen
+2025-02-14 17:52:19,562 - CRITICAL - Libro scrapeado: Vita Nostra
+2025-02-14 17:52:27,258 - CRITICAL - Libro scrapeado: Fun for the Whole Family
+2025-02-14 17:52:30,694 - CRITICAL - Libro scrapeado: Everybody Says It's Everything
+2025-02-14 17:52:32,970 - CRITICAL - Libro scrapeado: Hail Mary: Stories
+2025-02-14 17:52:41,018 - CRITICAL - Libro scrapeado: The Raven Boys: The Graphic Novel
+2025-02-14 17:52:44,067 - CRITICAL - Libro scrapeado: The History of Everything
+2025-02-14 17:52:46,611 - CRITICAL - Libro scrapeado: Almost Sunset
+2025-02-14 17:52:51,366 - CRITICAL - Libro scrapeado: A Lesser Light
+2025-02-14 17:52:53,284 - CRITICAL - Libro scrapeado: Maiden Tomb
+2025-02-14 17:52:55,756 - CRITICAL - Libro scrapeado: World War 2.1
+2025-02-14 17:52:58,856 - CRITICAL - Libro scrapeado: The Rebel Romanov: Julie of Saxe-Coburg, the Empress Russia Never Had
+2025-02-14 17:53:01,012 - CRITICAL - Libro scrapeado: Warbody: A Marine Sniper and the Hidden Violence of Modern Warfare
+2025-02-14 17:53:04,681 - CRITICAL - Libro scrapeado: What Truth Sounds Like
+2025-02-14 17:53:10,690 - CRITICAL - Libro scrapeado: Whistle
+2025-02-14 17:53:13,896 - CRITICAL - Libro scrapeado: Their Monstrous Hearts
+2025-02-14 17:53:16,740 - CRITICAL - Libro scrapeado: Nowhere
+2025-02-14 17:53:24,888 - CRITICAL - Libro scrapeado: The Wanderer's Curse: A Memoir
+2025-02-14 17:53:27,435 - CRITICAL - Libro scrapeado: Hate Won't Win: Find Your Power and Leave This Place Better Than You Found It
+2025-02-14 17:53:29,674 - CRITICAL - Libro scrapeado: The Lost Journal
+2025-02-14 17:53:42,368 - CRITICAL - Error al procesar la categoría Music: Message: 
+
+2025-02-14 17:53:47,980 - CRITICAL - Libro scrapeado: Fair Play
+2025-02-14 17:53:51,860 - CRITICAL - Libro scrapeado: Making a Killing
+2025-02-14 17:53:54,798 - CRITICAL - Libro scrapeado: Murder Takes a Vacation
+2025-02-14 17:53:58,552 - CRITICAL - Libro scrapeado: The Wanderer's Curse: A Memoir
+2025-02-14 17:53:59,891 - CRITICAL - Libro scrapeado: Within You Without You: Listening to George Harrison
+2025-02-14 17:54:00,724 - CRITICAL - Libro scrapeado: Chokepoints: American Power in the Age of Economic Warfare
+2025-02-14 17:54:13,877 - CRITICAL - Error al procesar el libro en https://www.goodreads.com/book/show/180539965-in-the-deluge: Message: 
+Stacktrace:
+#0 0x55a6103faa5a <unknown>
+#1 0x55a60ff082f0 <unknown>
+#2 0x55a60ff57235 <unknown>
+#3 0x55a60ff57451 <unknown>
+#4 0x55a60ff9cdc4 <unknown>
+#5 0x55a60ff7bbed <unknown>
+#6 0x55a60ff9a11e <unknown>
+#7 0x55a60ff7b963 <unknown>
+#8 0x55a60ff48eec <unknown>
+#9 0x55a60ff4a13e <unknown>
+#10 0x55a6103c71cf <unknown>
+#11 0x55a6103cb2dd <unknown>
+#12 0x55a6103b56d7 <unknown>
+#13 0x55a6103cba51 <unknown>
+#14 0x55a61039cd1e <unknown>
+#15 0x55a6103e9538 <unknown>
+#16 0x55a6103e973a <unknown>
+#17 0x55a6103f96cc <unknown>
+#18 0x7f3af09d5ac3 <unknown>
+
+2025-02-14 17:54:17,125 - CRITICAL - Libro scrapeado: She Planted Her Own Flowers
+2025-02-14 17:54:19,212 - CRITICAL - Libro scrapeado: Crimson Leaves: Poetry Celebrating Romance
+2025-02-14 17:54:31,427 - CRITICAL - Error al procesar la categoría Psychology: Message: 
+
+2025-02-14 17:54:41,408 - CRITICAL - Libro scrapeado: Love at First Flight
+2025-02-14 17:54:45,035 - CRITICAL - Libro scrapeado: The Kiss Bet, Vol. 1
+2025-02-14 17:54:47,404 - CRITICAL - Libro scrapeado: These Summer Storms
+2025-02-14 17:54:52,829 - CRITICAL - Libro scrapeado: The Silicon Shrink: How Artificial Intelligence Made the World an Asylum
+2025-02-14 17:54:55,432 - CRITICAL - Libro scrapeado: Bilingualism
+2025-02-14 17:54:59,311 - CRITICAL - Libro scrapeado: Animal Rights
+2025-02-14 17:55:07,678 - CRITICAL - Libro scrapeado: Anticipation Day
+2025-02-14 17:55:11,891 - CRITICAL - Libro scrapeado: They Will Be Coming for Us
+2025-02-14 17:55:13,279 - CRITICAL - Libro scrapeado: World War 2.1
+2025-02-14 17:55:17,310 - CRITICAL - Libro scrapeado: Put Your Past in the Past: Why You May Be Reenacting Your Trauma, and How to Stop
+2025-02-14 17:55:19,497 - CRITICAL - Libro scrapeado: Soul Compass: A Journal for Intentional Living Through Self-Discovery
+2025-02-14 17:55:22,604 - CRITICAL - Libro scrapeado: Biblical Leadership: Based on the Life of Moses, for Business and Everday
+2025-02-14 17:55:35,017 - CRITICAL - Error al procesar la categoría Sports: Message: 
+
+2025-02-14 17:55:41,095 - CRITICAL - Libro scrapeado: The French Honeymoon
+2025-02-14 17:55:42,849 - CRITICAL - Libro scrapeado: Whistle
+2025-02-14 17:55:45,560 - CRITICAL - Libro scrapeado: The Butterfly and the Web
+2025-02-14 17:55:49,869 - CRITICAL - Libro scrapeado: Journey Through Greece: The Stress-Free Guide to Culture, Cuisine, and Hidden Treasures
+2025-02-14 17:55:52,811 - CRITICAL - Libro scrapeado: 20 Amici, 40 Ricette: Friends and Food from the Heart of Chianti
+2025-02-14 17:55:56,751 - CRITICAL - Libro scrapeado: The Lost Queen
+2025-02-14 17:55:59,542 - CRITICAL - Libro scrapeado: Time After Time
+2025-02-14 17:56:02,934 - CRITICAL - Libro scrapeado: They Changed the Game: 50 Stories and Illustrations Celebrating Creativity in Sports
+2025-02-14 17:56:02,935 - CRITICAL - Se encontró la sección 'More genres'. Parando el scraping de categorías.
+2025-02-14 17:56:03,400 - CRITICAL - Navegador cerrado.
