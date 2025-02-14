@@ -16,7 +16,7 @@ class JWTAuth {
     public static function generarToken($usuario_id) {
         $payload = [
             "iat" => time(),              // Tiempo actual
-            "exp" => time() + 60,       // Expira en 1 hora
+            "exp" => time() + 3600,       // Expira en 1 hora
             "usuario_id" => $usuario_id   // ID del usuario autenticado
         ];
         

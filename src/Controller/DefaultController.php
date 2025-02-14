@@ -4,6 +4,7 @@ namespace src\Controller;
 
 use Config\Database;
 use Config\TwigSetup;
+use Config\JWTAuth;
 use PDO;
 use PDOException;
 use src\Middleware\AuthMiddleware;
@@ -127,21 +128,35 @@ class DefaultController {
     
     public function login() {
         $this->initSession();
-
+    
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
             $password = $_POST['password'];
-
+    
             try {
                 $db = (new Database())->connect();
                 $stmt = $db->prepare("SELECT id, contrasena FROM usuarios WHERE correo = :username");
                 $stmt->bindParam(':username', $username, PDO::PARAM_STR);
                 $stmt->execute();
-
+    
                 $user = $stmt->fetch(PDO::FETCH_ASSOC);
-
+    
                 if ($user && password_verify($password, $user['contrasena'])) {
+                    // Generar token JWT
+                    $token = JWTAuth::generarToken($user['id']);
+    
+                    // Almacenar el token en una cookie segura
+                    setcookie('jwt_token', $token, [
+                        'expires' => time() + 60 * 60 * 24 * 7, // 1 semana de duración
+                        'path' => '/',
+                        'secure' => true, // Solo enviar sobre HTTPS
+                        'httponly' => true, // No accesible desde JavaScript
+                        'samesite' => 'Strict' // Prevenir ataques CSRF
+                    ]);
+    
+                    // También almacenar el ID del usuario en la sesión (opcional)
                     $_SESSION['user_id'] = $user['id'];
+    
                     header('Location: /admin');
                     exit;
                 } else {
@@ -154,7 +169,7 @@ class DefaultController {
                 return;
             }
         }
-
+    
         echo $this->twig->render('login.twig');
     }
 
