@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="{{ lang }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Libronia - Tu biblioteca digital{% endblock %}</title>
+    <title>{% block title %}{{ _("Libronia - Tu biblioteca digital") }}{% endblock %}</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <!-- Estilos personalizados -->
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/assets/leaflet/leaflet.css" />
     <link rel="stylesheet" href="/assets/sweetalert2/sweetalert2.css" />
@@ -15,24 +14,42 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
-            <a class="navbar-brand" href="/">📚 Libronia</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="/">📚 {{ _("Libronia") }}</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="{{ _("Toggle navigation") }}">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     {% if user %}
                         <li class="nav-item">
-                            <a class="nav-link" href="/admin">Administración</a>
+                            <a class="nav-link" href="/admin">{{ _("Administración") }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/logout">Cerrar sesión</a>
+                            <a class="nav-link" href="/logout">{{ _("Cerrar sesión") }}</a>
                         </li>
                     {% else %}
                         <li class="nav-item">
-                            <a class="nav-link" href="/login">Iniciar sesión</a>
+                            <a class="nav-link" href="/login">{{ _("Iniciar sesión") }}</a>
                         </li>
                     {% endif %}
+
+                    <!-- Selector de idioma con banderas -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle lang-dropdown" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            {% if lang == 'es_ES' %}
+                                <img src="/assets/images/flags/es.png" alt="{{ _("Español") }}"> {{ _("Español") }}
+                            {% elseif lang == 'en_US' %}
+                                <img src="/assets/images/flags/us.png" alt="{{ _("English") }}"> {{ _("English") }}
+                            {% elseif lang == 'pt_BR' %}
+                                <img src="/assets/images/flags/br.png" alt="{{ _("Português") }}"> {{ _("Português") }}
+                            {% endif %}
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                            <li><a class="dropdown-item lang-option" href="?lang=es_ES"><img src="/assets/images/flags/es.png" alt="{{ _("Español") }}"> {{ _("Español") }}</a></li>
+                            <li><a class="dropdown-item lang-option" href="?lang=en_US"><img src="/assets/images/flags/us.png" alt="{{ _("English") }}"> {{ _("English") }}</a></li>
+                            <li><a class="dropdown-item lang-option" href="?lang=pt_BR"><img src="/assets/images/flags/br.png" alt="{{ _("Português") }}"> {{ _("Português") }}</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -45,18 +62,11 @@
 
     <!-- Footer -->
     <footer class="bg-primary text-white text-center py-3">
-        <p class="mb-0">© 2025 Libronia. Todos los derechos reservados.</p>
+        <p class="mb-0">© 2025 Libronia. {{ _("Todos los derechos reservados.") }}</p>
     </footer>
 
     <!-- Bootstrap JS -->
     <script src="/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Script Chart.js -->
-    <script src="/assets/chart.js/chart.umd.js"></script>
-
-    <!-- Script sweetalert2 -->
-    <script src="/assets/sweetalert2/sweetalert2.all.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- Scripts adicionales -->
     {% block scripts %}{% endblock %}

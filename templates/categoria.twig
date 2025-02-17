@@ -1,26 +1,26 @@
 {% extends 'base.twig' %}
 
-{% block title %}Categoría: {{ categoria }}{% endblock %}
+{% block title %}{{ _("Categoría:") }} {{ categoria }}{% endblock %}
 
 {% block content %}
 <div class="container">
-    <h1 class="text-primary text-center mb-5">Categoría: {{ categoria }}</h1>
-    <p class="text-secondary text-center mb-4">
-        En esta categoría encontrarás todos los libros relacionados.
-    </p>
+    <h1 class="text-primary text-center mb-5">{{ _("Categoría:") }} {{ categoria }}</h1>
+<p class="text-secondary text-center mb-4">
+{{ _("En esta categoria encontraras todos los libros relacionados.") }}
+</p>
 
     <div class="row">
         {% for libro in libros %}
             <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4">
                 <div class="card shadow-sm">
-<a href="/libro/{{ libro.id }}">
-    <img src="{{ libro.imagen_url }}" class="card-img-topl" alt="{{ libro.titulo }}">
-</a>
+                    <a href="/libro/{{ libro.id }}">
+                        <img src="{{ libro.imagen_url }}" class="card-img-topl" alt="{{ libro.titulo }}">
+                    </a>
                 </div>
             </div>
         {% else %}
         <div class="col-12">
-            <p class="text-center text-muted">No hay libros en esta categoría.</p>
+            <p class="text-center text-muted">{{ _("No hay libros en esta categoría.") }}</p>
         </div>
         {% endfor %}
     </div>

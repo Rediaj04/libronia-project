@@ -1,0 +1,65 @@
+msgid "Libronia - Tu biblioteca digital"
+msgstr "Libronia - Your digital library"
+
+msgid "Toggle navigation"
+msgstr "Toggle navigation"
+
+msgid "Administración"
+msgstr "Administration"
+
+msgid "Cerrar sesión"
+msgstr "Logout"
+
+msgid "Iniciar sesión"
+msgstr "Login"
+
+msgid "Español"
+msgstr "Spanish"
+
+msgid "English"
+msgstr "English"
+
+msgid "Português"
+msgstr "Portuguese"
+
+msgid "Todos los derechos reservados."
+msgstr "All rights reserved."
+
+msgid "Bienvenido a Libronia"
+msgstr "Welcome to Libronia"
+
+msgid "¡Explora nuestras categorías y descubre nuevas lecturas!"
+msgstr "Explore our categories and discover new readings!"
+
+msgid "Buscar y explorar libros"
+msgstr "Search and explore books"
+
+msgid "Escribe el nombre del libro o autor..."
+msgstr "Enter the book or author's name..."
+
+msgid "Buscar"
+msgstr "Search"
+
+msgid "Categorías"
+msgstr "Categories"
+
+msgid "¡Sigue explorando y encuentra tu próxima lectura favorita!"
+msgstr "Keep exploring and find your next favorite read!"
+
+msgid "Bibliotecas cercanas a tu ubicación:"
+msgstr "Libraries near your location:"
+
+msgid "Estás Aquí"
+msgstr "You are here"
+
+msgid "Biblioteca del Saber"
+msgstr "Library of Knowledge"
+
+msgid "Centro de Lectura Aurora"
+msgstr "Aurora Reading Center"
+
+msgid "Archivo de Letras"
+msgstr "Archive of Letters"
+
+msgid "Sala del Conocimiento"
+msgstr "Hall of Knowledge"
