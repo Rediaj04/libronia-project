@@ -15,23 +15,31 @@ class DefaultController {
 
     public function __construct() {
         $this->twig = (new TwigSetup())->getTwig();
-        $this->initSession(); // Iniciar sesión si no está activa
+        $this->initSession(); 
     
-        // Obtener el usuario si está logueado
+        // Validar JWT si la sesión no está iniciada
+        if (!isset($_SESSION['user_id']) && isset($_COOKIE['jwt_token'])) {
+            $datos = JWTAuth::validarToken($_COOKIE['jwt_token']);
+            if ($datos) {
+                $_SESSION['user_id'] = $datos->usuario_id;
+            }
+        }
+    
+        // Obtener usuario desde la base de datos
         if (isset($_SESSION['user_id'])) {
             $db = (new Database())->connect();
-            $userId = $_SESSION['user_id'];
             $stmt = $db->prepare("SELECT nombre FROM usuarios WHERE id = :user_id");
-            $stmt->bindParam(':user_id', $userId, PDO::PARAM_INT);
+            $stmt->bindParam(':user_id', $_SESSION['user_id'], PDO::PARAM_INT);
             $stmt->execute();
             $this->user = $stmt->fetch(PDO::FETCH_ASSOC);
         } else {
-            $this->user = null; // No hay usuario logueado
+            $this->user = null;
         }
     
-        // Pasar el usuario a todas las vistas
+        // Pasar `user` globalmente a todas las vistas
         $this->twig->addGlobal('user', $this->user);
     }
+    
 
     private function initSession() {
         if (session_status() === PHP_SESSION_NONE) {
@@ -174,11 +182,34 @@ class DefaultController {
     }
 
     public function logout() {
-        $this->initSession();
+        $this->initSession(); // Asegurar que la sesión está iniciada
+    
+        // Borrar todas las variables de sesión
+        $_SESSION = [];
+    
+        // Borrar la cookie de sesión si existe
+        if (ini_get("session.use_cookies")) {
+            $params = session_get_cookie_params();
+            setcookie(session_name(), '', time() - 42000, 
+                $params["path"], $params["domain"], 
+                $params["secure"], $params["httponly"]
+            );
+        }
+    
+        // Regenerar ID de sesión antes de destruirla (mejor seguridad)
+        session_regenerate_id(true);
+        
+        // Destruir la sesión completamente
         session_destroy();
+    
+        // Asegurar que el token JWT (si se usa) también se elimina
+        setcookie("jwt_token", "", time() - 3600, "/", "", true, true);
+    
+        // Redirigir al login
         header('Location: /login');
         exit;
     }
+    
 
     public function charts() {
         echo $this->twig->render('charts.twig');
