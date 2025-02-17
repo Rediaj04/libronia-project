@@ -3,7 +3,7 @@ require_once __DIR__ . '/../config/Database.php'; // Incluye la configuración p
 
 /**
  * Este script se utiliza para insertar un usuario administrador predeterminado en la tabla `usuarios`.
- * Usuario: Moha
+ * Usuario: Andres
  * Contraseña: admin123
  * Email: admin@libronia.local
  * Ejecutar este archivo una sola vez para configurar el usuario inicial.
@@ -14,7 +14,7 @@ try {
     $db = (new Config\Database())->connect(); // Asegúrate de usar el namespace correcto
 
     // Datos del usuario administrador
-    $username = 'Moha'; // Ahora 'nombre'
+    $username = 'Andres'; // Ahora 'nombre'
     $email = 'admin@libronia.local'; // Ahora 'correo'
     $password = 'admin123';
 

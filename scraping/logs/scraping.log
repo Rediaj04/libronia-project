@@ -2441,3 +2441,107 @@ Stacktrace:
 2025-02-14 17:56:02,934 - CRITICAL - Libro scrapeado: They Changed the Game: 50 Stories and Illustrations Celebrating Creativity in Sports
 2025-02-14 17:56:02,935 - CRITICAL - Se encontró la sección 'More genres'. Parando el scraping de categorías.
 2025-02-14 17:56:03,400 - CRITICAL - Navegador cerrado.
+2025-02-17 15:28:53,233 - CRITICAL - Libro scrapeado: The Story of ABBA: Melancholy Undercover
+2025-02-17 15:28:55,311 - CRITICAL - Libro scrapeado: We Need Your Art: Stop Messing Around and Make Something
+2025-02-17 15:29:06,928 - CRITICAL - Error al procesar el libro en https://www.goodreads.com/book/show/210454086-syme-s-letter-writer: Message: 
+Stacktrace:
+#0 0x55c45ea36a5a <unknown>
+#1 0x55c45e5442f0 <unknown>
+#2 0x55c45e593235 <unknown>
+#3 0x55c45e593451 <unknown>
+#4 0x55c45e5d8dc4 <unknown>
+#5 0x55c45e5b7bed <unknown>
+#6 0x55c45e5d611e <unknown>
+#7 0x55c45e5b7963 <unknown>
+#8 0x55c45e584eec <unknown>
+#9 0x55c45e58613e <unknown>
+#10 0x55c45ea031cf <unknown>
+#11 0x55c45ea072dd <unknown>
+#12 0x55c45e9f16d7 <unknown>
+#13 0x55c45ea07a51 <unknown>
+#14 0x55c45e9d8d1e <unknown>
+#15 0x55c45ea25538 <unknown>
+#16 0x55c45ea2573a <unknown>
+#17 0x55c45ea356cc <unknown>
+#18 0x7f2c8b8bbac3 <unknown>
+
+2025-02-17 15:29:12,913 - CRITICAL - Libro scrapeado: Jane Austen's Bookshelf: A Rare Book Collector's Quest to Find the Women Writers Who Shaped a Legend
+2025-02-17 15:29:15,817 - CRITICAL - Libro scrapeado: Killer Story: The Truth Behind True Crime Television
+2025-02-17 15:29:18,311 - CRITICAL - Libro scrapeado: Foreign Fruit: A Personal History of the Orange
+2025-02-17 15:29:22,026 - CRITICAL - Libro scrapeado: The Relationship-Driven Leader: Strengthening Connections to Enhance Productivity and Wellness at Work
+2025-02-17 15:29:24,073 - CRITICAL - Libro scrapeado: The Broken Rung: When the Career Ladder Breaks for Women—and How They Can Succeed in Spite of It
+2025-02-17 15:29:25,982 - CRITICAL - Libro scrapeado: The New Rules of the Road: How to Navigate the Rapidly Changing Marketing Landscape
+2025-02-17 15:29:30,081 - CRITICAL - Libro scrapeado: Almost Sunset
+2025-02-17 15:29:32,619 - CRITICAL - Libro scrapeado: Racing the Clouds
+2025-02-17 15:29:34,301 - CRITICAL - Libro scrapeado: Poo and Order: A Funny and Educational Children's Book about Truth, Fairness, and Learning the Difference Between Fact and Fiction
+2025-02-17 15:29:46,072 - CRITICAL - Error al procesar la categoría Christian: Message: 
+
+2025-02-17 15:29:50,485 - CRITICAL - Libro scrapeado: The Greatest Adventure
+2025-02-17 15:29:54,128 - CRITICAL - Libro scrapeado: The Hampdenshire Wonder
+2025-02-17 15:29:55,798 - CRITICAL - Libro scrapeado: Dante's Divine Comedy: A Biography
+2025-02-17 15:30:00,561 - CRITICAL - Libro scrapeado: Tongues, Vol. 1
+2025-02-17 15:30:05,156 - CRITICAL - Libro scrapeado: Crumb: A Cartoonist's Life
+2025-02-17 15:30:08,746 - CRITICAL - Libro scrapeado: Pacific Harvest: A Northwest Coast Foraging Guide
+2025-02-17 15:30:11,713 - CRITICAL - Libro scrapeado: Praisesong for the Kitchen Ghosts: Stories and Recipes from Five Generations of Black Country Cooks
+2025-02-17 15:30:14,533 - CRITICAL - Libro scrapeado: Buddha Jumps Over the Wall, and Other Curiously Named Classic Chinese Dishes: A Graphic Cookbook―26 Recipes & Stories
+2025-02-17 15:30:26,162 - CRITICAL - Error al procesar la categoría Ebooks: Message: 
+
+2025-02-17 15:30:34,084 - CRITICAL - Libro scrapeado: Rick Kotani's 400 Million Dollar Summer
+2025-02-17 15:30:38,828 - CRITICAL - Libro scrapeado: Ambessa
+2025-02-17 15:30:40,293 - CRITICAL - Libro scrapeado: Wind that Blows from Nowhere
+2025-02-17 15:30:45,505 - CRITICAL - Libro scrapeado: The Persians
+2025-02-17 15:30:47,223 - CRITICAL - Libro scrapeado: At Home in a Faraway Place
+2025-02-17 15:30:50,211 - CRITICAL - Libro scrapeado: Considering Us
+2025-02-17 15:30:55,174 - CRITICAL - Libro scrapeado: The History of Everything
+2025-02-17 15:30:55,854 - CRITICAL - Libro scrapeado: Almost Sunset
+2025-02-17 15:30:57,625 - CRITICAL - Libro scrapeado: You and Me on Repeat
+2025-02-17 15:31:02,336 - CRITICAL - Libro scrapeado: The Dressmakers of London
+2025-02-17 15:31:04,153 - CRITICAL - Libro scrapeado: The Enemy's Daughter
+2025-02-17 15:31:05,837 - CRITICAL - Libro scrapeado: The Scrapbook
+2025-02-17 15:31:08,403 - CRITICAL - Libro scrapeado: Jane Austen's Bookshelf: A Rare Book Collector's Quest to Find the Women Writers Who Shaped a Legend
+2025-02-17 15:31:10,044 - CRITICAL - Libro scrapeado: Integrated: How American Schools Failed Black Children
+2025-02-17 15:31:12,352 - CRITICAL - Libro scrapeado: The World After Gaza: A Short History
+2025-02-17 15:31:16,827 - CRITICAL - Libro scrapeado: Another Fine Mess
+2025-02-17 15:31:20,409 - CRITICAL - Libro scrapeado: The Haunting of Villa Maledetta
+2025-02-17 15:31:22,819 - CRITICAL - Libro scrapeado: The Starving Saints
+2025-02-17 15:31:26,822 - CRITICAL - Libro scrapeado: We've Decided to Go in a Different Direction: Essays
+2025-02-17 15:31:30,365 - CRITICAL - Libro scrapeado: If You Were My Daughter: A Memoir of Healing an Unmothered Heart
+2025-02-17 15:31:32,716 - CRITICAL - Libro scrapeado: Dirty Kitchen: A Memoir of Food and Family
+2025-02-17 15:31:44,485 - CRITICAL - Error al procesar la categoría Music: Message: 
+
+2025-02-17 15:31:49,288 - CRITICAL - Libro scrapeado: The Isle of Ever
+2025-02-17 15:31:50,016 - CRITICAL - Libro scrapeado: Another Fine Mess
+2025-02-17 15:31:52,064 - CRITICAL - Libro scrapeado: The Dark Library
+2025-02-17 15:31:56,154 - CRITICAL - Libro scrapeado: The Good Death: A Guide for Supporting Your Loved One through the End of Life
+2025-02-17 15:31:57,416 - CRITICAL - Libro scrapeado: Shift Your Mind to Shift Your Weight: A Weight Loss Journal of Manifestation, Meditation, Gratitude and Mindfulness to Change Your Relationship With Eating
+2025-02-17 15:31:59,899 - CRITICAL - Libro scrapeado: Gentle: Rest More, Stress Less, and Live the Life You Actually Want
+2025-02-17 15:32:04,308 - CRITICAL - Libro scrapeado: Letter to a Dandelion: Earth Verse for Gardeners & Dandelions
+2025-02-17 15:32:06,599 - CRITICAL - Libro scrapeado: How Hot It Be in Hell
+2025-02-17 15:32:09,010 - CRITICAL - Libro scrapeado: Knucklehead: Poems
+2025-02-17 15:32:20,817 - CRITICAL - Error al procesar la categoría Psychology: Message: 
+
+2025-02-17 15:32:25,745 - CRITICAL - Libro scrapeado: An Overdue Match
+2025-02-17 15:32:28,113 - CRITICAL - Libro scrapeado: Collision
+2025-02-17 15:32:28,991 - CRITICAL - Libro scrapeado: Considering Us
+2025-02-17 15:32:32,574 - CRITICAL - Libro scrapeado: TreeNotes: A Year in the Company of Trees
+2025-02-17 15:32:34,207 - CRITICAL - Libro scrapeado: On Breathing: Care in a Time of Catastrophe
+2025-02-17 15:32:36,156 - CRITICAL - Libro scrapeado: They Poisoned the World: Life and Death in the Age of Forever Chemicals
+2025-02-17 15:32:40,948 - CRITICAL - Libro scrapeado: Two Truths and a Lie
+2025-02-17 15:32:43,247 - CRITICAL - Libro scrapeado: The Garden
+2025-02-17 15:32:45,031 - CRITICAL - Libro scrapeado: Gemma Pazat-Jones: The Beginnings
+2025-02-17 15:32:48,074 - CRITICAL - Libro scrapeado: Make Sense of Your Story: Why Engaging Your Past with Kindness Changes Everything
+2025-02-17 15:32:48,889 - CRITICAL - Libro scrapeado: Shift Your Mind to Shift Your Weight: A Weight Loss Journal of Manifestation, Meditation, Gratitude and Mindfulness to Change Your Relationship With Eating
+2025-02-17 15:32:51,707 - CRITICAL - Libro scrapeado: Change Your Story, Change Your Life: Using Shamanic and Jungian Tools to Achieve Personal Transformation
+2025-02-17 15:33:03,839 - CRITICAL - Error al procesar la categoría Sports: Message: 
+
+2025-02-17 15:33:07,609 - CRITICAL - Libro scrapeado: Up in Smoke
+2025-02-17 15:33:10,176 - CRITICAL - Libro scrapeado: Through the Mist
+2025-02-17 15:33:13,065 - CRITICAL - Libro scrapeado: All for the Game
+2025-02-17 15:33:18,629 - CRITICAL - Libro scrapeado: Journey Through Greece: The Stress-Free Guide to Culture, Cuisine, and Hidden Treasures
+2025-02-17 15:33:20,267 - CRITICAL - Libro scrapeado: Mouse Visits Six National Monuments
+2025-02-17 15:33:22,582 - CRITICAL - Libro scrapeado: Down By The River
+2025-02-17 15:33:27,370 - CRITICAL - Libro scrapeado: A Catalog of Burnt Objects
+2025-02-17 15:33:30,500 - CRITICAL - Libro scrapeado: I Am the Cage
+2025-02-17 15:33:31,188 - CRITICAL - Libro scrapeado: The Isle of Ever
+2025-02-17 15:33:31,188 - CRITICAL - Se encontró la sección 'More genres'. Parando el scraping de categorías.
+2025-02-17 15:33:31,460 - CRITICAL - Navegador cerrado.
