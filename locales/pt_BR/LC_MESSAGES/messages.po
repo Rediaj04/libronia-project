@@ -1,0 +1,114 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0.1\n"
+
+msgid "Libronia - Tu biblioteca digital"
+msgstr "Libronia - Sua biblioteca digital"
+
+msgid "Toggle navigation"
+msgstr "Alternar navegação"
+
+msgid "Administración"
+msgstr "Administração"
+
+msgid "Cerrar sesión"
+msgstr "Sair"
+
+msgid "Iniciar sesión"
+msgstr "Entrar"
+
+msgid "Español"
+msgstr "Espanhol"
+
+msgid "English"
+msgstr "Inglês"
+
+msgid "Português"
+msgstr "Português"
+
+msgid "Todos los derechos reservados."
+msgstr "Todos os direitos reservados."
+
+msgid "Bienvenido a Libronia"
+msgstr "Bem-vindo à Libronia"
+
+msgid "¡Explora nuestras categorías y descubre nuevas lecturas!"
+msgstr "Explore nossas categorias e descubra novas leituras!"
+
+msgid "Buscar y explorar libros"
+msgstr "Buscar e explorar livros"
+
+msgid "Escribe el nombre del libro o autor..."
+msgstr "Digite o nome do livro ou autor..."
+
+msgid "Buscar"
+msgstr "Buscar"
+
+msgid "Categorías"
+msgstr "Categorias"
+
+msgid "¡Sigue explorando y encuentra tu próxima lectura favorita!"
+msgstr "Continue explorando e encontre sua próxima leitura favorita!"
+
+msgid "Bibliotecas cercanas a tu ubicación:"
+msgstr "Bibliotecas próximas à sua localização:"
+
+msgid "Estás Aquí"
+msgstr "Você está aqui"
+
+msgid "Biblioteca del Saber"
+msgstr "Biblioteca do Saber"
+
+msgid "Centro de Lectura Aurora"
+msgstr "Centro de Leitura Aurora"
+
+msgid "Archivo de Letras"
+msgstr "Arquivo de Letras"
+
+msgid "Sala del Conocimiento"
+msgstr "Sala do Conhecimento"
+
+msgid "Buscar tu libro"
+msgstr "Buscar seu livro"
+
+msgid "Resultados encontrados:"
+msgstr "Resultados encontrados:"
+
+msgid "Portada de"
+msgstr "Capa de"
+
+msgid "Autor:"
+msgstr "Autor:"
+
+msgid "Publicado en:"
+msgstr "Publicado em:"
+
+msgid "Paginación"
+msgstr "Paginação"
+
+msgid "Anterior"
+msgstr "Anterior"
+
+msgid "Siguiente"
+msgstr "Próximo"
+
+msgid "No se encontraron resultados para"
+msgstr "Nenhum resultado encontrado para"
+
+msgid "Categoría:"
+msgstr "Categoria:"
+
+msgid "En esta categoria encontraras todos los libros relacionados."
+msgstr "Nesta categoria, você encontraará todos os livros relacionados."
+
+msgid "No hay libros en esta categoría."
+msgstr "Não há livros nesta categoria."

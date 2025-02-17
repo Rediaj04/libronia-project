@@ -1,18 +1,17 @@
 {% extends 'base.twig' %}
-
-{% block title %}Inicio{% endblock %}
+{% block title %}{{ _("Inicio") }}{% endblock %}
 
 {% block content %}
 <div class="container">
-    <h1 class="text-center text-primary mb-5">Bienvenido a Libronia</h1>
+    <h1 class="text-center text-primary mb-5">{{ _("Bienvenido a Libronia") }}</h1>
 
     <!-- Banner de imagen -->
     <div class="banner-container">
-        <img src="/assets/images/misc/bannerog.jpg" alt="Banner de Libronia" class="banner-image">
+        <img src="/assets/images/misc/bannerog.jpg" alt="{{ _("Banner de Libronia") }}" class="banner-image">
     </div>
 
     <div class="alert alert-success text-center" role="alert">
-        ¡Explora nuestras categorías y descubre nuevas lecturas!
+        {{ _("¡Explora nuestras categorías y descubre nuevas lecturas!") }}
     </div>
 
     <!-- Formulario de búsqueda -->
@@ -20,11 +19,11 @@
         <div class="col-12">
             <div class="card shadow-sm">
                 <div class="card-body">
-                    <h5 class="card-title text-secondary">Buscar y explorar libros</h5>
+                    <h5 class="card-title text-secondary">{{ _("Buscar y explorar libros") }}</h5>
                     <form action="/buscar" method="GET">
                         <div class="input-group">
-                            <input type="text" name="q" class="form-control" placeholder="Escribe el nombre del libro o autor..." required>
-                            <button class="btn btn-primary" type="submit">Buscar</button>
+                            <input type="text" name="q" class="form-control" placeholder="{{ _("Escribe el nombre del libro o autor...") }}" required>
+                            <button class="btn btn-primary" type="submit">{{ _("Buscar") }}</button>
                         </div>
                     </form>
                 </div>
@@ -37,7 +36,7 @@
         <div class="col-12">
             <div class="card shadow-sm">
                 <div class="card-body">
-                    <h5 class="card-title text-secondary">Categorías</h5>
+                    <h5 class="card-title text-secondary">{{ _("Categorías") }}</h5>
                     <div class="row">
                         {% for categoria in categorias %}
                         <div class="col-md-4 col-sm-6 col-12 mb-2">
@@ -53,13 +52,13 @@
     </div>
 
     <div class="alert alert-info text-center mt-4" role="alert">
-        ¡Sigue explorando y encuentra tu próxima lectura favorita!
+        {{ _("¡Sigue explorando y encuentra tu próxima lectura favorita!") }}
     </div>
 
     <!-- Mapa -->
     <div class="card mt-4">
         <div class="card-body">
-            <h5 class="card-title text-secondary">Bibliotecas cercanas a tu ubicación:</h5>
+            <h5 class="card-title text-secondary">{{ _("Bibliotecas cercanas a tu ubicación:") }}</h5>
             <div class="map-container">
                 <div id="map"></div>
             </div>
@@ -88,21 +87,21 @@
 
     // Marcador para la ubicación actual
     L.marker(ILocation, { icon: redIcon }).addTo(map)
-        .bindPopup('Estás Aquí')
+        .bindPopup('{{ _("Estás Aquí") }}')
         .openPopup();
 
     // Agregamos marcadores de "bibliotecas" (ubicaciones inventadas)
     L.marker([41.45700, 2.20300]).addTo(map)
-        .bindPopup('Biblioteca del Saber');
+        .bindPopup('{{ _("Biblioteca del Saber") }}');
 
     L.marker([41.45400, 2.20000]).addTo(map)
-        .bindPopup('Centro de Lectura Aurora');
+        .bindPopup('{{ _("Centro de Lectura Aurora") }}');
 
     L.marker([41.45600, 2.20600]).addTo(map)
-        .bindPopup('Archivo de Letras');
+        .bindPopup('{{ _("Archivo de Letras") }}');
 
     L.marker([41.45350, 2.20350]).addTo(map)
-        .bindPopup('Sala del Conocimiento');
+        .bindPopup('{{ _("Sala del Conocimiento") }}');
 </script>
 {% endblock %}
 
