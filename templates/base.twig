@@ -36,18 +36,21 @@
                     <!-- Selector de idioma con banderas -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle lang-dropdown" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            {% if lang == 'es_ES' %}
-                                <img src="/assets/images/flags/es.png" alt="{{ _("Español") }}"> {{ _("Español") }}
-                            {% elseif lang == 'en_US' %}
-                                <img src="/assets/images/flags/us.png" alt="{{ _("English") }}"> {{ _("English") }}
-                            {% elseif lang == 'pt_BR' %}
-                                <img src="/assets/images/flags/br.png" alt="{{ _("Português") }}"> {{ _("Português") }}
-                            {% endif %}
+                            {{ _("Idioma") }}
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
-                            <li><a class="dropdown-item lang-option" href="?lang=es_ES"><img src="/assets/images/flags/es.png" alt="{{ _("Español") }}"> {{ _("Español") }}</a></li>
-                            <li><a class="dropdown-item lang-option" href="?lang=en_US"><img src="/assets/images/flags/us.png" alt="{{ _("English") }}"> {{ _("English") }}</a></li>
-                            <li><a class="dropdown-item lang-option" href="?lang=pt_BR"><img src="/assets/images/flags/br.png" alt="{{ _("Português") }}"> {{ _("Português") }}</a></li>
+                            <li><a class="dropdown-item lang-option" href="?lang=es_ES">
+                                <img src="/assets/images/flags/es.png" alt="{{ _("Español") }}">
+                                <span>{{ _("Español") }}</span>
+                            </a></li>
+                            <li><a class="dropdown-item lang-option" href="?lang=en_US">
+                                <img src="/assets/images/flags/us.png" alt="{{ _("English") }}">
+                                <span>{{ _("English") }}</span>
+                            </a></li>
+                            <li><a class="dropdown-item lang-option" href="?lang=pt_BR">
+                                <img src="/assets/images/flags/br.png" alt="{{ _("Português") }}">
+                                <span>{{ _("Português") }}</span>
+                            </a></li>
                         </ul>
                     </li>
                 </ul>

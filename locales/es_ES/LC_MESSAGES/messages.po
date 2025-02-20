@@ -63,7 +63,7 @@ msgid "Bibliotecas cercanas a tu ubicación:"
 msgstr "Bibliotecas cercanas a tu ubicación:"
 
 msgid "Estás Aquí"
-msgstr "Estás Aquí"
+msgstr "Estás aquí"
 
 msgid "Biblioteca del Saber"
 msgstr "Biblioteca del Saber"
@@ -76,3 +76,138 @@ msgstr "Archivo de Letras"
 
 msgid "Sala del Conocimiento"
 msgstr "Sala del Conocimiento"
+
+msgid "Buscar tu libro"
+msgstr "Buscar tu libro"
+
+msgid "Resultados encontrados:"
+msgstr "Resultados encontrados:"
+
+msgid "Portada de"
+msgstr "Portada de"
+
+msgid "Autor:"
+msgstr "Autor:"
+
+msgid "Publicado en:"
+msgstr "Publicado en:"
+
+msgid "Paginación"
+msgstr "Paginación"
+
+msgid "Anterior"
+msgstr "Anterior"
+
+msgid "Siguiente"
+msgstr "Siguiente"
+
+msgid "No se encontraron resultados para"
+msgstr "No se encontraron resultados para"
+
+msgid "Categoría:"
+msgstr "Categoría:"
+
+msgid "En esta categoria encontraras todos los libros relacionados."
+msgstr "En esta categoría encontrarás todos los libros relacionados."
+
+msgid "No hay libros en esta categoría."
+msgstr "No hay libros en esta categoría."
+
+msgid "Formato:"
+msgstr "Formato:"
+
+msgid "Número de páginas:"
+msgstr "Número de páginas:"
+
+msgid "Fecha de publicación:"
+msgstr "Fecha de publicación:"
+
+msgid "Calificaciones:"
+msgstr "Calificaciones:"
+
+msgid "Reseñas:"
+msgstr "Reseñas:"
+
+msgid "Descripción:"
+msgstr "Descripción:"
+
+msgid "Ver libro"
+msgstr "Ver libro"
+
+msgid "Comparación de Calificaciones y Reseñas"
+msgstr "Comparación de Calificaciones y Reseñas"
+
+msgid "Cantidad"
+msgstr "Cantidad"
+
+msgid "Te encuentras editando un libro"
+msgstr "Te encuentras editando un libro"
+
+msgid "Imagen actual:"
+msgstr "Imagen actual:"
+
+msgid "Cambiar imagen:"
+msgstr "Cambiar imagen:"
+
+msgid "Título:"
+msgstr "Título:"
+
+msgid "Número de calificaciones:"
+msgstr "Número de calificaciones:"
+
+msgid "Número de reseñas:"
+msgstr "Número de reseñas:"
+
+msgid "Actualizar"
+msgstr "Actualizar"
+
+msgid "Volver Atrás"
+msgstr "Volver Atrás"
+
+msgid "Iniciar Sesión"
+msgstr "Iniciar Sesión"
+
+msgid "Usuario"
+msgstr "Usuario"
+
+msgid "Contraseña"
+msgstr "Contraseña"
+
+msgid "Panel de Administración"
+msgstr "Panel de Administración"
+
+msgid "Hola!"
+msgstr "¡Hola!"
+
+msgid "Buscar por título, autor o categoría"
+msgstr "Buscar por título, autor o categoría"
+
+msgid "Lista de Libros"
+msgstr "Lista de Libros"
+
+msgid "ID"
+msgstr "ID"
+
+msgid "Acciones"
+msgstr "Acciones"
+
+msgid "Editar"
+msgstr "Editar"
+
+msgid "Eliminar"
+msgstr "Eliminar"
+
+msgid "¿Estás seguro de eliminar este libro?"
+msgstr "¿Estás seguro de eliminar este libro?"
+
+msgid "No hay libros registrados."
+msgstr "No hay libros registrados."
+
+msgid "Error 404"
+msgstr "Error 404"
+
+msgid "Volver a la página principal"
+msgstr "Volver a la página principal"
+
+msgid "Idioma"
+msgstr "Idioma"

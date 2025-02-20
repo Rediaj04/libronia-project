@@ -11,26 +11,24 @@
             <img src="{{ libro.imagen_url }}" class="img-fluid rounded shadow" alt="{{ libro.titulo }}">
         </div>
         <div class="col-md-8">
-            <p><strong>Autor:</strong> {{ libro.nombre_autor }}</p>
-            <p><strong>Categoría:</strong> {{ libro.nombre_categoria }}</p>
-            <p><strong>Formato:</strong> {{ libro.formato }}</p>
-            <p><strong>Número de páginas:</strong> {{ libro.num_paginas }}</p>
-            <p><strong>Fecha de publicación:</strong> {{ libro.fecha_publicacion }}</p>
-            <p><strong>Calificaciones:</strong> {{ libro.num_calificaciones }}</p>
-            <p><strong>Reseñas:</strong> {{ libro.num_resenas }}</p>
-            <p><strong>Descripción:</strong> {{ libro.descripcion }}</p>
-            <a href="{{ libro.libro_url }}" class="btn btn-primary" target="_blank">Ver libro</a>
+            <p><strong>{{ _("Autor:") }}</strong> {{ libro.nombre_autor }}</p>
+            <p><strong>{{ _("Categoría:") }}</strong> {{ libro.nombre_categoria }}</p>
+            <p><strong>{{ _("Formato:") }}</strong> {{ libro.formato }}</p>
+            <p><strong>{{ _("Número de páginas:") }}</strong> {{ libro.num_paginas }}</p>
+            <p><strong>{{ _("Fecha de publicación:") }}</strong> {{ libro.fecha_publicacion }}</p>
+            <p><strong>{{ _("Calificaciones:") }}</strong> {{ libro.num_calificaciones }}</p>
+            <p><strong>{{ _("Reseñas:") }}</strong> {{ libro.num_resenas }}</p>
+            <p><strong>{{ _("Descripción:") }}</strong> {{ libro.descripcion }}</p>
+            <a href="{{ libro.libro_url }}" class="btn btn-primary" target="_blank">{{ _("Ver libro") }}</a>
         </div>
     </div>
 
     <!-- Gráfico de Calificaciones y Reseñas -->
     <div class="mt-4">
-        <h3>Comparación de Calificaciones y Reseñas</h3>
+        <h3>{{ _("Comparación de Calificaciones y Reseñas") }}</h3>
         <!-- Agregar una clase al canvas -->
         <canvas id="reviewsChart" class="small-chart"></canvas>
     </div>
-
-
 </div>
 {% endblock %}
 
@@ -41,9 +39,9 @@
     var reviewsChart = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ['Calificaciones', 'Reseñas'],
+            labels: ['{{ _("Calificaciones") }}', '{{ _("Reseñas") }}'],
             datasets: [{
-                label: 'Cantidad',
+                label: '{{ _("Cantidad") }}',
                 data: [{{ libro.num_calificaciones }}, {{ libro.num_resenas }}],
                 backgroundColor: ['#3498db', '#e74c3c'],
                 borderColor: ['#2980b9', '#c0392b'],

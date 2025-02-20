@@ -108,7 +108,106 @@ msgid "Categoría:"
 msgstr "Categoria:"
 
 msgid "En esta categoria encontraras todos los libros relacionados."
-msgstr "Nesta categoria, você encontraará todos os livros relacionados."
+msgstr "Nesta categoria, você encontrará todos os livros relacionados."
 
 msgid "No hay libros en esta categoría."
 msgstr "Não há livros nesta categoria."
+
+msgid "Formato:"
+msgstr "Formato:"
+
+msgid "Número de páginas:"
+msgstr "Número de páginas:"
+
+msgid "Fecha de publicación:"
+msgstr "Data de publicação:"
+
+msgid "Calificaciones:"
+msgstr "Avaliações:"
+
+msgid "Reseñas:"
+msgstr "Resenhas:"
+
+msgid "Descripción:"
+msgstr "Descrição:"
+
+msgid "Ver libro"
+msgstr "Ver livro"
+
+msgid "Comparación de Calificaciones y Reseñas"
+msgstr "Comparação de Avaliações e Resenhas"
+
+msgid "Cantidad"
+msgstr "Quantidade"
+
+msgid "Te encuentras editando un libro"
+msgstr "Você está editando um livro"
+
+msgid "Imagen actual:"
+msgstr "Imagem atual:"
+
+msgid "Cambiar imagen:"
+msgstr "Alterar imagem:"
+
+msgid "Título:"
+msgstr "Título:"
+
+msgid "Número de calificaciones:"
+msgstr "Número de avaliações:"
+
+msgid "Número de reseñas:"
+msgstr "Número de resenhas:"
+
+msgid "Actualizar"
+msgstr "Atualizar"
+
+msgid "Volver Atrás"
+msgstr "Voltar Atrás"
+
+msgid "Iniciar Sesión"
+msgstr "Iniciar Sessão"
+
+msgid "Usuario"
+msgstr "Usuário"
+
+msgid "Contraseña"
+msgstr "Senha"
+
+msgid "Panel de Administración"
+msgstr "Painel de Administração"
+
+msgid "Hola!"
+msgstr "Olá!"
+
+msgid "Buscar por título, autor o categoría"
+msgstr "Buscar por título, autor ou categoria"
+
+msgid "Lista de Libros"
+msgstr "Lista de Livros"
+
+msgid "ID"
+msgstr "ID"
+
+msgid "Acciones"
+msgstr "Ações"
+
+msgid "Editar"
+msgstr "Editar"
+
+msgid "Eliminar"
+msgstr "Excluir"
+
+msgid "¿Estás seguro de eliminar este libro?"
+msgstr "Tem certeza que deseja excluir este livro?"
+
+msgid "No hay libros registrados."
+msgstr "Não há livros registrados."
+
+msgid "Error 404"
+msgstr "Erro 404"
+
+msgid "Volver a la página principal"
+msgstr "Voltar à página principal"
+
+msgid "Idioma"
+msgstr "Idioma"

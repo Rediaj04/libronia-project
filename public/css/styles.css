@@ -236,3 +236,32 @@ footer {
     height: 300px; /* Mantiene la proporción de la imagen */
     display: block; /* Elimina el espacio adicional debajo de la imagen */
 }
+
+/* Estilos para el selector de idiomas */
+.lang-dropdown {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.lang-dropdown img,
+.lang-option img {
+    width: 20px;
+    height: 15px;
+    object-fit: cover;
+    margin-right: 5px;
+}
+
+.dropdown-menu {
+    min-width: 150px;
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+}
