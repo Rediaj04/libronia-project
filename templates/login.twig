@@ -1,26 +1,26 @@
 {% extends 'base.twig' %}
 
-{% block title %}Iniciar Sesión{% endblock %}
+{% block title %}{{ _("Iniciar Sesión") }}{% endblock %}
 
 {% block content %}
 <div class="row justify-content-center">
     <div class="col-md-6">
         <div class="card shadow-sm">
             <div class="card-body">
-                <h2 class="text-center text-primary">Iniciar Sesión</h2>
+                <h2 class="text-center text-primary">{{ _("Iniciar Sesión") }}</h2>
                 {% if error %}
                     <div class="alert alert-danger">{{ error }}</div>
                 {% endif %}
                 <form method="POST" action="/login">
                     <div class="mb-3">
-                        <label for="username" class="form-label">Usuario</label>
+                        <label for="username" class="form-label">{{ _("Usuario") }}</label>
                         <input type="text" name="username" id="username" class="form-control" required>
                     </div>
                     <div class="mb-3">
-                        <label for="password" class="form-label">Contraseña</label>
+                        <label for="password" class="form-label">{{ _("Contraseña") }}</label>
                         <input type="password" name="password" id="password" class="form-control" required>
                     </div>
-                    <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
+                    <button type="submit" class="btn btn-primary w-100">{{ _("Iniciar Sesión") }}</button>
                 </form>
             </div>
         </div>
