@@ -384,13 +384,31 @@ class DefaultController {
             if (isset($_FILES['nueva_imagen']) && $_FILES['nueva_imagen']['error'] === UPLOAD_ERR_OK) {
                 $imagen = $_FILES['nueva_imagen'];
                 $nombre_imagen = uniqid() . '_' . basename($imagen['name']);
-                $ruta_imagen = "public/uploads/" . $nombre_imagen;
-    
-                if (move_uploaded_file($imagen['tmp_name'], $ruta_imagen)) {
-                    $imagen_url = "/uploads/" . $nombre_imagen;
-                } else {
-                    $mensaje = "Error al subir la imagen.";
+                
+                // Usar la ruta correcta relativa a public/
+                $upload_dir = __DIR__ . "/../../public/uploads";
+                if (!file_exists($upload_dir)) {
+                    if (!mkdir($upload_dir, 0755, true)) {
+                        $mensaje = "Error: No se pudo crear el directorio de uploads.";
+                        $tipoMensaje = "error";
+                        error_log("Error al crear directorio: " . $upload_dir);
+                    }
+                }
+
+                if (!is_writable($upload_dir)) {
+                    $mensaje = "Error: El directorio de uploads no tiene permisos de escritura.";
                     $tipoMensaje = "error";
+                    error_log("Error de permisos en directorio: " . $upload_dir);
+                } else {
+                    $ruta_imagen = $upload_dir . "/" . $nombre_imagen;
+                    
+                    if (move_uploaded_file($imagen['tmp_name'], $ruta_imagen)) {
+                        $imagen_url = "/uploads/" . $nombre_imagen;
+                    } else {
+                        $mensaje = "Error al subir la imagen: " . error_get_last()['message'];
+                        $tipoMensaje = "error";
+                        error_log("Error al mover archivo: " . error_get_last()['message']);
+                    }
                 }
             }
     

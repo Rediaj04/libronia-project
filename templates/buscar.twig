@@ -4,63 +4,67 @@
 
 {% block content %}
 <div class="container">
-    <h1 class="text-center text-primary mb-4">{{ _("Buscar tu libro") }}</h1>
-    <form action="/buscar" method="GET" class="mb-4">
-        <div class="input-group">
-            <!-- Se prellena el campo con el término buscado -->
-            <input type="text" name="q" class="form-control" placeholder="{{ _("Escribe el nombre del libro o autor...") }}" required value="{{ query }}">
-            <button class="btn btn-primary" type="submit">{{ _("Buscar") }}</button>
+    <h1 class="text-center text-primary mb-4 fs-3">{{ _("Buscar tu libro") }}</h1>
+    
+    <div class="row justify-content-center mb-4">
+        <div class="col-lg-8 col-md-10">
+            <form action="/buscar" method="GET">
+                <div class="input-group">
+                    <input type="text" name="q" class="form-control" placeholder="{{ _("Escribe el nombre del libro o autor...") }}" required value="{{ query }}">
+                    <button class="btn btn-primary" type="submit">{{ _("Buscar") }}</button>
+                </div>
+            </form>
         </div>
-    </form>
+    </div>
 
     {% if libros is not empty %}
-        <h3 class="text-secondary">{{ _("Resultados encontrados:") }}</h3>
+        <h3 class="text-secondary fs-4 mb-3">{{ _("Resultados encontrados:") }}</h3>
         <div class="list-group mt-3">
             {% for libro in libros %}
-                <div class="list-group-item d-flex align-items-center">
-                    <a href="/libro/{{ libro.id }}">
-                        <img src="{{ libro.imagen_url }}" alt="{{ _("Portada de") }} {{ libro.titulo }}" class="me-3" style="width: 80px; height: auto;">
-                    </a>
-                    <div>
-                        <a href="/libro/{{ libro.id }}">
-                            <h5 class="mb-1">{{ libro.titulo }}</h5>
-                        </a>
-                        <p class="mb-1"><strong>{{ _("Autor:") }}</strong> {{ libro.autor }}</p>
-                        <small><strong>{{ _("Publicado en:") }}</strong> {{ libro.fecha_publicacion }}</small>
+                <div class="list-group-item libro-resultado">
+                    <div class="row g-0 align-items-center">
+                        <div class="col-md-2 col-4">
+                            <a href="/libro/{{ libro.id }}">
+                                <img src="{{ libro.imagen_url }}" alt="{{ _("Portada de") }} {{ libro.titulo }}" class="img-fluid rounded">
+                            </a>
+                        </div>
+                        <div class="col-md-10 col-8 ps-3">
+                            <a href="/libro/{{ libro.id }}" class="text-decoration-none">
+                                <h5 class="mb-1 fs-5">{{ libro.titulo }}</h5>
+                            </a>
+                            <p class="mb-1"><strong>{{ _("Autor:") }}</strong> {{ libro.autor }}</p>
+                            <small><strong>{{ _("Publicado en:") }}</strong> {{ libro.fecha_publicacion }}</small>
+                        </div>
                     </div>
                 </div>
             {% endfor %}
         </div>
 
-        {# Paginación #}
         {% if totalPages > 1 %}
-        <nav aria-label="{{ _("Paginación") }}">
-          <ul class="pagination justify-content-center mt-4">
-            {# Enlace a la página anterior #}
-            {% if currentPage > 1 %}
-            <li class="page-item">
-              <a class="page-link" href="/buscar?q={{ query }}&page={{ currentPage - 1 }}" aria-label="{{ _("Anterior") }}">
-                <span aria-hidden="true">&laquo;</span>
-              </a>
-            </li>
-            {% endif %}
+        <nav aria-label="{{ _("Paginación") }}" class="mt-4">
+            <ul class="pagination pagination-sm justify-content-center flex-wrap">
+                {% if currentPage > 1 %}
+                <li class="page-item">
+                    <a class="page-link" href="/buscar?q={{ query }}&page={{ currentPage - 1 }}">
+                        &laquo;
+                    </a>
+                </li>
+                {% endif %}
 
-            {# Enlaces numerados para cada página #}
-            {% for i in 1..totalPages %}
-            <li class="page-item {% if i == currentPage %}active{% endif %}">
-              <a class="page-link" href="/buscar?q={{ query }}&page={{ i }}">{{ i }}</a>
-            </li>
-            {% endfor %}
+                {% for i in 1..totalPages %}
+                <li class="page-item {% if i == currentPage %}active{% endif %}">
+                    <a class="page-link" href="/buscar?q={{ query }}&page={{ i }}">{{ i }}</a>
+                </li>
+                {% endfor %}
 
-            {# Enlace a la página siguiente #}
-            {% if currentPage < totalPages %}
-            <li class="page-item">
-              <a class="page-link" href="/buscar?q={{ query }}&page={{ currentPage + 1 }}" aria-label="{{ _("Siguiente") }}">
-                <span aria-hidden="true">&raquo;</span>
-              </a>
-            </li>
-            {% endif %}
-          </ul>
+                {% if currentPage < totalPages %}
+                <li class="page-item">
+                    <a class="page-link" href="/buscar?q={{ query }}&page={{ currentPage + 1 }}">
+                        &raquo;
+                    </a>
+                </li>
+                {% endif %}
+            </ul>
         </nav>
         {% endif %}
 

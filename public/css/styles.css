@@ -74,12 +74,9 @@ footer {
 
 /* Contenedor principal */
 .editar-libro-container {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Título del libro */
@@ -102,10 +99,10 @@ footer {
 }
 
 .imagen-libro {
-    width: 100%;
-    max-width: 300px;
+    max-width: 100%;
+    height: auto;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 /* Formulario de edición */
@@ -118,9 +115,7 @@ footer {
 
 /* Grupos de campos del formulario */
 .form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+    margin-bottom: 1rem;
 }
 
 .form-group label {
@@ -264,4 +259,326 @@ footer {
 
 .dropdown-item:hover {
     background-color: #f8f9fa;
+}
+
+/* Estilos responsivos para la vista de categoría */
+.book-link {
+    display: block;
+    transition: transform 0.2s;
+}
+
+.book-link:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-topl {
+    height: auto;
+    max-height: 320px;
+    object-fit: contain;
+    padding: 10px;
+}
+
+/* Estilos responsivos para la vista de libro */
+.book-image-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.book-details {
+    height: 100%;
+}
+
+.chart-container {
+    position: relative;
+    margin: auto;
+    max-width: 800px;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    .card-img-topl {
+        max-height: 250px;
+    }
+
+    .book-details {
+        margin-top: 1rem;
+    }
+
+    .small-chart {
+        width: 100% !important;
+        height: 300px !important;
+    }
+
+    .editar-libro-container {
+        padding: 15px;
+    }
+
+    .form-group label {
+        font-size: 0.9rem;
+    }
+
+    .libro-resultado img {
+        max-width: 100px;
+    }
+
+    .libro-resultado h5 {
+        font-size: 1rem;
+    }
+
+    .libro-resultado p,
+    .libro-resultado small {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-img-topl {
+        max-height: 200px;
+    }
+
+    h1.fs-2 {
+        font-size: 1.5rem !important;
+    }
+
+    .book-details p {
+        font-size: 0.9rem;
+    }
+
+    .libro-resultado .row {
+        flex-direction: row;
+    }
+
+    .libro-resultado img {
+        max-width: 80px;
+    }
+
+    .pagination {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Estilos para el panel de administración */
+.table-responsive {
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    .btn-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .btn-group .btn {
+        width: 100%;
+    }
+
+    .table td, .table th {
+        font-size: 0.9rem;
+    }
+
+    .pagination {
+        justify-content: center;
+    }
+}
+
+/* Estilos para el formulario de login */
+.card {
+    border: none;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 576px) {
+    .card-body {
+        padding: 1.25rem;
+    }
+
+    .form-label {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* Ajustes adicionales para el index */
+@media (max-width: 576px) {
+    .banner-container {
+        margin: -1rem -1rem 1rem -1rem;
+    }
+
+    .banner-image {
+        border-radius: 0;
+    }
+
+    .card-body {
+        padding: 1rem;
+    }
+
+    .alert {
+        margin-left: -0.5rem;
+        margin-right: -0.5rem;
+        border-radius: 0;
+    }
+}
+
+/* Estilos para la página de búsqueda */
+.libro-resultado {
+    transition: transform 0.2s;
+}
+
+.libro-resultado:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Estilos para el menú de categorías */
+@media (max-width: 767.98px) {
+    .btn-link {
+        color: #6c757d;
+        text-decoration: none;
+        padding: 0.25rem 0.5rem;
+    }
+
+    .btn-link:hover {
+        color: #0056b3;
+    }
+
+    .btn-link.collapsed i::before {
+        content: "\f0c9"; /* Icono de hamburguesa */
+    }
+
+    .btn-link:not(.collapsed) i::before {
+        content: "\f00d"; /* Icono de X */
+    }
+
+    #categoriasCollapse {
+        margin-top: 1rem;
+    }
+
+    #categoriasCollapse .list-group-item {
+        border-radius: 0;
+        margin-bottom: 1px;
+    }
+}
+
+/* Estilos para el botón de categorías */
+.btn-secondary.collapsed .fa-chevron-down {
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+}
+
+.btn-secondary:not(.collapsed) .fa-chevron-down {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+}
+
+#categoriasCollapse {
+    margin-top: 0.5rem;
+}
+
+#categoriasCollapse .list-group-item {
+    border-radius: 0;
+    margin-bottom: 1px;
+}
+
+#categoriasCollapse .list-group-item:hover {
+    background-color: #f8f9fa;
+}
+
+/* Mostrar grid en pantallas más grandes */
+@media (min-width: 768px) {
+    .btn-secondary {
+        display: none !important;
+    }
+    
+    #categoriasCollapse {
+        display: block !important;
+    }
+    
+    #categoriasCollapse .list-group {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 0.5rem;
+    }
+}
+
+/* Actualizar los estilos existentes para el formulario de edición */
+.editar-libro-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.imagen-libro {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.formulario-edicion .form-group {
+    margin-bottom: 1rem;
+}
+
+.formulario-edicion .form-control {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.formulario-edicion textarea.form-control {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    .editar-libro-container {
+        padding: 15px;
+    }
+
+    .form-group {
+        margin-bottom: 0.75rem;
+    }
+
+    .form-group label {
+        font-size: 0.9rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .btn-actualizar,
+    .btn-volver {
+        width: 100%;
+        margin: 0.25rem 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .editar-libro-container {
+        padding: 10px;
+    }
+
+    .imagen-libro {
+        max-width: 200px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .form-control {
+        font-size: 0.9rem;
+        padding: 6px;
+    }
+
+    textarea.form-control {
+        min-height: 80px;
+    }
 }
