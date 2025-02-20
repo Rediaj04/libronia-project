@@ -4,30 +4,35 @@
 
 {% block content %}
 <div class="container">
-    <h1 class="text-primary text-center mb-3">{{ libro.titulo }}</h1>
+    <h1 class="text-primary text-center mb-4 fs-2">{{ libro.titulo }}</h1>
 
-    <div class="row">
-        <div class="col-md-4">
-            <img src="{{ libro.imagen_url }}" class="img-fluid rounded shadow" alt="{{ libro.titulo }}">
+    <div class="row g-4">
+        <div class="col-lg-4 col-md-5">
+            <div class="book-image-container mb-4">
+                <img src="{{ libro.imagen_url }}" class="img-fluid rounded shadow-sm" alt="{{ libro.titulo }}">
+            </div>
         </div>
-        <div class="col-md-8">
-            <p><strong>{{ _("Autor:") }}</strong> {{ libro.nombre_autor }}</p>
-            <p><strong>{{ _("Categoría:") }}</strong> {{ libro.nombre_categoria }}</p>
-            <p><strong>{{ _("Formato:") }}</strong> {{ libro.formato }}</p>
-            <p><strong>{{ _("Número de páginas:") }}</strong> {{ libro.num_paginas }}</p>
-            <p><strong>{{ _("Fecha de publicación:") }}</strong> {{ libro.fecha_publicacion }}</p>
-            <p><strong>{{ _("Calificaciones:") }}</strong> {{ libro.num_calificaciones }}</p>
-            <p><strong>{{ _("Reseñas:") }}</strong> {{ libro.num_resenas }}</p>
-            <p><strong>{{ _("Descripción:") }}</strong> {{ libro.descripcion }}</p>
-            <a href="{{ libro.libro_url }}" class="btn btn-primary" target="_blank">{{ _("Ver libro") }}</a>
+        <div class="col-lg-8 col-md-7">
+            <div class="book-details p-3 bg-light rounded">
+                <p class="mb-2"><strong>{{ _("Autor:") }}</strong> {{ libro.nombre_autor }}</p>
+                <p class="mb-2"><strong>{{ _("Categoría:") }}</strong> {{ libro.nombre_categoria }}</p>
+                <p class="mb-2"><strong>{{ _("Formato:") }}</strong> {{ libro.formato }}</p>
+                <p class="mb-2"><strong>{{ _("Número de páginas:") }}</strong> {{ libro.num_paginas }}</p>
+                <p class="mb-2"><strong>{{ _("Fecha de publicación:") }}</strong> {{ libro.fecha_publicacion }}</p>
+                <p class="mb-2"><strong>{{ _("Calificaciones:") }}</strong> {{ libro.num_calificaciones }}</p>
+                <p class="mb-2"><strong>{{ _("Reseñas:") }}</strong> {{ libro.num_resenas }}</p>
+                <p class="mb-3"><strong>{{ _("Descripción:") }}</strong> {{ libro.descripcion }}</p>
+                <a href="{{ libro.libro_url }}" class="btn btn-primary w-100 w-md-auto" target="_blank">{{ _("Ver libro") }}</a>
+            </div>
         </div>
     </div>
 
     <!-- Gráfico de Calificaciones y Reseñas -->
-    <div class="mt-4">
-        <h3>{{ _("Comparación de Calificaciones y Reseñas") }}</h3>
-        <!-- Agregar una clase al canvas -->
-        <canvas id="reviewsChart" class="small-chart"></canvas>
+    <div class="mt-5">
+        <h3 class="fs-4 mb-3">{{ _("Comparación de Calificaciones y Reseñas") }}</h3>
+        <div class="chart-container">
+            <canvas id="reviewsChart" class="small-chart"></canvas>
+        </div>
     </div>
 </div>
 {% endblock %}

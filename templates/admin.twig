@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="container mt-4">
-    <h2>{{ _("Panel de Administración") }}</h2>
+    <h2 class="fs-3 mb-4">{{ _("Panel de Administración") }}</h2>
     
     <!-- Mensaje de bienvenida -->
     {% if user %}
@@ -13,17 +13,21 @@
 
     <!-- Buscador -->
     <div class="mb-4">
-        <form action="/admin" method="GET" class="form-inline">
-            <div class="form-group mx-sm-3 mb-2">
-                <input type="text" name="q" class="form-control" placeholder="{{ _("Buscar por título, autor o categoría") }}" value="{{ searchQuery }}">
+        <form action="/admin" method="GET">
+            <div class="row g-2">
+                <div class="col-sm-9 col-12">
+                    <input type="text" name="q" class="form-control" placeholder="{{ _("Buscar por título, autor o categoría") }}" value="{{ searchQuery }}">
+                </div>
+                <div class="col-sm-3 col-12">
+                    <button type="submit" class="btn btn-primary w-100">{{ _("Buscar") }}</button>
+                </div>
             </div>
-            <button type="submit" class="btn btn-primary mb-2">{{ _("Buscar") }}</button>
         </form>
     </div>
 
     <!-- Lista de libros -->
-    <div class="mt-3">
-        <h4>{{ _("Lista de Libros") }}</h4>
+    <div class="table-responsive mt-3">
+        <h4 class="fs-5 mb-3">{{ _("Lista de Libros") }}</h4>
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -31,7 +35,7 @@
                     <th>{{ _("Título") }}</th>
                     <th>{{ _("Autor") }}</th>
                     <th>{{ _("Categoría") }}</th>
-                    <th>{{ _("Acciones") }}</th>
+                    <th class="text-center">{{ _("Acciones") }}</th>
                 </tr>
             </thead>
             <tbody>
@@ -41,9 +45,11 @@
                     <td>{{ libro.titulo }}</td>
                     <td>{{ libro.autor }}</td>
                     <td>{{ libro.categoria }}</td>
-                    <td>
-                        <a href="/editar/{{ libro.id }}" class="btn btn-warning btn-sm">{{ _("Editar") }}</a>
-                        <a href="/eliminar/{{ libro.id }}" class="btn btn-danger btn-sm" onclick="return confirm('{{ _("¿Estás seguro de eliminar este libro?") }}');">{{ _("Eliminar") }}</a>
+                    <td class="text-center">
+                        <div class="btn-group">
+                            <a href="/editar/{{ libro.id }}" class="btn btn-warning btn-sm">{{ _("Editar") }}</a>
+                            <a href="/eliminar/{{ libro.id }}" class="btn btn-danger btn-sm" onclick="return confirm('{{ _("¿Estás seguro de eliminar este libro?") }}');">{{ _("Eliminar") }}</a>
+                        </div>
                     </td>
                 </tr>
                 {% else %}
@@ -56,12 +62,12 @@
     </div>
 
     <!-- Paginación -->
-    <nav aria-label="Paginación">
-        <ul class="pagination">
+    <nav aria-label="Paginación" class="d-flex justify-content-center mt-4">
+        <ul class="pagination pagination-sm flex-wrap">
             {% if currentPage > 1 %}
                 <li class="page-item">
-                    <a class="page-link" href="/admin?page={{ currentPage - 1 }}{% if searchQuery %}&q={{ searchQuery }}{% endif %}" aria-label="{{ _("Anterior") }}">
-                        <span aria-hidden="true">&laquo;</span>
+                    <a class="page-link" href="/admin?page={{ currentPage - 1 }}{% if searchQuery %}&q={{ searchQuery }}{% endif %}">
+                        &laquo;
                     </a>
                 </li>
             {% endif %}
@@ -74,8 +80,8 @@
 
             {% if currentPage < totalPages %}
                 <li class="page-item">
-                    <a class="page-link" href="/admin?page={{ currentPage + 1 }}{% if searchQuery %}&q={{ searchQuery }}{% endif %}" aria-label="{{ _("Siguiente") }}">
-                        <span aria-hidden="true">&raquo;</span>
+                    <a class="page-link" href="/admin?page={{ currentPage + 1 }}{% if searchQuery %}&q={{ searchQuery }}{% endif %}">
+                        &raquo;
                     </a>
                 </li>
             {% endif %}

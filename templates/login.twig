@@ -3,25 +3,27 @@
 {% block title %}{{ _("Iniciar Sesión") }}{% endblock %}
 
 {% block content %}
-<div class="row justify-content-center">
-    <div class="col-md-6">
-        <div class="card shadow-sm">
-            <div class="card-body">
-                <h2 class="text-center text-primary">{{ _("Iniciar Sesión") }}</h2>
-                {% if error %}
-                    <div class="alert alert-danger">{{ error }}</div>
-                {% endif %}
-                <form method="POST" action="/login">
-                    <div class="mb-3">
-                        <label for="username" class="form-label">{{ _("Usuario") }}</label>
-                        <input type="text" name="username" id="username" class="form-control" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="password" class="form-label">{{ _("Contraseña") }}</label>
-                        <input type="password" name="password" id="password" class="form-control" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary w-100">{{ _("Iniciar Sesión") }}</button>
-                </form>
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-sm-8 col-11">
+            <div class="card shadow-sm">
+                <div class="card-body p-4">
+                    <h2 class="text-center text-primary fs-3 mb-4">{{ _("Iniciar Sesión") }}</h2>
+                    {% if error %}
+                        <div class="alert alert-danger">{{ error }}</div>
+                    {% endif %}
+                    <form method="POST" action="/login">
+                        <div class="mb-4">
+                            <label for="username" class="form-label">{{ _("Usuario") }}</label>
+                            <input type="text" name="username" id="username" class="form-control" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="password" class="form-label">{{ _("Contraseña") }}</label>
+                            <input type="password" name="password" id="password" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">{{ _("Iniciar Sesión") }}</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

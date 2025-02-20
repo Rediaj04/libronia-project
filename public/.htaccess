@@ -1,6 +1,11 @@
 Options +FollowSymLinks
 AddType image/svg+xml .svg .svgz
 RewriteEngine On
+
+# Permitir acceso directo a archivos en uploads/
+RewriteRule ^uploads/ - [L]
+
+# Redirigir el resto al index.php
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php [QSA,L]
