@@ -63,7 +63,7 @@ class DefaultController {
 
     public function admin() {
         AuthMiddleware::verificarSesion();
-        $this->initSession(); // Asegúrate de que la sesión esté iniciada
+        $this->initSession(); // Asegurar que la sesión esté iniciada
     
         $db = (new Database())->connect();
     

@@ -7,7 +7,6 @@ use Twig\TwigFunction;
 
 class TwigSetup {
     public function getTwig() {
-        // Ruta correcta basada en la ubicación del archivo actual
         $loader = new FilesystemLoader(__DIR__ . '/../templates');
         
         // Crear la instancia de Twig
